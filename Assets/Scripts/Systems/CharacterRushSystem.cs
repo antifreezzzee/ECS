@@ -19,8 +19,8 @@ namespace Systems
             Entities.With(_rushQuery).ForEach(
                 (Entity entity, UserInputData userInputData, ref InputData inputData) =>
                 {
-                    if (inputData.Rush > 0f && userInputData.rushAction != null &&
-                        userInputData.rushAction is IAbility ability)
+                    if (inputData.Rush > 0f && userInputData.RushAction != null &&
+                        userInputData.RushAction is IAbility ability)
                         ability.Execute();
                 });
         }

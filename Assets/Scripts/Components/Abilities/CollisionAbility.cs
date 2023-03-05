@@ -1,23 +1,53 @@
 using System.Collections.Generic;
+using Components.Interfaces;
 using Unity.Entities;
 using Unity.Mathematics;
 using UnityEngine;
 
 namespace Components
 {
-    public class CollisionAbility : MonoBehaviour, IConvertGameObjectToEntity, ICollisionAbility
+    public class CollisionAbility : MonoBehaviour, IConvertGameObjectToEntity, IAbility
     {
-        public Collider Collider;
-        public List<Collider> Collisions { get; set; }
+        [SerializeField] private Collider collider;
+        [SerializeField] private List<MonoBehaviour> collisionActions;
+        
+        private List<IAbilityTarget> _collisionActionsAbilities = new List<IAbilityTarget>();
+        private List<Collider> _collisions = new List<Collider>();
+
+        public List<Collider> Collisions => _collisions;
+
+        private void Start()
+        {
+            foreach (var action in collisionActions)
+            {
+                if (action is IAbilityTarget ability)
+                {
+                    _collisionActionsAbilities.Add(ability);
+                }
+                else
+                {
+                    Debug.LogError("collision action must derive from IAbility");
+                }
+            }
+        }
 
         public void Execute()
         {
+            foreach (var action in _collisionActionsAbilities)
+            {
+                action.Targets = new List<GameObject>();
+                _collisions.ForEach(c =>
+                {
+                    if (c != null) action.Targets.Add(c.gameObject);
+                });
+                action.Execute();
+            }
         }
 
         public void Convert(Entity entity, EntityManager dstManager, GameObjectConversionSystem conversionSystem)
         {
             float3 position = gameObject.transform.position;
-            switch (Collider)
+            switch (collider)
             {
                 case SphereCollider sphereCollider:
                     sphereCollider.ToWorldSpaceSphere(out var sphereCenter, out var sphereRadius);
@@ -54,7 +84,7 @@ namespace Components
                     break;
             }
 
-            Collider.enabled = false;
+            collider.enabled = false;
         }
     }
 

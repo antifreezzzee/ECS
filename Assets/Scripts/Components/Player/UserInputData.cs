@@ -7,9 +7,12 @@ namespace Components
 {
     public class UserInputData : MonoBehaviour, IConvertGameObjectToEntity
     {
-        public float speed;
-        public MonoBehaviour shootAction;
-        public MonoBehaviour rushAction;
+        [SerializeField] private float speed;
+        [SerializeField] private MonoBehaviour shootAction;
+        [SerializeField] private MonoBehaviour rushAction;
+
+        public MonoBehaviour ShootAction => shootAction;
+        public MonoBehaviour RushAction => rushAction;
 
         public void Convert(Entity entity, EntityManager dstManager, GameObjectConversionSystem conversionSystem)
         {

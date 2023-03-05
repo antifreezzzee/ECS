@@ -1,4 +1,5 @@
 using System;
+using System.Collections.Generic;
 using System.Linq;
 using Components;
 using Unity.Entities;
@@ -10,6 +11,7 @@ namespace Systems
     public class CollisionSystem : ComponentSystem
     {
         private readonly Collider[] _colliders = new Collider[50];
+        private List<Collider> _collidersList = new List<Collider>();
         private EntityQuery _collisionQuery;
 
         protected override void OnCreate()
@@ -20,18 +22,12 @@ namespace Systems
 
         protected override void OnUpdate()
         {
-            var dstManager = World.DefaultGameObjectInjectionWorld.EntityManager;
-
             Entities.With(_collisionQuery).ForEach(
-                (Entity entity, Transform transform, ref ActorColliderData actorColliderData) =>
+                (Entity entity, CollisionAbility collisionAbility, ref ActorColliderData actorColliderData) =>
                 {
-                    var gameObject = transform.gameObject;
+                    var gameObject = collisionAbility.gameObject;
                     float3 position = gameObject.transform.position;
                     var rotation = gameObject.transform.rotation;
-
-                    var collisionAbility = gameObject.GetComponent<ICollisionAbility>();
-
-                    if (collisionAbility == null) return;
 
                     collisionAbility.Collisions?.Clear();
 
@@ -64,7 +60,11 @@ namespace Systems
 
                     if (size > 0)
                     {
-                        collisionAbility.Collisions = _colliders.ToList();
+                        foreach (var result in _colliders)
+                        {
+                            collisionAbility.Collisions?.Add(result);
+                        }
+                        
                         collisionAbility.Execute();
                     }
                 });

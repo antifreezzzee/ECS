@@ -126,8 +126,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5a976e2148b9463c9491d89bce4088a2, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  shootForce: 10
-  selfDestroyDelay: 5
+  shootForce: 5
+  selfDestroyDelay: 3
 --- !u!114 &3192638884309510142
 MonoBehaviour:
   m_ObjectHideFlags: 0

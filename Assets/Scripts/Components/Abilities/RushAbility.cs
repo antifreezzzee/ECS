@@ -6,8 +6,8 @@ namespace Components
     [RequireComponent(typeof(Rigidbody))]
     public class RushAbility : MonoBehaviour, IAbility
     {
-        public float rushForce;
-        public float rushDelay;
+        [SerializeField] private float rushForce;
+        [SerializeField] private float rushDelay;
 
         private float _rushTime = float.MinValue;
 

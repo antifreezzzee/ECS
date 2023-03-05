@@ -5,8 +5,8 @@ namespace Components
     [RequireComponent(typeof(Rigidbody))]
     public class Projectile : MonoBehaviour
     {
-        public float shootForce;
-        public float selfDestroyDelay;
+        [SerializeField] private float shootForce;
+        [SerializeField] private float selfDestroyDelay;
 
         private float _shootTime = float.MinValue;
 

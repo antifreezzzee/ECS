@@ -61,8 +61,8 @@
      <Compile Include="Assets\Scripts\Components\Utils.cs" />
      <Compile Include="Assets\Scripts\Systems\CollisionSystem.cs" />
      <Compile Include="Assets\Scripts\Components\Player\CharacterHealth.cs" />
-     <Compile Include="Assets\Scripts\Components\Abilities\TrapAbility.cs" />
-     <Compile Include="Assets\Scripts\Components\Interfaces\ICollisionAbility.cs" />
+     <Compile Include="Assets\Scripts\Components\ApplyDamage.cs" />
+     <Compile Include="Assets\Scripts\Components\Interfaces\IAbilityTarget.cs" />
      <Reference Include="UnityEngine">
      <HintPath>C:\Program Files\Unity\Hub\Editor\2020.3.23f1\Editor\Data\PlaybackEngines\WindowsStandaloneSupport\Variations\mono\Managed\UnityEngine.dll</HintPath>
      </Reference>

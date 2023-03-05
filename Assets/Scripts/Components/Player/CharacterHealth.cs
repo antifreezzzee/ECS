@@ -2,5 +2,11 @@ using UnityEngine;
 
 public class CharacterHealth : MonoBehaviour
 {
-    public int Health = 100;
+    [SerializeField] private int health = 100;
+
+    public int Health
+    {
+        get => health;
+        set => health = value;
+    }
 }

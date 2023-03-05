@@ -19,8 +19,8 @@ namespace Systems
             Entities.With(_shootQuery).ForEach(
                 (Entity entity, UserInputData userInputData, ref InputData inputData) =>
                 {
-                    if (inputData.Shoot > 0f && userInputData.shootAction != null &&
-                        userInputData.shootAction is IAbility ability)
+                    if (inputData.Shoot > 0f && userInputData.ShootAction != null &&
+                        userInputData.ShootAction is IAbility ability)
                         ability.Execute();
                 });
         }
