@@ -127,6 +127,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   shootForce: 10
+  selfDestroyDelay: 5
 --- !u!114 &3192638884309510142
 MonoBehaviour:
   m_ObjectHideFlags: 0

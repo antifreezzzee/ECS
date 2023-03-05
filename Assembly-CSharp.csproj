@@ -53,10 +53,16 @@
      <Compile Include="Assets\Scripts\Components\Projectile.cs" />
      <Compile Include="Assets\Joystick Pack\Examples\JoystickSetterExample.cs" />
      <Compile Include="Assets\Scripts\Components\Interfaces\IAbility.cs" />
-     <Compile Include="Assets\Scripts\Components\Player\RushAbility.cs" />
+     <Compile Include="Assets\Scripts\Components\Abilities\RushAbility.cs" />
      <Compile Include="Assets\Scripts\Components\Player\UserInputData.cs" />
      <Compile Include="Assets\Joystick Pack\Scripts\Joysticks\FloatingJoystick.cs" />
-     <Compile Include="Assets\Scripts\Components\Player\ShootAbility.cs" />
+     <Compile Include="Assets\Scripts\Components\Abilities\ShootAbility.cs" />
+     <Compile Include="Assets\Scripts\Components\Abilities\CollisionAbility.cs" />
+     <Compile Include="Assets\Scripts\Components\Utils.cs" />
+     <Compile Include="Assets\Scripts\Systems\CollisionSystem.cs" />
+     <Compile Include="Assets\Scripts\Components\Player\CharacterHealth.cs" />
+     <Compile Include="Assets\Scripts\Components\Abilities\TrapAbility.cs" />
+     <Compile Include="Assets\Scripts\Components\Interfaces\ICollisionAbility.cs" />
      <Reference Include="UnityEngine">
      <HintPath>C:\Program Files\Unity\Hub\Editor\2020.3.23f1\Editor\Data\Managed\UnityEngine\UnityEngine.dll</HintPath>
      </Reference>
@@ -633,122 +639,160 @@
      <Reference Include="System.Xml.Serialization">
      <HintPath>C:\Program Files\Unity\Hub\Editor\2020.3.23f1\Editor\Data\NetStandard\compat\2.0.0\shims\netfx\System.Xml.Serialization.dll</HintPath>
      </Reference>
-     <Reference Include="Unity.Transforms.Hybrid">
-     <HintPath>C:\Users\Serega\Documents\UnityProjects\ECS\Library\ScriptAssemblies\Unity.Transforms.Hybrid.dll</HintPath>
-     </Reference>
-     <Reference Include="Unity.Properties">
-     <HintPath>C:\Users\Serega\Documents\UnityProjects\ECS\Library\ScriptAssemblies\Unity.Properties.dll</HintPath>
-     </Reference>
-     <Reference Include="Unity.Serialization">
-     <HintPath>C:\Users\Serega\Documents\UnityProjects\ECS\Library\ScriptAssemblies\Unity.Serialization.dll</HintPath>
-     </Reference>
-     <Reference Include="Unity.VSCode.Editor">
-     <HintPath>C:\Users\Serega\Documents\UnityProjects\ECS\Library\ScriptAssemblies\Unity.VSCode.Editor.dll</HintPath>
-     </Reference>
-     <Reference Include="UnityEditor.CacheServer">
-     <HintPath>C:\Users\Serega\Documents\UnityProjects\ECS\Library\ScriptAssemblies\UnityEditor.CacheServer.dll</HintPath>
-     </Reference>
-     <Reference Include="Unity.TextMeshPro.Editor">
-     <HintPath>C:\Users\Serega\Documents\UnityProjects\ECS\Library\ScriptAssemblies\Unity.TextMeshPro.Editor.dll</HintPath>
-     </Reference>
-     <Reference Include="Unity.InputSystem">
-     <HintPath>C:\Users\Serega\Documents\UnityProjects\ECS\Library\ScriptAssemblies\Unity.InputSystem.dll</HintPath>
-     </Reference>
-     <Reference Include="UnityEditor.UI">
-     <HintPath>C:\Users\Serega\Documents\UnityProjects\ECS\Library\ScriptAssemblies\UnityEditor.UI.dll</HintPath>
-     </Reference>
-     <Reference Include="Unity.Rider.Editor">
-     <HintPath>C:\Users\Serega\Documents\UnityProjects\ECS\Library\ScriptAssemblies\Unity.Rider.Editor.dll</HintPath>
-     </Reference>
-     <Reference Include="UnityEngine.UI">
-     <HintPath>C:\Users\Serega\Documents\UnityProjects\ECS\Library\ScriptAssemblies\UnityEngine.UI.dll</HintPath>
-     </Reference>
-     <Reference Include="Unity.Entities.Hybrid.EndToEnd.Tests">
-     <HintPath>C:\Users\Serega\Documents\UnityProjects\ECS\Library\ScriptAssemblies\Unity.Entities.Hybrid.EndToEnd.Tests.dll</HintPath>
-     </Reference>
-     <Reference Include="Unity.Properties.UI.Editor">
-     <HintPath>C:\Users\Serega\Documents\UnityProjects\ECS\Library\ScriptAssemblies\Unity.Properties.UI.Editor.dll</HintPath>
-     </Reference>
-     <Reference Include="Unity.Scenes">
-     <HintPath>C:\Users\Serega\Documents\UnityProjects\ECS\Library\ScriptAssemblies\Unity.Scenes.dll</HintPath>
-     </Reference>
-     <Reference Include="Unity.Mathematics.Extensions">
-     <HintPath>C:\Users\Serega\Documents\UnityProjects\ECS\Library\ScriptAssemblies\Unity.Mathematics.Extensions.dll</HintPath>
-     </Reference>
-     <Reference Include="Unity.Mathematics.Editor">
-     <HintPath>C:\Users\Serega\Documents\UnityProjects\ECS\Library\ScriptAssemblies\Unity.Mathematics.Editor.dll</HintPath>
-     </Reference>
-     <Reference Include="Unity.Transforms">
-     <HintPath>C:\Users\Serega\Documents\UnityProjects\ECS\Library\ScriptAssemblies\Unity.Transforms.dll</HintPath>
-     </Reference>
-     <Reference Include="Unity.Collections">
-     <HintPath>C:\Users\Serega\Documents\UnityProjects\ECS\Library\ScriptAssemblies\Unity.Collections.dll</HintPath>
-     </Reference>
-     <Reference Include="Unity.Scenes.Editor">
-     <HintPath>C:\Users\Serega\Documents\UnityProjects\ECS\Library\ScriptAssemblies\Unity.Scenes.Editor.dll</HintPath>
-     </Reference>
-     <Reference Include="Unity.Mathematics.Extensions.Hybrid">
-     <HintPath>C:\Users\Serega\Documents\UnityProjects\ECS\Library\ScriptAssemblies\Unity.Mathematics.Extensions.Hybrid.dll</HintPath>
-     </Reference>
-     <Reference Include="Unity.Entities.Editor">
-     <HintPath>C:\Users\Serega\Documents\UnityProjects\ECS\Library\ScriptAssemblies\Unity.Entities.Editor.dll</HintPath>
-     </Reference>
-     <Reference Include="Unity.Entities.BuildUtils">
-     <HintPath>C:\Users\Serega\Documents\UnityProjects\ECS\Library\ScriptAssemblies\Unity.Entities.BuildUtils.dll</HintPath>
-     </Reference>
-     <Reference Include="Unity.VisualStudio.Editor">
-     <HintPath>C:\Users\Serega\Documents\UnityProjects\ECS\Library\ScriptAssemblies\Unity.VisualStudio.Editor.dll</HintPath>
-     </Reference>
-     <Reference Include="Unity.Timeline">
-     <HintPath>C:\Users\Serega\Documents\UnityProjects\ECS\Library\ScriptAssemblies\Unity.Timeline.dll</HintPath>
-     </Reference>
-     <Reference Include="Unity.TextMeshPro">
-     <HintPath>C:\Users\Serega\Documents\UnityProjects\ECS\Library\ScriptAssemblies\Unity.TextMeshPro.dll</HintPath>
-     </Reference>
-     <Reference Include="Unity.Burst.Editor">
-     <HintPath>C:\Users\Serega\Documents\UnityProjects\ECS\Library\ScriptAssemblies\Unity.Burst.Editor.dll</HintPath>
-     </Reference>
-     <Reference Include="Unity.PlasticSCM.Editor">
-     <HintPath>C:\Users\Serega\Documents\UnityProjects\ECS\Library\ScriptAssemblies\Unity.PlasticSCM.Editor.dll</HintPath>
-     </Reference>
-     <Reference Include="Unity.Entities">
-     <HintPath>C:\Users\Serega\Documents\UnityProjects\ECS\Library\ScriptAssemblies\Unity.Entities.dll</HintPath>
-     </Reference>
-     <Reference Include="Unity.Entities.Hybrid">
-     <HintPath>C:\Users\Serega\Documents\UnityProjects\ECS\Library\ScriptAssemblies\Unity.Entities.Hybrid.dll</HintPath>
-     </Reference>
-     <Reference Include="Unity.Jobs.Editor">
-     <HintPath>C:\Users\Serega\Documents\UnityProjects\ECS\Library\ScriptAssemblies\Unity.Jobs.Editor.dll</HintPath>
-     </Reference>
-     <Reference Include="Unity.Mathematics">
-     <HintPath>C:\Users\Serega\Documents\UnityProjects\ECS\Library\ScriptAssemblies\Unity.Mathematics.dll</HintPath>
-     </Reference>
-     <Reference Include="Unity.Burst">
-     <HintPath>C:\Users\Serega\Documents\UnityProjects\ECS\Library\ScriptAssemblies\Unity.Burst.dll</HintPath>
-     </Reference>
-     <Reference Include="Unity.Jobs">
-     <HintPath>C:\Users\Serega\Documents\UnityProjects\ECS\Library\ScriptAssemblies\Unity.Jobs.dll</HintPath>
-     </Reference>
-     <Reference Include="Unity.Deformations">
-     <HintPath>C:\Users\Serega\Documents\UnityProjects\ECS\Library\ScriptAssemblies\Unity.Deformations.dll</HintPath>
-     </Reference>
-     <Reference Include="Unity.Timeline.Editor">
-     <HintPath>C:\Users\Serega\Documents\UnityProjects\ECS\Library\ScriptAssemblies\Unity.Timeline.Editor.dll</HintPath>
-     </Reference>
-     <Reference Include="Unity.Properties.UI">
-     <HintPath>C:\Users\Serega\Documents\UnityProjects\ECS\Library\ScriptAssemblies\Unity.Properties.UI.dll</HintPath>
-     </Reference>
-     <Reference Include="Unity.ScriptableBuildPipeline">
-     <HintPath>C:\Users\Serega\Documents\UnityProjects\ECS\Library\ScriptAssemblies\Unity.ScriptableBuildPipeline.dll</HintPath>
-     </Reference>
-     <Reference Include="Unity.Serialization.Editor">
-     <HintPath>C:\Users\Serega\Documents\UnityProjects\ECS\Library\ScriptAssemblies\Unity.Serialization.Editor.dll</HintPath>
-     </Reference>
-     <Reference Include="Unity.ScriptableBuildPipeline.Editor">
-     <HintPath>C:\Users\Serega\Documents\UnityProjects\ECS\Library\ScriptAssemblies\Unity.ScriptableBuildPipeline.Editor.dll</HintPath>
-     </Reference>
   </ItemGroup>
   <ItemGroup>
+    <ProjectReference Include="Unity.Transforms.Hybrid.csproj">
+      <Project>{f448a6f0-9af2-8833-92eb-0fad086c28f2}</Project>
+      <Name>Unity.Transforms.Hybrid</Name>
+    </ProjectReference>
+    <ProjectReference Include="Unity.Properties.csproj">
+      <Project>{12fa1c4e-65ac-a619-8738-bb050f20ccc1}</Project>
+      <Name>Unity.Properties</Name>
+    </ProjectReference>
+    <ProjectReference Include="Unity.Serialization.csproj">
+      <Project>{81254503-f24f-f743-3838-1715a2e96015}</Project>
+      <Name>Unity.Serialization</Name>
+    </ProjectReference>
+    <ProjectReference Include="Unity.VSCode.Editor.csproj">
+      <Project>{19f25ae0-d600-3a5e-0fa6-df120ebd52ef}</Project>
+      <Name>Unity.VSCode.Editor</Name>
+    </ProjectReference>
+    <ProjectReference Include="UnityEditor.CacheServer.csproj">
+      <Project>{3b1e6470-0a0d-8427-e267-8694d9a72b5b}</Project>
+      <Name>UnityEditor.CacheServer</Name>
+    </ProjectReference>
+    <ProjectReference Include="Unity.TextMeshPro.Editor.csproj">
+      <Project>{fab0734c-eae7-0797-7397-d4aed7f87470}</Project>
+      <Name>Unity.TextMeshPro.Editor</Name>
+    </ProjectReference>
+    <ProjectReference Include="Unity.InputSystem.csproj">
+      <Project>{7aacce67-bcb5-e8b4-cc8a-916c8051b81d}</Project>
+      <Name>Unity.InputSystem</Name>
+    </ProjectReference>
+    <ProjectReference Include="UnityEditor.UI.csproj">
+      <Project>{dbf8503f-d397-49d6-248e-699cff981ee0}</Project>
+      <Name>UnityEditor.UI</Name>
+    </ProjectReference>
+    <ProjectReference Include="Unity.Rider.Editor.csproj">
+      <Project>{5033ae97-418f-748d-f1a9-ad3dd94972b4}</Project>
+      <Name>Unity.Rider.Editor</Name>
+    </ProjectReference>
+    <ProjectReference Include="UnityEngine.UI.csproj">
+      <Project>{236bff09-fbd9-427b-8bed-56b9466e6220}</Project>
+      <Name>UnityEngine.UI</Name>
+    </ProjectReference>
+    <ProjectReference Include="Unity.Entities.Hybrid.EndToEnd.Tests.csproj">
+      <Project>{a4fa31c3-79c1-73ab-84ad-6c03db1515d9}</Project>
+      <Name>Unity.Entities.Hybrid.EndToEnd.Tests</Name>
+    </ProjectReference>
+    <ProjectReference Include="Unity.Properties.UI.Editor.csproj">
+      <Project>{b20f1806-76a9-b1af-1965-2ae8e51f1056}</Project>
+      <Name>Unity.Properties.UI.Editor</Name>
+    </ProjectReference>
+    <ProjectReference Include="Unity.Scenes.csproj">
+      <Project>{da84030d-6c52-349e-1ecb-b4f209ac5994}</Project>
+      <Name>Unity.Scenes</Name>
+    </ProjectReference>
+    <ProjectReference Include="Unity.Mathematics.Extensions.csproj">
+      <Project>{58fbc00b-c583-0552-c482-332495e330cf}</Project>
+      <Name>Unity.Mathematics.Extensions</Name>
+    </ProjectReference>
+    <ProjectReference Include="Unity.Mathematics.Editor.csproj">
+      <Project>{a6f3d51e-1421-2f27-9b88-aad5cfc94aed}</Project>
+      <Name>Unity.Mathematics.Editor</Name>
+    </ProjectReference>
+    <ProjectReference Include="Unity.Transforms.csproj">
+      <Project>{8390fa05-85ca-04d3-fce0-730c6c5f5db4}</Project>
+      <Name>Unity.Transforms</Name>
+    </ProjectReference>
+    <ProjectReference Include="Unity.Collections.csproj">
+      <Project>{a6125660-5047-3f17-392b-d5f25f81db44}</Project>
+      <Name>Unity.Collections</Name>
+    </ProjectReference>
+    <ProjectReference Include="Unity.Scenes.Editor.csproj">
+      <Project>{ef0d5536-2ff7-3a00-1669-362cb9449cc5}</Project>
+      <Name>Unity.Scenes.Editor</Name>
+    </ProjectReference>
+    <ProjectReference Include="Unity.Mathematics.Extensions.Hybrid.csproj">
+      <Project>{921cedfb-58b9-0fba-b1d0-bfdfbed15de2}</Project>
+      <Name>Unity.Mathematics.Extensions.Hybrid</Name>
+    </ProjectReference>
+    <ProjectReference Include="Unity.Entities.Editor.csproj">
+      <Project>{578ecabb-bdb7-1de1-24b5-202d0115a228}</Project>
+      <Name>Unity.Entities.Editor</Name>
+    </ProjectReference>
+    <ProjectReference Include="Unity.Entities.BuildUtils.csproj">
+      <Project>{db797855-1bee-16b3-8843-67b085f2d25a}</Project>
+      <Name>Unity.Entities.BuildUtils</Name>
+    </ProjectReference>
+    <ProjectReference Include="Unity.VisualStudio.Editor.csproj">
+      <Project>{6be67881-9280-fc9a-210e-378fba06d628}</Project>
+      <Name>Unity.VisualStudio.Editor</Name>
+    </ProjectReference>
+    <ProjectReference Include="Unity.Timeline.csproj">
+      <Project>{2080e60d-1a35-f050-3f0d-39bf541629f0}</Project>
+      <Name>Unity.Timeline</Name>
+    </ProjectReference>
+    <ProjectReference Include="Unity.TextMeshPro.csproj">
+      <Project>{04f3152d-4891-dcfc-ea05-1806ba4ea8fa}</Project>
+      <Name>Unity.TextMeshPro</Name>
+    </ProjectReference>
+    <ProjectReference Include="Unity.Burst.Editor.csproj">
+      <Project>{60eab5da-46eb-d39f-f352-300af7211956}</Project>
+      <Name>Unity.Burst.Editor</Name>
+    </ProjectReference>
+    <ProjectReference Include="Unity.PlasticSCM.Editor.csproj">
+      <Project>{be53e3ae-7a51-5e8e-0364-4a1a4799ae8d}</Project>
+      <Name>Unity.PlasticSCM.Editor</Name>
+    </ProjectReference>
+    <ProjectReference Include="Unity.Entities.csproj">
+      <Project>{ba6add14-c721-0d99-8710-d626bb81641a}</Project>
+      <Name>Unity.Entities</Name>
+    </ProjectReference>
+    <ProjectReference Include="Unity.Entities.Hybrid.csproj">
+      <Project>{6f555089-c19d-d694-ac02-ff7dca0e82ea}</Project>
+      <Name>Unity.Entities.Hybrid</Name>
+    </ProjectReference>
+    <ProjectReference Include="Unity.Jobs.Editor.csproj">
+      <Project>{460113ef-f200-4528-116c-e47eed6ef3c4}</Project>
+      <Name>Unity.Jobs.Editor</Name>
+    </ProjectReference>
+    <ProjectReference Include="Unity.Mathematics.csproj">
+      <Project>{b6edb76e-35fa-6293-89e6-318a2c9c2b20}</Project>
+      <Name>Unity.Mathematics</Name>
+    </ProjectReference>
+    <ProjectReference Include="Unity.Burst.csproj">
+      <Project>{12613b6c-7ed6-e02a-cf20-6b6ef1bf3468}</Project>
+      <Name>Unity.Burst</Name>
+    </ProjectReference>
+    <ProjectReference Include="Unity.Jobs.csproj">
+      <Project>{b84f3465-4c3a-4710-4fc3-8f617080f83d}</Project>
+      <Name>Unity.Jobs</Name>
+    </ProjectReference>
+    <ProjectReference Include="Unity.Deformations.csproj">
+      <Project>{69096fbd-fd82-3038-89c1-cb78ce15a96c}</Project>
+      <Name>Unity.Deformations</Name>
+    </ProjectReference>
+    <ProjectReference Include="Unity.Timeline.Editor.csproj">
+      <Project>{8b72e9a8-7f4f-b9e4-9623-c0c3bb8096ed}</Project>
+      <Name>Unity.Timeline.Editor</Name>
+    </ProjectReference>
+    <ProjectReference Include="Unity.Properties.UI.csproj">
+      <Project>{31057fc1-9beb-64c3-6147-4dc820b84340}</Project>
+      <Name>Unity.Properties.UI</Name>
+    </ProjectReference>
+    <ProjectReference Include="Unity.ScriptableBuildPipeline.csproj">
+      <Project>{981cf6bc-cf2d-3823-3669-c902a10a747f}</Project>
+      <Name>Unity.ScriptableBuildPipeline</Name>
+    </ProjectReference>
+    <ProjectReference Include="Unity.Serialization.Editor.csproj">
+      <Project>{dc83d4d5-1f46-1711-71ee-df6293f9aad9}</Project>
+      <Name>Unity.Serialization.Editor</Name>
+    </ProjectReference>
+    <ProjectReference Include="Unity.ScriptableBuildPipeline.Editor.csproj">
+      <Project>{d7367700-7c82-8b68-7485-26af13b59fb0}</Project>
+      <Name>Unity.ScriptableBuildPipeline.Editor</Name>
+    </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it.
