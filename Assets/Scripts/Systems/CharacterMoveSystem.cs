@@ -21,7 +21,7 @@ namespace Systems
                 {
                     var pos = transform.position;
                     var input = new Vector3(inputData.Move.x, 0, inputData.Move.y);
-                    Vector3 lookDirection = pos + input;
+                    var lookDirection = pos + input;
                     pos += input * moveData.Speed;
                     transform.position = pos;
                     transform.LookAt(lookDirection);

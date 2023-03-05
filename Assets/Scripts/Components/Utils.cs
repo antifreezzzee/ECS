@@ -16,7 +16,7 @@ namespace Components
         public static void ToWorldSpaceBox(this BoxCollider boxCollider, out float3 center, out float3 halfExtents,
             out quaternion orientation)
         {
-            Transform transform = boxCollider.transform;
+            var transform = boxCollider.transform;
             orientation = transform.rotation;
             center = transform.TransformPoint(boxCollider.center);
             var lossyScale = transform.lossyScale;
@@ -27,12 +27,12 @@ namespace Components
         public static void ToWorldSpaceCapsule(this CapsuleCollider capsuleCollider, out float3 point0,
             out float3 point1, out float radius)
         {
-            Transform transform = capsuleCollider.transform;
+            var transform = capsuleCollider.transform;
             var center = (float3) transform.TransformPoint(capsuleCollider.center);
             radius = 0;
             float height = 0;
             float3 lossyScale = transform.lossyScale;
-            float3 dir = float3.zero;
+            var dir = float3.zero;
 
             switch (capsuleCollider.direction)
             {
@@ -53,10 +53,7 @@ namespace Components
                     break;
             }
 
-            if (height < radius * 2)
-            {
-                dir = Vector3.zero;
-            }
+            if (height < radius * 2) dir = Vector3.zero;
 
             point0 = center + dir * (height * 0.5f - radius);
             point1 = center - dir * (height * 0.5f - radius);
@@ -64,7 +61,7 @@ namespace Components
 
         public static void ToWorldSpaceSphere(this SphereCollider sphereCollider, out float3 center, out float radius)
         {
-            Transform transform = sphereCollider.transform;
+            var transform = sphereCollider.transform;
             center = transform.TransformPoint(sphereCollider.center);
             radius = sphereCollider.radius * Max(Abs(transform.lossyScale));
         }

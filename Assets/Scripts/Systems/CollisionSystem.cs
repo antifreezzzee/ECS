@@ -9,8 +9,8 @@ namespace Systems
 {
     public class CollisionSystem : ComponentSystem
     {
+        private readonly Collider[] _colliders = new Collider[50];
         private EntityQuery _collisionQuery;
-        private Collider[] _colliders = new Collider[50];
 
         protected override void OnCreate()
         {
@@ -21,21 +21,21 @@ namespace Systems
         protected override void OnUpdate()
         {
             var dstManager = World.DefaultGameObjectInjectionWorld.EntityManager;
-            
+
             Entities.With(_collisionQuery).ForEach(
                 (Entity entity, Transform transform, ref ActorColliderData actorColliderData) =>
                 {
                     var gameObject = transform.gameObject;
                     float3 position = gameObject.transform.position;
-                    Quaternion rotation = gameObject.transform.rotation;
+                    var rotation = gameObject.transform.rotation;
 
                     var collisionAbility = gameObject.GetComponent<ICollisionAbility>();
-                    
+
                     if (collisionAbility == null) return;
-                    
+
                     collisionAbility.Collisions?.Clear();
-                    
-                    int size = 0;
+
+                    var size = 0;
 
                     switch (actorColliderData.ColliderType)
                     {
@@ -44,8 +44,8 @@ namespace Systems
                                 actorColliderData.SphereRadius, _colliders);
                             break;
                         case ColliderType.Capsule:
-                            var center = ((actorColliderData.CapsuleStart + position) + (actorColliderData.CapsuleEnd +
-                                          position)) / 2;
+                            var center = (actorColliderData.CapsuleStart + position + (actorColliderData.CapsuleEnd +
+                                position)) / 2;
                             var point1 = actorColliderData.CapsuleStart + position;
                             var point2 = actorColliderData.CapsuleEnd + position;
                             point1 = (float3) (rotation * (point1 - center)) + center;

@@ -9,10 +9,10 @@ public class UserInputSystem : ComponentSystem
     private EntityQuery _inputQuery;
     private InputAction _moveAction;
     private float2 _moveInput;
-    private InputAction _shootAction;
     private InputAction _rushAction;
-    private float _shootInput;
     private float _rushInput;
+    private InputAction _shootAction;
+    private float _shootInput;
 
 
     protected override void OnCreate()

@@ -1,5 +1,4 @@
 using System.Collections.Generic;
-using Components.Interfaces;
 using Unity.Entities;
 using Unity.Mathematics;
 using UnityEngine;
@@ -10,10 +9,9 @@ namespace Components
     {
         public Collider Collider;
         public List<Collider> Collisions { get; set; }
-        
+
         public void Execute()
         {
-            
         }
 
         public void Convert(Entity entity, EntityManager dstManager, GameObjectConversionSystem conversionSystem)
@@ -58,7 +56,6 @@ namespace Components
 
             Collider.enabled = false;
         }
-
     }
 
     public struct ActorColliderData : IComponentData

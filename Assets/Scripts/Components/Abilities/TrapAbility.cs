@@ -1,6 +1,3 @@
-using System.Collections.Generic;
-using UnityEngine;
-
 namespace Components
 {
     public class TrapAbility : CollisionAbility, ICollisionAbility
@@ -12,10 +9,7 @@ namespace Components
             foreach (var collider in Collisions)
             {
                 var colliderHealth = collider?.gameObject.GetComponent<CharacterHealth>();
-                if (colliderHealth != null)
-                {
-                    colliderHealth.Health -= Damage;
-                }
+                if (colliderHealth != null) colliderHealth.Health -= Damage;
             }
         }
     }

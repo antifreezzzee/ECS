@@ -18,10 +18,10 @@ namespace Components
             {
                 Speed = speed / 1000
             });
-            
-            if (shootAction != null && shootAction is IAbility) 
+
+            if (shootAction != null && shootAction is IAbility)
                 dstManager.AddComponentData(entity, new ShootData());
-            
+
             if (rushAction != null && rushAction is IAbility)
                 dstManager.AddComponentData(entity, new RushData());
         }
@@ -43,7 +43,7 @@ namespace Components
     {
         public float Shoot;
     }
-    
+
     public struct RushData : IComponentData
     {
         public float Rush;

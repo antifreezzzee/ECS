@@ -4,9 +4,9 @@ using UnityEngine;
 
 namespace Components
 {
-    public interface ICollisionAbility: IAbility
+    public interface ICollisionAbility : IAbility
 
     {
-    List<Collider> Collisions { get; set; }
+        List<Collider> Collisions { get; set; }
     }
 }

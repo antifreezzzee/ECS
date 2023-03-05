@@ -10,6 +10,11 @@ namespace Components
 
         private float _shootTime = float.MinValue;
 
+        private void Update()
+        {
+            CheckSelfDestroy();
+        }
+
         private void OnEnable()
         {
             GetComponent<Rigidbody>()
@@ -17,12 +22,7 @@ namespace Components
             _shootTime = Time.time;
         }
 
-        private void Update()
-        {
-            checkSelfDestroy();
-        }
-
-        private void checkSelfDestroy()
+        private void CheckSelfDestroy()
         {
             if (Time.time < _shootTime + selfDestroyDelay)
                 return;
