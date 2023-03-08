@@ -10,7 +10,7 @@ namespace Components
     {
         [SerializeField] private Collider collider;
         [SerializeField] private List<MonoBehaviour> collisionActions;
-        
+
         private List<IAbilityTarget> _collisionActionsAbilities = new List<IAbilityTarget>();
         private List<Collider> _collisions = new List<Collider>();
 

@@ -4,9 +4,18 @@ public class CharacterHealth : MonoBehaviour
 {
     [SerializeField] private int health = 100;
 
-    public int Health
+    public int Health => health;
+
+    public void AddHealth(int count)
     {
-        get => health;
-        set => health = value;
+        health += count;
+    }
+
+    public void GetDamage(int count)
+    {
+        if (health > 0)
+            health -= count;
+        if (health < 0)
+            health = 0;
     }
 }
