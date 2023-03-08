@@ -18,7 +18,8 @@ namespace Components
             if (bullet != null)
             {
                 var bulletTransform = transform;
-                Instantiate(bullet, bulletTransform.position, bulletTransform.rotation);
+                Instantiate(bullet, bulletTransform.position, bulletTransform.rotation).
+                    SetRicochet(CharacterStatus.IsRicochetBullets);
             }
         }
     }

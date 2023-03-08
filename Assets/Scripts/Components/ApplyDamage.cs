@@ -15,7 +15,7 @@ namespace Components
                 var health = target.GetComponent<CharacterHealth>();
                 if (health != null)
                 {
-                    health.GetDamage(damage);
+                    health.ReceiveDamage(damage);
                 }
             }
         }

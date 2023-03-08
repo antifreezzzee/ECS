@@ -44,6 +44,7 @@
      <Compile Include="Assets\Joystick Pack\Scripts\Joysticks\FixedJoystick.cs" />
      <Compile Include="Assets\Joystick Pack\Scripts\Joysticks\VariableJoystick.cs" />
      <Compile Include="Assets\Scripts\Systems\UserInputSystem.cs" />
+     <Compile Include="Assets\Scripts\Components\PickUps\HealPickup.cs" />
      <Compile Include="Assets\Scripts\Components\Utils.cs" />
      <Compile Include="Assets\Scripts\Components\Player\CharacterHealth.cs" />
      <Compile Include="Assets\Scripts\Systems\CharacterRushSystem.cs" />
@@ -61,6 +62,8 @@
      <Compile Include="Assets\Scripts\Components\Player\UserInputData.cs" />
      <Compile Include="Assets\Joystick Pack\Scripts\Joysticks\FloatingJoystick.cs" />
      <Compile Include="Assets\Scripts\Components\Abilities\CollisionAbility.cs" />
+     <Compile Include="Assets\Scripts\Components\PickUps\RicochetPickUp.cs" />
+     <Compile Include="Assets\Scripts\Components\Player\CharacterStatus.cs" />
      <Compile Include="Assets\Scripts\Systems\CollisionSystem.cs" />
      <Compile Include="Assets\Scripts\Components\Abilities\ShootAbility.cs" />
      <Reference Include="UnityEngine">

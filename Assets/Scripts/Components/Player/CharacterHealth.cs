@@ -11,7 +11,7 @@ public class CharacterHealth : MonoBehaviour
         health += count;
     }
 
-    public void GetDamage(int count)
+    public void ReceiveDamage(int count)
     {
         if (health > 0)
             health -= count;

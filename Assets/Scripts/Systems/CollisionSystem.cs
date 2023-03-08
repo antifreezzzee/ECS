@@ -9,9 +9,9 @@ namespace Systems
 {
     public class CollisionSystem : ComponentSystem
     {
-        private readonly Collider[] _colliders = new Collider[50];
-        private List<Collider> _collidersList = new List<Collider>();
         private EntityQuery _collisionQuery;
+        
+        private Collider[] _colliders = new Collider[50];
 
         protected override void OnCreate()
         {

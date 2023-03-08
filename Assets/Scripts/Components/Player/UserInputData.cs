@@ -45,6 +45,7 @@ namespace Components
     public struct ShootData : IComponentData
     {
         public float Shoot;
+        public bool Ricochet;
     }
 
     public struct RushData : IComponentData

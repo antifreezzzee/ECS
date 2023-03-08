@@ -1,3 +1,4 @@
+using System;
 using UnityEngine;
 
 namespace Components
@@ -9,6 +10,7 @@ namespace Components
         [SerializeField] private float selfDestroyDelay;
 
         private float _shootTime = float.MinValue;
+        private bool _isRicochet;
 
         private void Update()
         {
@@ -27,6 +29,19 @@ namespace Components
             if (Time.time < _shootTime + selfDestroyDelay)
                 return;
             Destroy(gameObject);
+        }
+
+        private void OnCollisionEnter(Collision collision)
+        {
+            if (!_isRicochet)
+            {
+                Destroy(gameObject);
+            }
+        }
+
+        public void SetRicochet(bool isRicochet)
+        {
+            _isRicochet = isRicochet;
         }
     }
 }
