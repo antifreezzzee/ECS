@@ -45,7 +45,7 @@
      <Compile Include="Assets\Joystick Pack\Scripts\Joysticks\VariableJoystick.cs" />
      <Compile Include="Assets\Scripts\Systems\UserInputSystem.cs" />
      <Compile Include="Assets\Scripts\Components\PickUps\HealPickup.cs" />
-     <Compile Include="Assets\Scripts\Components\Utils.cs" />
+     <Compile Include="Assets\Scripts\Utils.cs" />
      <Compile Include="Assets\Scripts\Components\Player\CharacterHealth.cs" />
      <Compile Include="Assets\Scripts\Systems\CharacterRushSystem.cs" />
      <Compile Include="Assets\Joystick Pack\Examples\JoystickPlayerExample.cs" />
@@ -66,6 +66,7 @@
      <Compile Include="Assets\Scripts\Components\Player\CharacterStatus.cs" />
      <Compile Include="Assets\Scripts\Systems\CollisionSystem.cs" />
      <Compile Include="Assets\Scripts\Components\Abilities\ShootAbility.cs" />
+     <Compile Include="Assets\Scripts\GoogleDriveTools.cs" />
      <Reference Include="UnityEngine">
      <HintPath>C:\Program Files\Unity\Hub\Editor\2020.3.23f1\Editor\Data\PlaybackEngines\WindowsStandaloneSupport\Variations\mono\Managed\UnityEngine.dll</HintPath>
      </Reference>
@@ -314,6 +315,9 @@
      </Reference>
      <Reference Include="Unity.ScriptableBuildPipeline.Editor">
      <HintPath>C:\Users\Serega\Documents\UnityProjects\ECS\Library\ScriptAssemblies\Unity.ScriptableBuildPipeline.Editor.dll</HintPath>
+     </Reference>
+     <Reference Include="Elringus.UnityGoogleDrive.Editor">
+     <HintPath>C:\Users\Serega\Documents\UnityProjects\ECS\Library\ScriptAssemblies\Elringus.UnityGoogleDrive.Editor.dll</HintPath>
      </Reference>
      <Reference Include="Newtonsoft.Json">
      <HintPath>C:\Users\Serega\Documents\UnityProjects\ECS\Library\PackageCache\com.unity.nuget.newtonsoft-json@2.0.0-preview\Runtime\AOT\Newtonsoft.Json.dll</HintPath>
@@ -750,6 +754,10 @@
     <ProjectReference Include="Unity.ScriptableBuildPipeline.Player.csproj">
       <Project>{03d97885-bda9-a412-b7f7-5120f1594eda}</Project>
       <Name>Unity.ScriptableBuildPipeline.Player</Name>
+    </ProjectReference>
+    <ProjectReference Include="Elringus.UnityGoogleDrive.Runtime.Player.csproj">
+      <Project>{d3515154-b9c2-8f08-5712-ddb8cd6921bc}</Project>
+      <Name>Elringus.UnityGoogleDrive.Runtime.Player</Name>
     </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />

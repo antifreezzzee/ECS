@@ -45,7 +45,7 @@
      <Compile Include="Assets\Joystick Pack\Scripts\Joysticks\VariableJoystick.cs" />
      <Compile Include="Assets\Scripts\Systems\UserInputSystem.cs" />
      <Compile Include="Assets\Scripts\Components\PickUps\HealPickup.cs" />
-     <Compile Include="Assets\Scripts\Components\Utils.cs" />
+     <Compile Include="Assets\Scripts\Utils.cs" />
      <Compile Include="Assets\Scripts\Components\Player\CharacterHealth.cs" />
      <Compile Include="Assets\Scripts\Systems\CharacterRushSystem.cs" />
      <Compile Include="Assets\Joystick Pack\Examples\JoystickPlayerExample.cs" />
@@ -66,6 +66,7 @@
      <Compile Include="Assets\Scripts\Components\Player\CharacterStatus.cs" />
      <Compile Include="Assets\Scripts\Systems\CollisionSystem.cs" />
      <Compile Include="Assets\Scripts\Components\Abilities\ShootAbility.cs" />
+     <Compile Include="Assets\Scripts\GoogleDriveTools.cs" />
      <Reference Include="UnityEngine">
      <HintPath>C:\Program Files\Unity\Hub\Editor\2020.3.23f1\Editor\Data\Managed\UnityEngine\UnityEngine.dll</HintPath>
      </Reference>
@@ -795,6 +796,14 @@
     <ProjectReference Include="Unity.ScriptableBuildPipeline.Editor.csproj">
       <Project>{d7367700-7c82-8b68-7485-26af13b59fb0}</Project>
       <Name>Unity.ScriptableBuildPipeline.Editor</Name>
+    </ProjectReference>
+    <ProjectReference Include="Elringus.UnityGoogleDrive.Runtime.csproj">
+      <Project>{998ba63e-bdc5-17ee-0ee1-62d6c96c9fce}</Project>
+      <Name>Elringus.UnityGoogleDrive.Runtime</Name>
+    </ProjectReference>
+    <ProjectReference Include="Elringus.UnityGoogleDrive.Editor.csproj">
+      <Project>{46e762f1-93ef-4805-2c12-237bd0f319d6}</Project>
+      <Name>Elringus.UnityGoogleDrive.Editor</Name>
     </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />

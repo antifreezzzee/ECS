@@ -820,6 +820,14 @@
       <Project>{d7367700-7c82-8b68-7485-26af13b59fb0}</Project>
       <Name>Unity.ScriptableBuildPipeline.Editor</Name>
     </ProjectReference>
+    <ProjectReference Include="Elringus.UnityGoogleDrive.Runtime.csproj">
+      <Project>{998ba63e-bdc5-17ee-0ee1-62d6c96c9fce}</Project>
+      <Name>Elringus.UnityGoogleDrive.Runtime</Name>
+    </ProjectReference>
+    <ProjectReference Include="Elringus.UnityGoogleDrive.Editor.csproj">
+      <Project>{46e762f1-93ef-4805-2c12-237bd0f319d6}</Project>
+      <Name>Elringus.UnityGoogleDrive.Editor</Name>
+    </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it.

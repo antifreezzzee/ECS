@@ -5,21 +5,66 @@ m_ProjectFiles:
     m_ContentTrackingEnabled: 1
     m_ModificationDate:
       serializedVersion: 2
-      ticks: 638135550072333674
-    m_Hash: 3897582251
+      ticks: 638138848493423835
+    m_Hash: 1943192344
   m_LockFileStatus:
     m_FilePath: C:/Users/Serega/Documents/UnityProjects/ECS/Packages/packages-lock.json
     m_PathExists: 1
     m_ContentTrackingEnabled: 1
     m_ModificationDate:
       serializedVersion: 2
-      ticks: 638135554732422638
-    m_Hash: 1296350266
+      ticks: 638138848493463841
+    m_Hash: 1359402911
 m_EmbeddedPackageManifests:
   m_ManifestsStatus: {}
 m_PackageAssets:
   m_Packages:
     m_ResolvedPackages:
+    - packageId: com.elringus.unitygoogledrive@https://github.com/Elringus/UnityGoogleDrive.git#package
+      testable: 0
+      isDirectDependency: 1
+      version: 0.27.0
+      source: 5
+      resolvedPath: C:\Users\Serega\Documents\UnityProjects\ECS\Library\PackageCache\com.elringus.unitygoogledrive@fe300dd537
+      assetPath: Packages/com.elringus.unitygoogledrive
+      name: com.elringus.unitygoogledrive
+      displayName: UnityGoogleDrive
+      author:
+        name: Elringus
+        email: 
+        url: https://elringus.me
+      category: 
+      type: 
+      description: Google Drive SDK for Unity game engine
+      status: 4
+      errors: []
+      versions:
+        all: []
+        compatible: []
+        verified: 
+      dependencies: []
+      resolvedDependencies: []
+      keywords: []
+      registry:
+        id: 
+        name: 
+        url: 
+        scopes: []
+        isDefault: 0
+        capabilities: 0
+      hasRegistry: 0
+      hideInEditor: 1
+      entitlements:
+        isAllowed: 1
+      isAssetStorePackage: 0
+      datePublishedTicks: 0
+      documentationUrl: 
+      hasRepository: 0
+      repository:
+        type: 
+        url: 
+        revision: 
+        path: 
     - packageId: com.unity.collab-proxy@1.17.2
       testable: 0
       isDirectDependency: 1
