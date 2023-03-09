@@ -61,12 +61,14 @@
      <Compile Include="Assets\Scripts\Components\Abilities\RushAbility.cs" />
      <Compile Include="Assets\Scripts\Components\Player\UserInputData.cs" />
      <Compile Include="Assets\Joystick Pack\Scripts\Joysticks\FloatingJoystick.cs" />
+     <Compile Include="Assets\Scripts\GoogleDriveTools.cs" />
      <Compile Include="Assets\Scripts\Components\Abilities\CollisionAbility.cs" />
      <Compile Include="Assets\Scripts\Components\PickUps\RicochetPickUp.cs" />
      <Compile Include="Assets\Scripts\Components\Player\CharacterStatus.cs" />
      <Compile Include="Assets\Scripts\Systems\CollisionSystem.cs" />
      <Compile Include="Assets\Scripts\Components\Abilities\ShootAbility.cs" />
-     <Compile Include="Assets\Scripts\GoogleDriveTools.cs" />
+     <Compile Include="Assets\Scripts\ShootCounter.cs" />
+     <Compile Include="Assets\Scripts\DisplayInfo.cs" />
      <Reference Include="UnityEngine">
      <HintPath>C:\Program Files\Unity\Hub\Editor\2020.3.23f1\Editor\Data\Managed\UnityEngine\UnityEngine.dll</HintPath>
      </Reference>
@@ -713,6 +715,10 @@
       <Project>{a6125660-5047-3f17-392b-d5f25f81db44}</Project>
       <Name>Unity.Collections</Name>
     </ProjectReference>
+    <ProjectReference Include="Elringus.UnityGoogleDrive.Editor.csproj">
+      <Project>{46e762f1-93ef-4805-2c12-237bd0f319d6}</Project>
+      <Name>Elringus.UnityGoogleDrive.Editor</Name>
+    </ProjectReference>
     <ProjectReference Include="Unity.Scenes.Editor.csproj">
       <Project>{ef0d5536-2ff7-3a00-1669-362cb9449cc5}</Project>
       <Name>Unity.Scenes.Editor</Name>
@@ -769,6 +775,10 @@
       <Project>{12613b6c-7ed6-e02a-cf20-6b6ef1bf3468}</Project>
       <Name>Unity.Burst</Name>
     </ProjectReference>
+    <ProjectReference Include="Elringus.UnityGoogleDrive.Runtime.csproj">
+      <Project>{998ba63e-bdc5-17ee-0ee1-62d6c96c9fce}</Project>
+      <Name>Elringus.UnityGoogleDrive.Runtime</Name>
+    </ProjectReference>
     <ProjectReference Include="Unity.Jobs.csproj">
       <Project>{b84f3465-4c3a-4710-4fc3-8f617080f83d}</Project>
       <Name>Unity.Jobs</Name>
@@ -796,14 +806,6 @@
     <ProjectReference Include="Unity.ScriptableBuildPipeline.Editor.csproj">
       <Project>{d7367700-7c82-8b68-7485-26af13b59fb0}</Project>
       <Name>Unity.ScriptableBuildPipeline.Editor</Name>
-    </ProjectReference>
-    <ProjectReference Include="Elringus.UnityGoogleDrive.Runtime.csproj">
-      <Project>{998ba63e-bdc5-17ee-0ee1-62d6c96c9fce}</Project>
-      <Name>Elringus.UnityGoogleDrive.Runtime</Name>
-    </ProjectReference>
-    <ProjectReference Include="Elringus.UnityGoogleDrive.Editor.csproj">
-      <Project>{46e762f1-93ef-4805-2c12-237bd0f319d6}</Project>
-      <Name>Elringus.UnityGoogleDrive.Editor</Name>
     </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />

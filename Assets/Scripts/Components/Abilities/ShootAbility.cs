@@ -1,4 +1,5 @@
 using Components.Interfaces;
+using DefaultNamespace;
 using UnityEngine;
 
 namespace Components
@@ -7,8 +8,16 @@ namespace Components
     {
         [SerializeField] private Projectile bullet;
         [SerializeField] private float shootDelay;
-
+        
         private float _shootTime = float.MinValue;
+        public ShootCounter shootCounter;
+
+        private void Start()
+        {
+            shootCounter = new ShootCounter();
+            shootCounter = shootCounter.LoadStats();
+            shootCounter.InvokeChangedEvent();
+        }
 
         public void Execute()
         {
@@ -18,8 +27,10 @@ namespace Components
             if (bullet != null)
             {
                 var bulletTransform = transform;
-                Instantiate(bullet, bulletTransform.position, bulletTransform.rotation).
-                    SetRicochet(CharacterStatus.IsRicochetBullets);
+                Instantiate(bullet, bulletTransform.position, bulletTransform.rotation)
+                    .SetRicochet(CharacterStatus.IsRicochetBullets);
+                shootCounter.ShootsCount++;
+                shootCounter.SaveStats();
             }
         }
     }

@@ -94,8 +94,8 @@
      <Compile Include="Library\PackageCache\com.unity.platforms@0.10.0-preview.10\Editor\Unity.Build\Properties\HierarchicalComponentContainer.cs" />
      <Compile Include="Library\PackageCache\com.unity.platforms@0.10.0-preview.10\Editor\Unity.Build\ResultBase.cs" />
      <Compile Include="Library\PackageCache\com.unity.platforms@0.10.0-preview.10\Editor\Unity.Build\BuildManifest.cs" />
-     <Compile Include="Library\PackageCache\com.unity.platforms@0.10.0-preview.10\Editor\Unity.Build\Extensions\BuildTargetExtensions.cs" />
      <Compile Include="Library\PackageCache\com.unity.platforms@0.10.0-preview.10\Editor\Unity.Build\Obsolete\ICustomBuildComponentConstructor.cs" />
+     <Compile Include="Library\PackageCache\com.unity.platforms@0.10.0-preview.10\Editor\Unity.Build\Extensions\BuildTargetExtensions.cs" />
      <Compile Include="Library\PackageCache\com.unity.platforms@0.10.0-preview.10\Editor\Unity.Build\ObjectPool\CollectionPool.cs" />
      <Compile Include="Library\PackageCache\com.unity.platforms@0.10.0-preview.10\Editor\Unity.Build\bee\Components\ScreenOrientationsCommon.cs" />
      <Compile Include="Library\PackageCache\com.unity.platforms@0.10.0-preview.10\Editor\Unity.Build\BuildPipelineBaseJsonAdapter.cs" />

@@ -188,8 +188,8 @@
      <Compile Include="Library\PackageCache\com.unity.collab-proxy@1.17.2\Editor\PlasticSCM\Tool\IsExeAvailable.cs" />
      <Compile Include="Library\PackageCache\com.unity.collab-proxy@1.17.2\Editor\PlasticSCM\Views\IncomingChanges\Gluon\Errors\ErrorsListView.cs" />
      <Compile Include="Library\PackageCache\com.unity.collab-proxy@1.17.2\Editor\PlasticSCM\Views\Diff\DiffTreeViewMenu.cs" />
-     <Compile Include="Library\PackageCache\com.unity.collab-proxy@1.17.2\Editor\PlasticSCM\PlasticPlugin.cs" />
      <Compile Include="Library\PackageCache\com.unity.collab-proxy@1.17.2\Editor\PlasticSCM\Views\Changesets\ChangesetsTab_Operations.cs" />
+     <Compile Include="Library\PackageCache\com.unity.collab-proxy@1.17.2\Editor\PlasticSCM\PlasticPlugin.cs" />
      <Compile Include="Library\PackageCache\com.unity.collab-proxy@1.17.2\Editor\PlasticSCM\UI\EnumPopupSetting.cs" />
      <Compile Include="Library\PackageCache\com.unity.collab-proxy@1.17.2\Editor\PlasticSCM\Views\CreateWorkspace\Dialogs\RepositoryListViewItem.cs" />
      <Compile Include="Library\PackageCache\com.unity.collab-proxy@1.17.2\Editor\PlasticSCM\Configuration\CloudEdition\Welcome\CloudEditionWelcomeWindow.cs" />

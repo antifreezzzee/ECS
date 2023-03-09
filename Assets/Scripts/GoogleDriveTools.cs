@@ -1,6 +1,7 @@
 using System;
 using System.Collections.Generic;
 using System.Text;
+using UnityEngine;
 using UnityGoogleDrive;
 using UnityGoogleDrive.Data;
 
@@ -13,11 +14,10 @@ public static class GoogleDriveTools
         return output;
     }
 
-    public static File Upload(String str, Action onDone)
+    public static void Upload(String str)
     {
         var file = new File {Name = "GameData.json", Content = Encoding.ASCII.GetBytes(str)};
-        GoogleDriveFiles.Create(file).Send();
-        return file;
+        GoogleDriveFiles.Create(file).Send().OnDone += json => { Debug.Log("json was uploaded"); };
     }
 
     public static File Download(String fileId)

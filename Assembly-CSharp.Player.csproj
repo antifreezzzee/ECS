@@ -61,12 +61,14 @@
      <Compile Include="Assets\Scripts\Components\Abilities\RushAbility.cs" />
      <Compile Include="Assets\Scripts\Components\Player\UserInputData.cs" />
      <Compile Include="Assets\Joystick Pack\Scripts\Joysticks\FloatingJoystick.cs" />
+     <Compile Include="Assets\Scripts\GoogleDriveTools.cs" />
      <Compile Include="Assets\Scripts\Components\Abilities\CollisionAbility.cs" />
      <Compile Include="Assets\Scripts\Components\PickUps\RicochetPickUp.cs" />
      <Compile Include="Assets\Scripts\Components\Player\CharacterStatus.cs" />
      <Compile Include="Assets\Scripts\Systems\CollisionSystem.cs" />
      <Compile Include="Assets\Scripts\Components\Abilities\ShootAbility.cs" />
-     <Compile Include="Assets\Scripts\GoogleDriveTools.cs" />
+     <Compile Include="Assets\Scripts\ShootCounter.cs" />
+     <Compile Include="Assets\Scripts\DisplayInfo.cs" />
      <Reference Include="UnityEngine">
      <HintPath>C:\Program Files\Unity\Hub\Editor\2020.3.23f1\Editor\Data\PlaybackEngines\WindowsStandaloneSupport\Variations\mono\Managed\UnityEngine.dll</HintPath>
      </Reference>
@@ -286,6 +288,9 @@
      <Reference Include="Unity.Mathematics.Editor">
      <HintPath>C:\Users\Serega\Documents\UnityProjects\ECS\Library\ScriptAssemblies\Unity.Mathematics.Editor.dll</HintPath>
      </Reference>
+     <Reference Include="Elringus.UnityGoogleDrive.Editor">
+     <HintPath>C:\Users\Serega\Documents\UnityProjects\ECS\Library\ScriptAssemblies\Elringus.UnityGoogleDrive.Editor.dll</HintPath>
+     </Reference>
      <Reference Include="Unity.Scenes.Editor">
      <HintPath>C:\Users\Serega\Documents\UnityProjects\ECS\Library\ScriptAssemblies\Unity.Scenes.Editor.dll</HintPath>
      </Reference>
@@ -315,9 +320,6 @@
      </Reference>
      <Reference Include="Unity.ScriptableBuildPipeline.Editor">
      <HintPath>C:\Users\Serega\Documents\UnityProjects\ECS\Library\ScriptAssemblies\Unity.ScriptableBuildPipeline.Editor.dll</HintPath>
-     </Reference>
-     <Reference Include="Elringus.UnityGoogleDrive.Editor">
-     <HintPath>C:\Users\Serega\Documents\UnityProjects\ECS\Library\ScriptAssemblies\Elringus.UnityGoogleDrive.Editor.dll</HintPath>
      </Reference>
      <Reference Include="Newtonsoft.Json">
      <HintPath>C:\Users\Serega\Documents\UnityProjects\ECS\Library\PackageCache\com.unity.nuget.newtonsoft-json@2.0.0-preview\Runtime\AOT\Newtonsoft.Json.dll</HintPath>
@@ -739,6 +741,10 @@
       <Project>{172a2ab1-e5ae-4a87-7873-fd294e730682}</Project>
       <Name>Unity.Burst.Player</Name>
     </ProjectReference>
+    <ProjectReference Include="Elringus.UnityGoogleDrive.Runtime.Player.csproj">
+      <Project>{d3515154-b9c2-8f08-5712-ddb8cd6921bc}</Project>
+      <Name>Elringus.UnityGoogleDrive.Runtime.Player</Name>
+    </ProjectReference>
     <ProjectReference Include="Unity.Jobs.Player.csproj">
       <Project>{9417b13f-cfa2-4dc8-ff37-e0d043eae32d}</Project>
       <Name>Unity.Jobs.Player</Name>
@@ -754,10 +760,6 @@
     <ProjectReference Include="Unity.ScriptableBuildPipeline.Player.csproj">
       <Project>{03d97885-bda9-a412-b7f7-5120f1594eda}</Project>
       <Name>Unity.ScriptableBuildPipeline.Player</Name>
-    </ProjectReference>
-    <ProjectReference Include="Elringus.UnityGoogleDrive.Runtime.Player.csproj">
-      <Project>{d3515154-b9c2-8f08-5712-ddb8cd6921bc}</Project>
-      <Name>Elringus.UnityGoogleDrive.Runtime.Player</Name>
     </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
