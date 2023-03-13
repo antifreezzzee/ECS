@@ -30,6 +30,7 @@ namespace Components
                 Instantiate(bullet, bulletTransform.position, bulletTransform.rotation)
                     .SetRicochet(CharacterStatus.IsRicochetBullets);
                 shootCounter.ShootsCount++;
+                shootCounter.InvokeChangedEvent();
                 shootCounter.SaveStats();
             }
         }

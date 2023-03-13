@@ -1,4 +1,3 @@
-using System;
 using System.Collections.Generic;
 using System.Text;
 using UnityEngine;
@@ -14,13 +13,22 @@ public static class GoogleDriveTools
         return output;
     }
 
-    public static void Upload(String str)
+    public static File CreateFileFromJson(string jsonString)
     {
-        var file = new File {Name = "GameData.json", Content = Encoding.ASCII.GetBytes(str)};
+        return new File {Name = "GameData.json", Content = Encoding.ASCII.GetBytes(jsonString)};
+    }
+
+    public static void Upload(File file)
+    {
         GoogleDriveFiles.Create(file).Send().OnDone += json => { Debug.Log("json was uploaded"); };
     }
 
-    public static File Download(String fileId)
+    public static void Update(string fileId, File newFile)
+    {
+        GoogleDriveFiles.Update(fileId, newFile).Send().OnDone += file => { Debug.Log("json was updated"); };
+    }
+
+    public static File Download(string fileId)
     {
         File output = new File();
         GoogleDriveFiles.Download(fileId).Send().OnDone += file => { output = file; };

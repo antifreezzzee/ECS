@@ -5,16 +5,16 @@ m_ProjectFiles:
     m_ContentTrackingEnabled: 1
     m_ModificationDate:
       serializedVersion: 2
-      ticks: 638138848493423835
-    m_Hash: 1943192344
+      ticks: 638142519896964099
+    m_Hash: 1919982179
   m_LockFileStatus:
     m_FilePath: C:/Users/Serega/Documents/UnityProjects/ECS/Packages/packages-lock.json
     m_PathExists: 1
     m_ContentTrackingEnabled: 1
     m_ModificationDate:
       serializedVersion: 2
-      ticks: 638138848493463841
-    m_Hash: 1359402911
+      ticks: 638142519896964099
+    m_Hash: 2119778817
 m_EmbeddedPackageManifests:
   m_ManifestsStatus: {}
 m_PackageAssets:

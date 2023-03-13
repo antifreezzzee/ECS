@@ -8,7 +8,7 @@ namespace DefaultNamespace
     {
         [SerializeField] private Text shootsText;
         [SerializeField] private ShootAbility shootAbility;
-        
+
         private void OnEnable()
         {
             ShootCounter.OnShootsCountChanged += UpdateText;
