@@ -1,3 +1,4 @@
+using System;
 using System.Collections.Generic;
 using System.Text;
 using UnityEngine;
@@ -6,6 +7,10 @@ using UnityGoogleDrive.Data;
 
 public static class GoogleDriveTools
 {
+    public static File RemoteFile;
+
+    public static event Action OnFileDownloaded;
+
     public static List<File> FileList()
     {
         List<File> output = new List<File>();
@@ -20,18 +25,23 @@ public static class GoogleDriveTools
 
     public static void Upload(File file)
     {
-        GoogleDriveFiles.Create(file).Send().OnDone += json => { Debug.Log("json was uploaded"); };
+        GoogleDriveFiles.Create(file).Send().OnDone += json => { Debug.Log("json файл отправлен на сервер"); };
     }
 
     public static void Update(string fileId, File newFile)
     {
-        GoogleDriveFiles.Update(fileId, newFile).Send().OnDone += file => { Debug.Log("json was updated"); };
+        GoogleDriveFiles.Update(fileId, newFile).Send().OnDone += file => { Debug.Log("json файл на сервере обновлен"); };
     }
 
     public static File Download(string fileId)
     {
-        File output = new File();
-        GoogleDriveFiles.Download(fileId).Send().OnDone += file => { output = file; };
-        return output;
+        RemoteFile = new File();
+        GoogleDriveFiles.Download(fileId).Send().OnDone += file => 
+        { 
+            Debug.Log("json файл скачан с сервера");
+            RemoteFile = file; 
+            OnFileDownloaded?.Invoke();
+        };
+        return RemoteFile;
     }
 }

@@ -1,7 +1,8 @@
+using Components;
 using System;
 using System.Text;
-using Components;
 using UnityEngine;
+using UnityGoogleDrive.Data;
 
 namespace DefaultNamespace
 {
@@ -11,6 +12,10 @@ namespace DefaultNamespace
         [SerializeField] private double shootsCount;
 
         public static event Action OnShootsCountChanged;
+        public void InvokeChangedEvent()
+        {
+            OnShootsCountChanged?.Invoke();
+        }
 
         public double ShootsCount
         {
@@ -26,30 +31,28 @@ namespace DefaultNamespace
             GoogleDriveTools.Update(CharacterStatus.SaveFileId, jsonFile);
         }
 
-        public ShootCounter LoadStats()
+        public ShootCounter LoadStatsFromPrefs()
         {
-            try
-            {
-                var remoteFile = GoogleDriveTools.Download(CharacterStatus.SaveFileId);
-                var remoteFileBytes = remoteFile.Content;
-                var remoteFileJsonString = Encoding.ASCII.GetString(remoteFileBytes);
-                Debug.Log(remoteFileJsonString);
-                return JsonUtility.FromJson<ShootCounter>(remoteFileJsonString);
-                
-            }
-            catch (Exception e)
-            {
-                Debug.LogError(e.Message);
-                if (PlayerPrefs.HasKey("Stats"))
-                    return JsonUtility.FromJson<ShootCounter>(PlayerPrefs.GetString("Stats"));
-            }
-
+            if (PlayerPrefs.HasKey("Stats"))
+                return JsonUtility.FromJson<ShootCounter>(PlayerPrefs.GetString("Stats"));
             return new ShootCounter();
         }
 
-        public void InvokeChangedEvent()
+        public ShootCounter LoadStatsFromRemote()
         {
-            OnShootsCountChanged?.Invoke();
+            File remoteFile = new File();
+            if (GoogleDriveTools.RemoteFile != null)
+            {
+                remoteFile = GoogleDriveTools.RemoteFile;
+                Debug.Log("json файл получен");
+                byte[] remoteFileBytes = remoteFile.Content;
+                Debug.Log($"контент получен. количество байт: {remoteFile.Content.Length}");
+                var remoteFileJsonString = Encoding.ASCII.GetString(remoteFileBytes);
+                Debug.Log($"json распарсен из байт: {remoteFileJsonString}");
+                return JsonUtility.FromJson<ShootCounter>(remoteFileJsonString);
+            }
+            return new ShootCounter();
         }
+
     }
 }

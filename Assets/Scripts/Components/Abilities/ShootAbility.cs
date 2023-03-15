@@ -12,10 +12,32 @@ namespace Components
         private float _shootTime = float.MinValue;
         public ShootCounter shootCounter;
 
+        private void OnEnable()
+        {
+            GoogleDriveTools.OnFileDownloaded += GetRemoteStats;
+        }
+
+        private void OnDisable()
+        {
+            GoogleDriveTools.OnFileDownloaded -= GetRemoteStats;
+        }
         private void Start()
         {
+            GetLocalStats();
+            GoogleDriveTools.Download(CharacterStatus.SaveFileId);
+        }
+
+        private void GetRemoteStats()
+        {
             shootCounter = new ShootCounter();
-            shootCounter = shootCounter.LoadStats();
+            shootCounter = shootCounter.LoadStatsFromRemote();
+            shootCounter.InvokeChangedEvent();
+        }
+
+        private void GetLocalStats()
+        {
+            shootCounter = new ShootCounter();
+            shootCounter = shootCounter.LoadStatsFromPrefs();
             shootCounter.InvokeChangedEvent();
         }
 
