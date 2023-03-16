@@ -15,6 +15,9 @@ GameObject:
   - component: {fileID: 2925785730634175255}
   - component: {fileID: 2925785730634175248}
   - component: {fileID: 2925785730634175254}
+  - component: {fileID: 1699958160087549060}
+  - component: {fileID: 63534189789024793}
+  - component: {fileID: 1335931883737521916}
   m_Layer: 8
   m_Name: Trap
   m_TagString: Untagged
@@ -63,7 +66,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 10303, guid: 0000000000000000f000000000000000, type: 0}
+  - {fileID: 2100000, guid: b2c6b9dc52736f744b2a61308a3fbd12, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -139,3 +142,41 @@ MonoBehaviour:
   collider: {fileID: 2925785730634175244}
   collisionActions:
   - {fileID: 2925785730634175248}
+--- !u!114 &1699958160087549060
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2925785730634175245}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f6857ae0fb24da1498ce0455beb8ed5a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  behaviours:
+  - {fileID: 63534189789024793}
+--- !u!114 &63534189789024793
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2925785730634175245}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f1179cd835d741ee83c09cfbe7339b0e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!114 &1335931883737521916
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2925785730634175245}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 53facbb1367648febca4ae1a03181694, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
