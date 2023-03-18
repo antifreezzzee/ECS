@@ -5,6 +5,7 @@ namespace Components.Behaviours
 {
     public class WaitBehaviour : MonoBehaviour, IBehaviour
     {
+        [SerializeField] private float rotationSpeed;
         public float Evaluate()
         {
             return 0.5f;
@@ -12,7 +13,7 @@ namespace Components.Behaviours
 
         public void Behave()
         {
-            Debug.Log("waiting");
+            transform.Rotate(Vector3.up, rotationSpeed * Time.deltaTime);
         }
     }
 }

@@ -8,6 +8,7 @@ namespace Components
     {
         [SerializeField] private Projectile bullet;
         [SerializeField] private float shootDelay;
+        [SerializeField] private Transform bulletEmitter;
         
         private float _shootTime = float.MinValue;
         public ShootCounter shootCounter;
@@ -48,7 +49,7 @@ namespace Components
             _shootTime = Time.time;
             if (bullet != null)
             {
-                var bulletTransform = transform;
+                var bulletTransform = bulletEmitter;
                 Instantiate(bullet, bulletTransform.position, bulletTransform.rotation)
                     .SetRicochet(CharacterStatus.IsRicochetBullets);
                 shootCounter.ShootsCount++;

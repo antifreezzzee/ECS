@@ -692,13 +692,13 @@
       <Project>{fab0734c-eae7-0797-7397-d4aed7f87470}</Project>
       <Name>Unity.TextMeshPro.Editor</Name>
     </ProjectReference>
-    <ProjectReference Include="Unity.InputSystem.csproj">
-      <Project>{7aacce67-bcb5-e8b4-cc8a-916c8051b81d}</Project>
-      <Name>Unity.InputSystem</Name>
-    </ProjectReference>
     <ProjectReference Include="UnityEditor.UI.csproj">
       <Project>{dbf8503f-d397-49d6-248e-699cff981ee0}</Project>
       <Name>UnityEditor.UI</Name>
+    </ProjectReference>
+    <ProjectReference Include="Unity.InputSystem.csproj">
+      <Project>{7aacce67-bcb5-e8b4-cc8a-916c8051b81d}</Project>
+      <Name>Unity.InputSystem</Name>
     </ProjectReference>
     <ProjectReference Include="Unity.Rider.Editor.csproj">
       <Project>{5033ae97-418f-748d-f1a9-ad3dd94972b4}</Project>
@@ -716,6 +716,14 @@
       <Project>{b20f1806-76a9-b1af-1965-2ae8e51f1056}</Project>
       <Name>Unity.Properties.UI.Editor</Name>
     </ProjectReference>
+    <ProjectReference Include="Cinemachine.csproj">
+      <Project>{a741d095-a192-5d27-783a-c7ea051cae0a}</Project>
+      <Name>Cinemachine</Name>
+    </ProjectReference>
+    <ProjectReference Include="com.unity.cinemachine.editor.csproj">
+      <Project>{2ed1698c-1b22-bb9c-27db-289d6bdaf993}</Project>
+      <Name>com.unity.cinemachine.editor</Name>
+    </ProjectReference>
     <ProjectReference Include="Unity.Scenes.csproj">
       <Project>{da84030d-6c52-349e-1ecb-b4f209ac5994}</Project>
       <Name>Unity.Scenes</Name>
@@ -724,9 +732,17 @@
       <Project>{58fbc00b-c583-0552-c482-332495e330cf}</Project>
       <Name>Unity.Mathematics.Extensions</Name>
     </ProjectReference>
+    <ProjectReference Include="NavMeshComponents.csproj">
+      <Project>{3bea1a92-1aaa-7ca9-f7b4-73bf9800fba2}</Project>
+      <Name>NavMeshComponents</Name>
+    </ProjectReference>
     <ProjectReference Include="Unity.Mathematics.Editor.csproj">
       <Project>{a6f3d51e-1421-2f27-9b88-aad5cfc94aed}</Project>
       <Name>Unity.Mathematics.Editor</Name>
+    </ProjectReference>
+    <ProjectReference Include="NavMeshComponentsEditor.csproj">
+      <Project>{3f4f449f-2811-4d0c-5405-8e3a7899b3c2}</Project>
+      <Name>NavMeshComponentsEditor</Name>
     </ProjectReference>
     <ProjectReference Include="Unity.Transforms.csproj">
       <Project>{8390fa05-85ca-04d3-fce0-730c6c5f5db4}</Project>

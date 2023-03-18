@@ -19,7 +19,6 @@ namespace Systems
             Entities.With(_evaluateQuery).ForEach(
                 (Entity entity, BehaviourManager behaviourManager) =>
                 {
-                    IBehaviour bestBehaviour;
                     float highScore = float.MinValue;
 
                     behaviourManager.ActiveBehaviour = null;

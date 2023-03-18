@@ -41,20 +41,26 @@
     <ImplicitlyExpandDesignTimeFacades>false</ImplicitlyExpandDesignTimeFacades>
   </PropertyGroup>
   <ItemGroup>
+     <Compile Include="Assets\Scripts\Systems\AIBehaveSystem.cs" />
      <Compile Include="Assets\Joystick Pack\Scripts\Joysticks\FixedJoystick.cs" />
      <Compile Include="Assets\Joystick Pack\Scripts\Joysticks\VariableJoystick.cs" />
      <Compile Include="Assets\Scripts\DisplayInfo.cs" />
      <Compile Include="Assets\Scripts\Systems\UserInputSystem.cs" />
      <Compile Include="Assets\Scripts\Components\PickUps\HealPickup.cs" />
      <Compile Include="Assets\Scripts\Utils.cs" />
+     <Compile Include="Assets\Scripts\Components\Behaviours\WaitBehaviour.cs" />
+     <Compile Include="Assets\Scripts\Components\BehaviourManager.cs" />
      <Compile Include="Assets\Scripts\Components\Player\CharacterHealth.cs" />
      <Compile Include="Assets\Scripts\Systems\CharacterRushSystem.cs" />
      <Compile Include="Assets\Joystick Pack\Examples\JoystickPlayerExample.cs" />
      <Compile Include="Assets\Scripts\Systems\CharacterShootSystem.cs" />
+     <Compile Include="Assets\Scripts\Components\Behaviours\AttackBehaviour.cs" />
      <Compile Include="Assets\Scripts\Systems\CharacterMoveSystem.cs" />
      <Compile Include="Assets\Scripts\ShootCounter.cs" />
      <Compile Include="Assets\Joystick Pack\Scripts\Joysticks\DynamicJoystick.cs" />
+     <Compile Include="Assets\Scripts\Components\Interfaces\IBehaviour.cs" />
      <Compile Include="Assets\Joystick Pack\Scripts\Base\Joystick.cs" />
+     <Compile Include="Assets\Scripts\Systems\AIEvaluateSystem.cs" />
      <Compile Include="Assets\Scripts\Components\Projectile.cs" />
      <Compile Include="Assets\Scripts\Components\Interfaces\IAbilityTarget.cs" />
      <Compile Include="Assets\Joystick Pack\Examples\JoystickSetterExample.cs" />
@@ -69,12 +75,6 @@
      <Compile Include="Assets\Scripts\Components\Player\CharacterStatus.cs" />
      <Compile Include="Assets\Scripts\Systems\CollisionSystem.cs" />
      <Compile Include="Assets\Scripts\Components\Abilities\ShootAbility.cs" />
-     <Compile Include="Assets\Scripts\Components\BehaviourManager.cs" />
-     <Compile Include="Assets\Scripts\Components\Interfaces\IBehaviour.cs" />
-     <Compile Include="Assets\Scripts\Components\Behaviours\WaitBehaviour.cs" />
-     <Compile Include="Assets\Scripts\Systems\AIEvaluateSystem.cs" />
-     <Compile Include="Assets\Scripts\Systems\AIBehaveSystem.cs" />
-     <Compile Include="Assets\Scripts\Components\Behaviours\RotateBehaviour.cs" />
      <Reference Include="UnityEngine">
      <HintPath>C:\Program Files\Unity\Hub\Editor\2020.3.23f1\Editor\Data\PlaybackEngines\WindowsStandaloneSupport\Variations\mono\Managed\UnityEngine.dll</HintPath>
      </Reference>
@@ -291,8 +291,14 @@
      <Reference Include="Unity.Properties.UI.Editor">
      <HintPath>C:\Users\Serega\Documents\UnityProjects\ECS\Library\ScriptAssemblies\Unity.Properties.UI.Editor.dll</HintPath>
      </Reference>
+     <Reference Include="com.unity.cinemachine.editor">
+     <HintPath>C:\Users\Serega\Documents\UnityProjects\ECS\Library\ScriptAssemblies\com.unity.cinemachine.editor.dll</HintPath>
+     </Reference>
      <Reference Include="Unity.Mathematics.Editor">
      <HintPath>C:\Users\Serega\Documents\UnityProjects\ECS\Library\ScriptAssemblies\Unity.Mathematics.Editor.dll</HintPath>
+     </Reference>
+     <Reference Include="NavMeshComponentsEditor">
+     <HintPath>C:\Users\Serega\Documents\UnityProjects\ECS\Library\ScriptAssemblies\NavMeshComponentsEditor.dll</HintPath>
      </Reference>
      <Reference Include="Elringus.UnityGoogleDrive.Editor">
      <HintPath>C:\Users\Serega\Documents\UnityProjects\ECS\Library\ScriptAssemblies\Elringus.UnityGoogleDrive.Editor.dll</HintPath>
@@ -703,6 +709,10 @@
       <Project>{91744492-9dbb-563e-3569-7e258531b822}</Project>
       <Name>UnityEngine.UI.Player</Name>
     </ProjectReference>
+    <ProjectReference Include="Cinemachine.Player.csproj">
+      <Project>{ad6911a4-bcf2-0e59-2249-24ed64653584}</Project>
+      <Name>Cinemachine.Player</Name>
+    </ProjectReference>
     <ProjectReference Include="Unity.Scenes.Player.csproj">
       <Project>{8af4799d-b357-6577-8253-a5e4a7111d53}</Project>
       <Name>Unity.Scenes.Player</Name>
@@ -710,6 +720,10 @@
     <ProjectReference Include="Unity.Mathematics.Extensions.Player.csproj">
       <Project>{3bada1a6-f312-02a5-fa5e-0ae7f6e273c5}</Project>
       <Name>Unity.Mathematics.Extensions.Player</Name>
+    </ProjectReference>
+    <ProjectReference Include="NavMeshComponents.Player.csproj">
+      <Project>{a41285a9-09ac-1439-d143-05cc3595bc10}</Project>
+      <Name>NavMeshComponents.Player</Name>
     </ProjectReference>
     <ProjectReference Include="Unity.Transforms.Player.csproj">
       <Project>{6c42df7f-25ae-f7dd-6780-52ae1aa846c7}</Project>
