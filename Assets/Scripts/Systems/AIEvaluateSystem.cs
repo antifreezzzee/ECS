@@ -36,8 +36,6 @@ namespace Systems
                             }
                         }
                     }
-                    
-                    Debug.Log(behaviourManager.ActiveBehaviour);
                 });
         }
     }

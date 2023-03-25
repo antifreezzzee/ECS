@@ -72,8 +72,8 @@
      <Compile Include="Library\PackageCache\com.unity.entities@0.17.0-preview.42\Unity.Entities.Editor\PropertyDrawers\LayerFieldDrawer.cs" />
      <Compile Include="Library\PackageCache\com.unity.entities@0.17.0-preview.42\Unity.Entities.Editor\EntityDebugger\EntityListQuery.cs" />
      <Compile Include="Library\PackageCache\com.unity.entities@0.17.0-preview.42\Unity.Entities.Editor\EntityDebugger\ComponentTypeChooser.cs" />
-     <Compile Include="Library\PackageCache\com.unity.entities@0.17.0-preview.42\Unity.Entities.Editor\EntityInspector\Adapters\IMGUIAdapter.UnityEngine.cs" />
      <Compile Include="Library\PackageCache\com.unity.entities@0.17.0-preview.42\Unity.Entities.Editor\EntityDebugger\EntityArrayListAdapter.cs" />
+     <Compile Include="Library\PackageCache\com.unity.entities@0.17.0-preview.42\Unity.Entities.Editor\EntityInspector\Adapters\IMGUIAdapter.UnityEngine.cs" />
      <Compile Include="Library\PackageCache\com.unity.entities@0.17.0-preview.42\Unity.Entities.Editor\LiveLink\LiveLinkConnectionsDropdown.cs" />
      <Compile Include="Library\PackageCache\com.unity.entities@0.17.0-preview.42\Unity.Entities.Editor\LiveLink\LiveLinkStyles.cs" />
      <Compile Include="Library\PackageCache\com.unity.entities@0.17.0-preview.42\Unity.Entities.Editor\EntityDebugger\EntityQueryListView.cs" />
