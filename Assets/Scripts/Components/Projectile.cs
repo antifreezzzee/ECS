@@ -8,6 +8,7 @@ namespace Components
     {
         [SerializeField] private float shootForce;
         [SerializeField] private float selfDestroyDelay;
+        [SerializeField] private GameObject burstEffect;
 
         private float _shootTime = float.MinValue;
         private bool _isRicochet;
@@ -33,8 +34,10 @@ namespace Components
 
         private void OnCollisionEnter(Collision collision)
         {
+            
             if (!_isRicochet)
             {
+                Instantiate(burstEffect, transform.position, Quaternion.identity);
                 Destroy(gameObject);
             }
         }

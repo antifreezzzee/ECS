@@ -2331,6 +2331,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   rushForce: 3
   rushDelay: 2
+  defaultMaterial: {fileID: 2100000, guid: da05e49adf02c134f88f541992ee78d2, type: 2}
+  rushGlowMaterial: {fileID: 2100000, guid: c8d25ee75e856c240a7de67914099f09, type: 2}
+  meshRenderer: {fileID: 9148094312735350628}
 --- !u!114 &8775907496297824145
 MonoBehaviour:
   m_ObjectHideFlags: 0

@@ -45,6 +45,7 @@
      <Compile Include="Assets\Scripts\DisplayInfo.cs" />
      <Compile Include="Assets\Scripts\Systems\UserInputSystem.cs" />
      <Compile Include="Assets\Scripts\Components\PickUps\HealPickup.cs" />
+     <Compile Include="Assets\Scripts\GameSettings.cs" />
      <Compile Include="Assets\Scripts\Utils.cs" />
      <Compile Include="Assets\Scripts\Components\Behaviours\WaitBehaviour.cs" />
      <Compile Include="Assets\Scripts\Components\BehaviourManager.cs" />
@@ -55,6 +56,7 @@
      <Compile Include="Assets\Scripts\Systems\CharacterMoveSystem.cs" />
      <Compile Include="Assets\Scripts\ShootCounter.cs" />
      <Compile Include="Assets\Scripts\Components\Interfaces\IBehaviour.cs" />
+     <Compile Include="Assets\Scripts\DummyGameSettings.cs" />
      <Compile Include="Assets\Scripts\Systems\AIEvaluateSystem.cs" />
      <Compile Include="Assets\Scripts\Components\Projectile.cs" />
      <Compile Include="Assets\Scripts\Components\Interfaces\IAbilityTarget.cs" />
@@ -69,8 +71,6 @@
      <Compile Include="Assets\Scripts\Components\Player\CharacterStatus.cs" />
      <Compile Include="Assets\Scripts\Systems\CollisionSystem.cs" />
      <Compile Include="Assets\Scripts\Components\Abilities\ShootAbility.cs" />
-     <Compile Include="Assets\Scripts\GameSettings.cs" />
-     <Compile Include="Assets\Scripts\DummyGameSettings.cs" />
      <Reference Include="UnityEngine">
      <HintPath>C:\Program Files\Unity\Hub\Editor\2020.3.23f1\Editor\Data\Managed\UnityEngine\UnityEngine.dll</HintPath>
      </Reference>
@@ -859,6 +859,46 @@
     <ProjectReference Include="Unity.ScriptableBuildPipeline.Editor.csproj">
       <Project>{d7367700-7c82-8b68-7485-26af13b59fb0}</Project>
       <Name>Unity.ScriptableBuildPipeline.Editor</Name>
+    </ProjectReference>
+    <ProjectReference Include="Unity.RenderPipelines.Core.Runtime.csproj">
+      <Project>{d1d17e78-0df0-16a2-69ba-30d5228a4918}</Project>
+      <Name>Unity.RenderPipelines.Core.Runtime</Name>
+    </ProjectReference>
+    <ProjectReference Include="Unity.Searcher.Editor.csproj">
+      <Project>{963dc051-fe4e-0eff-f58d-d6ee18982907}</Project>
+      <Name>Unity.Searcher.Editor</Name>
+    </ProjectReference>
+    <ProjectReference Include="Unity.RenderPipelines.Core.Editor.csproj">
+      <Project>{fcdacaf6-cdf0-ab23-a170-da87d9c254b8}</Project>
+      <Name>Unity.RenderPipelines.Core.Editor</Name>
+    </ProjectReference>
+    <ProjectReference Include="Unity.RenderPipelines.Core.ShaderLibrary.csproj">
+      <Project>{63a84ac0-6407-3522-b405-15b4ab03a041}</Project>
+      <Name>Unity.RenderPipelines.Core.ShaderLibrary</Name>
+    </ProjectReference>
+    <ProjectReference Include="Unity.RenderPipelines.ShaderGraph.ShaderGraphLibrary.csproj">
+      <Project>{871eaf47-4962-4804-4cf6-0030ef189625}</Project>
+      <Name>Unity.RenderPipelines.ShaderGraph.ShaderGraphLibrary</Name>
+    </ProjectReference>
+    <ProjectReference Include="Unity.ShaderGraph.Editor.csproj">
+      <Project>{f61e3394-e600-b563-a60e-56828758c55c}</Project>
+      <Name>Unity.ShaderGraph.Editor</Name>
+    </ProjectReference>
+    <ProjectReference Include="Unity.RenderPipelines.Universal.Shaders.csproj">
+      <Project>{eaafb020-d55a-5d54-2c85-41964c54684a}</Project>
+      <Name>Unity.RenderPipelines.Universal.Shaders</Name>
+    </ProjectReference>
+    <ProjectReference Include="Unity.RenderPipeline.Universal.ShaderLibrary.csproj">
+      <Project>{c0a89243-81ec-4476-311a-28e1c94578d3}</Project>
+      <Name>Unity.RenderPipeline.Universal.ShaderLibrary</Name>
+    </ProjectReference>
+    <ProjectReference Include="Unity.RenderPipelines.Universal.Runtime.csproj">
+      <Project>{79a04716-702c-bd74-6e4d-358d00bd8a53}</Project>
+      <Name>Unity.RenderPipelines.Universal.Runtime</Name>
+    </ProjectReference>
+    <ProjectReference Include="Unity.RenderPipelines.Universal.Editor.csproj">
+      <Project>{909aef7a-6896-148b-91fc-6e9aba5207d1}</Project>
+      <Name>Unity.RenderPipelines.Universal.Editor</Name>
     </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
