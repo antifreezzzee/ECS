@@ -41,81 +41,81 @@
     <ImplicitlyExpandDesignTimeFacades>false</ImplicitlyExpandDesignTimeFacades>
   </PropertyGroup>
   <ItemGroup>
-     <Compile Include="Library\PackageCache\com.unity.platforms@0.10.0-preview.10\Editor\Unity.Build\ContextBase.cs" />
-     <Compile Include="Library\PackageCache\com.unity.platforms@0.10.0-preview.10\Editor\Unity.Build\PlatformJsonAdapter.cs" />
      <Compile Include="Library\PackageCache\com.unity.platforms@0.10.0-preview.10\Editor\Unity.Build\IBuildArtifacts.cs" />
      <Compile Include="Library\PackageCache\com.unity.platforms@0.10.0-preview.10\Editor\Unity.Build\KnownPlatforms.cs" />
+     <Compile Include="Library\PackageCache\com.unity.platforms@0.10.0-preview.10\Editor\Unity.Build\Components\ScreenOrientations.cs" />
+     <Compile Include="Library\PackageCache\com.unity.platforms@0.10.0-preview.10\Editor\Unity.Build\bee\Components\GeneralSettingsCommon.cs" />
+     <Compile Include="Library\PackageCache\com.unity.platforms@0.10.0-preview.10\Editor\Unity.Build\Components\OutputBuildDirectory.cs" />
+     <Compile Include="Library\PackageCache\com.unity.platforms@0.10.0-preview.10\Editor\Unity.Build\RunContext.cs" />
+     <Compile Include="Library\PackageCache\com.unity.platforms@0.10.0-preview.10\Editor\Unity.Build\Properties\IHierarchicalComponentInitialize.cs" />
+     <Compile Include="Library\PackageCache\com.unity.platforms@0.10.0-preview.10\Editor\Unity.Build\IBuildComponent.cs" />
+     <Compile Include="Library\PackageCache\com.unity.platforms@0.10.0-preview.10\Editor\Unity.Build\PlatformInfo.cs" />
+     <Compile Include="Library\PackageCache\com.unity.platforms@0.10.0-preview.10\Editor\Unity.Build\BuildProcess.cs" />
+     <Compile Include="Library\PackageCache\com.unity.platforms@0.10.0-preview.10\Editor\Unity.Build\Platform.cs" />
+     <Compile Include="Library\PackageCache\com.unity.platforms@0.10.0-preview.10\Editor\Unity.Build\BoolResult.cs" />
+     <Compile Include="Library\PackageCache\com.unity.platforms@0.10.0-preview.10\Editor\Unity.Build\Components\GeneralSettings.cs" />
+     <Compile Include="Library\PackageCache\com.unity.platforms@0.10.0-preview.10\Editor\Unity.Build\BuildPipelineBase.cs" />
+     <Compile Include="Library\PackageCache\com.unity.platforms@0.10.0-preview.10\Editor\Unity.Build\RunTargetBase.cs" />
+     <Compile Include="Library\PackageCache\com.unity.platforms@0.10.0-preview.10\Editor\Unity.Build\Extensions\TimeSpanExtensions.cs" />
+     <Compile Include="Library\PackageCache\com.unity.platforms@0.10.0-preview.10\Editor\Unity.Build\BuildStepCollection.cs" />
+     <Compile Include="Library\PackageCache\com.unity.platforms@0.10.0-preview.10\Editor\Unity.Build\BuildAssemblyCache.cs" />
+     <Compile Include="Library\PackageCache\com.unity.platforms@0.10.0-preview.10\Editor\Unity.Build\ObjectPool\PooledObject.cs" />
+     <Compile Include="Library\PackageCache\com.unity.platforms@0.10.0-preview.10\Editor\Unity.Build\Extensions\TypeExtensions.cs" />
+     <Compile Include="Library\PackageCache\com.unity.platforms@0.10.0-preview.10\Editor\Unity.Build\Properties\HierarchicalComponentContainer.cs" />
+     <Compile Include="Library\PackageCache\com.unity.platforms@0.10.0-preview.10\Editor\Unity.Build\ResultBase.cs" />
+     <Compile Include="Library\PackageCache\com.unity.platforms@0.10.0-preview.10\Editor\Unity.Build\BuildManifest.cs" />
+     <Compile Include="Library\PackageCache\com.unity.platforms@0.10.0-preview.10\Editor\Unity.Build\Extensions\BuildTargetExtensions.cs" />
+     <Compile Include="Library\PackageCache\com.unity.platforms@0.10.0-preview.10\Editor\Unity.Build\bee\Components\ScreenOrientationsCommon.cs" />
+     <Compile Include="Library\PackageCache\com.unity.platforms@0.10.0-preview.10\Editor\Unity.Build\ObjectPool\GenericPool.cs" />
+     <Compile Include="Library\PackageCache\com.unity.platforms@0.10.0-preview.10\Editor\Unity.Build\ObjectPool\UnsafeGenericPool.cs" />
+     <Compile Include="Library\PackageCache\com.unity.platforms@0.10.0-preview.10\Editor\Unity.Build\BuildContext.cs" />
+     <Compile Include="Library\PackageCache\com.unity.platforms@0.10.0-preview.10\Editor\Unity.Build\Properties\HierarchicalComponentContainer+ReadOnly.cs" />
+     <Compile Include="Library\PackageCache\com.unity.platforms@0.10.0-preview.10\Editor\Unity.Build\CleanResult.cs" />
+     <Compile Include="Library\PackageCache\com.unity.platforms@0.10.0-preview.10\Editor\Unity.Build\Properties\HierarchicalComponentContainer+Internal.cs" />
+     <Compile Include="Library\PackageCache\com.unity.platforms@0.10.0-preview.10\Editor\Unity.Build\Extensions\DictionaryExtensions.cs" />
+     <Compile Include="Library\PackageCache\com.unity.platforms@0.10.0-preview.10\Editor\Unity.Build\ObjectPool\IObjectPool.cs" />
+     <Compile Include="Library\PackageCache\com.unity.platforms@0.10.0-preview.10\Editor\Unity.Build\bee\Components\ApplicationIdentifierCommon.cs" />
+     <Compile Include="Library\PackageCache\com.unity.platforms@0.10.0-preview.10\Editor\Unity.Build\Extensions\FileInfoExtensions.cs" />
+     <Compile Include="Library\PackageCache\com.unity.platforms@0.10.0-preview.10\Editor\Unity.Build\Extensions\UnityEngineObjectExtensions.cs" />
+     <Compile Include="Library\PackageCache\com.unity.platforms@0.10.0-preview.10\Editor\Unity.Build\TypeConstructionUtility.cs" />
+     <Compile Include="Library\PackageCache\com.unity.platforms@0.10.0-preview.10\Editor\Unity.Build\ContextBase.cs" />
+     <Compile Include="Library\PackageCache\com.unity.platforms@0.10.0-preview.10\Editor\Unity.Build\PlatformJsonAdapter.cs" />
      <Compile Include="Library\PackageCache\com.unity.platforms@0.10.0-preview.10\Editor\Unity.Build\Components\PlayerScriptingDefines.cs" />
      <Compile Include="Library\PackageCache\com.unity.platforms@0.10.0-preview.10\Editor\Unity.Build\IBuildComponentInitialize.cs" />
-     <Compile Include="Library\PackageCache\com.unity.platforms@0.10.0-preview.10\Editor\Unity.Build\Components\ScreenOrientations.cs" />
      <Compile Include="Library\PackageCache\com.unity.platforms@0.10.0-preview.10\Editor\Unity.Build\MissingPlatform.cs" />
      <Compile Include="Library\PackageCache\com.unity.platforms@0.10.0-preview.10\Editor\Unity.Build\Components\SceneList.cs" />
      <Compile Include="Library\PackageCache\com.unity.platforms@0.10.0-preview.10\Editor\Unity.Build\AssetGuidAttribute.cs" />
      <Compile Include="Library\PackageCache\com.unity.platforms@0.10.0-preview.10\Editor\Unity.Build\Components\ScreenOrientationsInspector.cs" />
      <Compile Include="Library\PackageCache\com.unity.platforms@0.10.0-preview.10\Editor\Unity.Build\Package.cs" />
-     <Compile Include="Library\PackageCache\com.unity.platforms@0.10.0-preview.10\Editor\Unity.Build\bee\Components\GeneralSettingsCommon.cs" />
-     <Compile Include="Library\PackageCache\com.unity.platforms@0.10.0-preview.10\Editor\Unity.Build\Components\OutputBuildDirectory.cs" />
-     <Compile Include="Library\PackageCache\com.unity.platforms@0.10.0-preview.10\Editor\Unity.Build\RunContext.cs" />
-     <Compile Include="Library\PackageCache\com.unity.platforms@0.10.0-preview.10\Editor\Unity.Build\Properties\IHierarchicalComponentInitialize.cs" />
      <Compile Include="Library\PackageCache\com.unity.platforms@0.10.0-preview.10\Editor\Unity.Build\IRunInstance.cs" />
      <Compile Include="Library\PackageCache\com.unity.platforms@0.10.0-preview.10\Editor\Unity.Build\BuildProgress.cs" />
-     <Compile Include="Library\PackageCache\com.unity.platforms@0.10.0-preview.10\Editor\Unity.Build\IBuildComponent.cs" />
-     <Compile Include="Library\PackageCache\com.unity.platforms@0.10.0-preview.10\Editor\Unity.Build\PlatformInfo.cs" />
-     <Compile Include="Library\PackageCache\com.unity.platforms@0.10.0-preview.10\Editor\Unity.Build\BuildProcess.cs" />
-     <Compile Include="Library\PackageCache\com.unity.platforms@0.10.0-preview.10\Editor\Unity.Build\Platform.cs" />
      <Compile Include="Library\PackageCache\com.unity.platforms@0.10.0-preview.10\Editor\Unity.Build\ObjectPool\LinkedPool.cs" />
      <Compile Include="Library\PackageCache\com.unity.platforms@0.10.0-preview.10\Editor\Unity.Build\BuildStepBase.cs" />
      <Compile Include="Library\PackageCache\com.unity.platforms@0.10.0-preview.10\Editor\Unity.Build\BuildType.cs" />
-     <Compile Include="Library\PackageCache\com.unity.platforms@0.10.0-preview.10\Editor\Unity.Build\BoolResult.cs" />
-     <Compile Include="Library\PackageCache\com.unity.platforms@0.10.0-preview.10\Editor\Unity.Build\Components\GeneralSettings.cs" />
      <Compile Include="Library\PackageCache\com.unity.platforms@0.10.0-preview.10\Editor\Unity.Build\BuildConfigurationScriptedImporter.cs" />
-     <Compile Include="Library\PackageCache\com.unity.platforms@0.10.0-preview.10\Editor\Unity.Build\BuildPipelineBase.cs" />
-     <Compile Include="Library\PackageCache\com.unity.platforms@0.10.0-preview.10\Editor\Unity.Build\RunTargetBase.cs" />
      <Compile Include="Library\PackageCache\com.unity.platforms@0.10.0-preview.10\Editor\Unity.Build\BuildArtifacts.cs" />
      <Compile Include="Library\PackageCache\com.unity.platforms@0.10.0-preview.10\Editor\Unity.Build\RunTargetProviderBase.cs" />
      <Compile Include="Library\PackageCache\com.unity.platforms@0.10.0-preview.10\Editor\Unity.Build\Extensions\DirectoryInfoExtensions.cs" />
      <Compile Include="Library\PackageCache\com.unity.platforms@0.10.0-preview.10\Editor\Unity.Build\ObjectPool\ObjectPools.cs" />
-     <Compile Include="Library\PackageCache\com.unity.platforms@0.10.0-preview.10\Editor\Unity.Build\Extensions\TimeSpanExtensions.cs" />
      <Compile Include="Library\PackageCache\com.unity.platforms@0.10.0-preview.10\Editor\Unity.Build\RunResult.cs" />
-     <Compile Include="Library\PackageCache\com.unity.platforms@0.10.0-preview.10\Editor\Unity.Build\BuildStepCollection.cs" />
-     <Compile Include="Library\PackageCache\com.unity.platforms@0.10.0-preview.10\Editor\Unity.Build\BuildAssemblyCache.cs" />
      <Compile Include="Library\PackageCache\com.unity.platforms@0.10.0-preview.10\Editor\Unity.Build\Components\GraphicsSettings.cs" />
      <Compile Include="Library\PackageCache\com.unity.platforms@0.10.0-preview.10\Editor\Unity.Build\IBuildPipelineComponent.cs" />
      <Compile Include="Library\PackageCache\com.unity.platforms@0.10.0-preview.10\Editor\Unity.Build\Components\ScriptingDebuggerSettings.cs" />
-     <Compile Include="Library\PackageCache\com.unity.platforms@0.10.0-preview.10\Editor\Unity.Build\ObjectPool\PooledObject.cs" />
      <Compile Include="Library\PackageCache\com.unity.platforms@0.10.0-preview.10\Editor\Unity.Build\BuildQueue.cs" />
      <Compile Include="Library\PackageCache\com.unity.platforms@0.10.0-preview.10\Editor\Unity.Build\TemporaryFileTracker.cs" />
      <Compile Include="Library\PackageCache\com.unity.platforms@0.10.0-preview.10\Editor\Unity.Build\Properties\ScriptableObjectPropertyContainer.cs" />
      <Compile Include="Library\PackageCache\com.unity.platforms@0.10.0-preview.10\Editor\Unity.Build\BuildBatchDescription.cs" />
-     <Compile Include="Library\PackageCache\com.unity.platforms@0.10.0-preview.10\Editor\Unity.Build\Extensions\TypeExtensions.cs" />
      <Compile Include="Library\PackageCache\com.unity.platforms@0.10.0-preview.10\Editor\Unity.Build\TestPlatform.cs" />
      <Compile Include="Library\PackageCache\com.unity.platforms@0.10.0-preview.10\Editor\Unity.Build\AssemblyInfo.cs" />
      <Compile Include="Library\PackageCache\com.unity.platforms@0.10.0-preview.10\Editor\Unity.Build\BuildResult.cs" />
-     <Compile Include="Library\PackageCache\com.unity.platforms@0.10.0-preview.10\Editor\Unity.Build\Properties\HierarchicalComponentContainer.cs" />
-     <Compile Include="Library\PackageCache\com.unity.platforms@0.10.0-preview.10\Editor\Unity.Build\ResultBase.cs" />
-     <Compile Include="Library\PackageCache\com.unity.platforms@0.10.0-preview.10\Editor\Unity.Build\BuildManifest.cs" />
      <Compile Include="Library\PackageCache\com.unity.platforms@0.10.0-preview.10\Editor\Unity.Build\Obsolete\ICustomBuildComponentConstructor.cs" />
-     <Compile Include="Library\PackageCache\com.unity.platforms@0.10.0-preview.10\Editor\Unity.Build\Extensions\BuildTargetExtensions.cs" />
      <Compile Include="Library\PackageCache\com.unity.platforms@0.10.0-preview.10\Editor\Unity.Build\ObjectPool\CollectionPool.cs" />
-     <Compile Include="Library\PackageCache\com.unity.platforms@0.10.0-preview.10\Editor\Unity.Build\bee\Components\ScreenOrientationsCommon.cs" />
      <Compile Include="Library\PackageCache\com.unity.platforms@0.10.0-preview.10\Editor\Unity.Build\BuildPipelineBaseJsonAdapter.cs" />
-     <Compile Include="Library\PackageCache\com.unity.platforms@0.10.0-preview.10\Editor\Unity.Build\ObjectPool\GenericPool.cs" />
-     <Compile Include="Library\PackageCache\com.unity.platforms@0.10.0-preview.10\Editor\Unity.Build\ObjectPool\UnsafeGenericPool.cs" />
      <Compile Include="Library\PackageCache\com.unity.platforms@0.10.0-preview.10\Editor\Unity.Build\Extensions\StringExtensions.cs" />
-     <Compile Include="Library\PackageCache\com.unity.platforms@0.10.0-preview.10\Editor\Unity.Build\BuildContext.cs" />
-     <Compile Include="Library\PackageCache\com.unity.platforms@0.10.0-preview.10\Editor\Unity.Build\Properties\HierarchicalComponentContainer+ReadOnly.cs" />
-     <Compile Include="Library\PackageCache\com.unity.platforms@0.10.0-preview.10\Editor\Unity.Build\CleanResult.cs" />
-     <Compile Include="Library\PackageCache\com.unity.platforms@0.10.0-preview.10\Editor\Unity.Build\Properties\HierarchicalComponentContainer+Internal.cs" />
      <Compile Include="Library\PackageCache\com.unity.platforms@0.10.0-preview.10\Editor\Unity.Build\BuildConfiguration.cs" />
      <Compile Include="Library\PackageCache\com.unity.platforms@0.10.0-preview.10\Editor\Unity.Build\CleanContext.cs" />
-     <Compile Include="Library\PackageCache\com.unity.platforms@0.10.0-preview.10\Editor\Unity.Build\Extensions\DictionaryExtensions.cs" />
      <Compile Include="Library\PackageCache\com.unity.platforms@0.10.0-preview.10\Editor\Unity.Build\Components\ApplicationIdentifier.cs" />
-     <Compile Include="Library\PackageCache\com.unity.platforms@0.10.0-preview.10\Editor\Unity.Build\ObjectPool\IObjectPool.cs" />
-     <Compile Include="Library\PackageCache\com.unity.platforms@0.10.0-preview.10\Editor\Unity.Build\bee\Components\ApplicationIdentifierCommon.cs" />
      <Compile Include="Library\PackageCache\com.unity.platforms@0.10.0-preview.10\Editor\Unity.Build\RootAssemblyComponent.cs" />
-     <Compile Include="Library\PackageCache\com.unity.platforms@0.10.0-preview.10\Editor\Unity.Build\Extensions\FileInfoExtensions.cs" />
-     <Compile Include="Library\PackageCache\com.unity.platforms@0.10.0-preview.10\Editor\Unity.Build\Extensions\UnityEngineObjectExtensions.cs" />
-     <Compile Include="Library\PackageCache\com.unity.platforms@0.10.0-preview.10\Editor\Unity.Build\TypeConstructionUtility.cs" />
      <Compile Include="Library\PackageCache\com.unity.platforms@0.10.0-preview.10\Editor\Unity.Build\BuildStepAttribute.cs" />
      <None Include="Library\PackageCache\com.unity.platforms@0.10.0-preview.10\Editor\Unity.Build\Unity.Build.asmdef" />
      <Reference Include="UnityEngine">
@@ -370,6 +370,9 @@
      <Reference Include="Unity.Plastic.Antlr3.Runtime">
      <HintPath>C:\Users\Serega\Documents\UnityProjects\ECS\Library\PackageCache\com.unity.collab-proxy@1.17.2\Lib\Editor\PlasticSCM\Unity.Plastic.Antlr3.Runtime.dll</HintPath>
      </Reference>
+     <Reference Include="DOTweenEditor">
+     <HintPath>C:\Users\Serega\Documents\UnityProjects\ECS\Assets\Plugins\Demigiant\DOTween\Editor\DOTweenEditor.dll</HintPath>
+     </Reference>
      <Reference Include="Unity.Burst.Unsafe">
      <HintPath>C:\Users\Serega\Documents\UnityProjects\ECS\Library\PackageCache\com.unity.burst@1.4.1\Unity.Burst.Unsafe.dll</HintPath>
      </Reference>
@@ -379,8 +382,14 @@
      <Reference Include="log4netPlastic">
      <HintPath>C:\Users\Serega\Documents\UnityProjects\ECS\Library\PackageCache\com.unity.collab-proxy@1.17.2\Lib\Editor\PlasticSCM\log4netPlastic.dll</HintPath>
      </Reference>
+     <Reference Include="DOTween">
+     <HintPath>C:\Users\Serega\Documents\UnityProjects\ECS\Assets\Plugins\Demigiant\DOTween\DOTween.dll</HintPath>
+     </Reference>
      <Reference Include="Zenject.ReflectionBaking.Mono.Cecil.Mdb">
      <HintPath>C:\Users\Serega\Documents\UnityProjects\ECS\Assets\Plugins\Zenject\OptionalExtras\ReflectionBaking\Lib\Zenject.ReflectionBaking.Mono.Cecil.Mdb.dll</HintPath>
+     </Reference>
+     <Reference Include="ICSharpCode.NRefactory">
+     <HintPath>C:\Users\Serega\Documents\UnityProjects\ECS\Library\PackageCache\com.unity.render-pipelines.core@10.7.0\Editor\ShaderGenerator\ICSharpCode.NRefactory.dll</HintPath>
      </Reference>
      <Reference Include="Newtonsoft.Json">
      <HintPath>C:\Users\Serega\Documents\UnityProjects\ECS\Library\PackageCache\com.unity.nuget.newtonsoft-json@2.0.0-preview\Runtime\Newtonsoft.Json.dll</HintPath>
@@ -390,9 +399,6 @@
      </Reference>
      <Reference Include="unityplastic">
      <HintPath>C:\Users\Serega\Documents\UnityProjects\ECS\Library\PackageCache\com.unity.collab-proxy@1.17.2\Lib\Editor\PlasticSCM\unityplastic.dll</HintPath>
-     </Reference>
-     <Reference Include="ICSharpCode.NRefactory">
-     <HintPath>C:\Users\Serega\Documents\UnityProjects\ECS\Library\PackageCache\com.unity.render-pipelines.core@10.7.0\Editor\ShaderGenerator\ICSharpCode.NRefactory.dll</HintPath>
      </Reference>
      <Reference Include="nunit.framework">
      <HintPath>C:\Users\Serega\Documents\UnityProjects\ECS\Library\PackageCache\com.unity.ext.nunit@1.0.6\net35\unity-custom\nunit.framework.dll</HintPath>

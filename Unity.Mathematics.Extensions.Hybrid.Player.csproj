@@ -253,6 +253,9 @@
      <Reference Include="Unity.Burst.Unsafe">
      <HintPath>C:\Users\Serega\Documents\UnityProjects\ECS\Library\PackageCache\com.unity.burst@1.4.1\Unity.Burst.Unsafe.dll</HintPath>
      </Reference>
+     <Reference Include="DOTween">
+     <HintPath>C:\Users\Serega\Documents\UnityProjects\ECS\Assets\Plugins\Demigiant\DOTween\DOTween.dll</HintPath>
+     </Reference>
      <Reference Include="netstandard">
      <HintPath>C:\Program Files\Unity\Hub\Editor\2020.3.23f1\Editor\Data\NetStandard\ref\2.0.0\netstandard.dll</HintPath>
      </Reference>

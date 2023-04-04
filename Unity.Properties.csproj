@@ -41,10 +41,29 @@
     <ImplicitlyExpandDesignTimeFacades>false</ImplicitlyExpandDesignTimeFacades>
   </PropertyGroup>
   <ItemGroup>
-     <Compile Include="Library\PackageCache\com.unity.properties@1.6.0-preview\Runtime\Unity.Properties\Properties\DelegateProperty.cs" />
      <Compile Include="Library\PackageCache\com.unity.properties@1.6.0-preview\Runtime\Unity.Properties\PropertyBags\Internal\IPropertyBag.cs" />
-     <Compile Include="Library\PackageCache\com.unity.properties@1.6.0-preview\Runtime\Unity.Properties\PropertyVisitors\Internal\PropertyVisitorAdapterExtensions.cs" />
      <Compile Include="Library\PackageCache\com.unity.properties@1.6.0-preview\Runtime\Unity.Properties\Exceptions.cs" />
+     <Compile Include="Library\PackageCache\com.unity.properties@1.6.0-preview\Runtime\Unity.Properties\PropertyBags\Internal\PropertyBagStore.cs" />
+     <Compile Include="Library\PackageCache\com.unity.properties@1.6.0-preview\Runtime\Unity.Properties\PropertyVisitors\PropertyVisitor.cs" />
+     <Compile Include="Library\PackageCache\com.unity.properties@1.6.0-preview\Runtime\Unity.Properties\Properties\ReflectedMemberProperty.cs" />
+     <Compile Include="Library\PackageCache\com.unity.properties@1.6.0-preview\Runtime\Unity.Properties\Algorithms\PropertyContainer.Path.cs" />
+     <Compile Include="Library\PackageCache\com.unity.properties@1.6.0-preview\Runtime\Unity.Properties\PropertyVisitors\Adapters\IVisit.cs" />
+     <Compile Include="Library\PackageCache\com.unity.properties@1.6.0-preview\Runtime\Unity.Properties\PropertyBags\PropertyBag.cs" />
+     <Compile Include="Library\PackageCache\com.unity.properties@1.6.0-preview\Runtime\Unity.Properties\Utility\AOT.cs" />
+     <Compile Include="Library\PackageCache\com.unity.properties@1.6.0-preview\Runtime\Unity.Properties\Utility\Internal\Pool.cs" />
+     <Compile Include="Library\PackageCache\com.unity.properties@1.6.0-preview\Runtime\Unity.Properties\PropertyBags\Internal\IPropertyBagProvider.cs" />
+     <Compile Include="Library\PackageCache\com.unity.properties@1.6.0-preview\Runtime\Unity.Properties\PropertyVisitors\Internal\PathVisitor.cs" />
+     <Compile Include="Library\PackageCache\com.unity.properties@1.6.0-preview\Runtime\Unity.Properties\PropertyVisitors\Adapters\IExclude.cs" />
+     <Compile Include="Library\PackageCache\com.unity.properties@1.6.0-preview\Runtime\Unity.Properties\PropertyBags\Internal\DictionaryPropertyBag.cs" />
+     <Compile Include="Library\PackageCache\com.unity.properties@1.6.0-preview\Runtime\Unity.Properties\Properties\Property.cs" />
+     <Compile Include="Library\PackageCache\com.unity.properties@1.6.0-preview\Runtime\Unity.Properties\Utility\Internal\ArrayUtility.cs" />
+     <Compile Include="Library\PackageCache\com.unity.properties@1.6.0-preview\Runtime\Unity.Properties\Algorithms\Internal\VisitErrorCode.cs" />
+     <Compile Include="Library\PackageCache\com.unity.properties@1.6.0-preview\Runtime\Unity.Properties\PropertyVisitors\Adapters\IVisitPrimitives.cs" />
+     <Compile Include="Library\PackageCache\com.unity.properties@1.6.0-preview\Runtime\Unity.Properties\AssemblyInfo.cs" />
+     <Compile Include="Library\PackageCache\com.unity.properties@1.6.0-preview\Runtime\Unity.Properties\PropertyBags\Internal\SetPropertyBag.cs" />
+     <Compile Include="Library\PackageCache\com.unity.properties@1.6.0-preview\Runtime\Unity.Properties\PropertyBags\Internal\KeyValuePairPropertyBag.cs" />
+     <Compile Include="Library\PackageCache\com.unity.properties@1.6.0-preview\Runtime\Unity.Properties\Properties\DelegateProperty.cs" />
+     <Compile Include="Library\PackageCache\com.unity.properties@1.6.0-preview\Runtime\Unity.Properties\PropertyVisitors\Internal\PropertyVisitorAdapterExtensions.cs" />
      <Compile Include="Library\PackageCache\com.unity.properties@1.6.0-preview\Runtime\Unity.Properties\Properties\Internal\IAttributes.cs" />
      <Compile Include="Library\PackageCache\com.unity.properties@1.6.0-preview\Runtime\Unity.Properties\Attributes.cs" />
      <Compile Include="Library\PackageCache\com.unity.properties@1.6.0-preview\Runtime\Unity.Properties\PropertyVisitors\Internal\IAccept.cs" />
@@ -53,35 +72,16 @@
      <Compile Include="Library\PackageCache\com.unity.properties@1.6.0-preview\Runtime\Unity.Properties\PropertyBags\Internal\ListPropertyBag.cs" />
      <Compile Include="Library\PackageCache\com.unity.properties@1.6.0-preview\Runtime\Unity.Properties\Algorithms\PropertyContainer.GetValue.cs" />
      <Compile Include="Library\PackageCache\com.unity.properties@1.6.0-preview\Runtime\Unity.Properties\Algorithms\PropertyContainer.cs" />
-     <Compile Include="Library\PackageCache\com.unity.properties@1.6.0-preview\Runtime\Unity.Properties\PropertyBags\Internal\PropertyBagStore.cs" />
-     <Compile Include="Library\PackageCache\com.unity.properties@1.6.0-preview\Runtime\Unity.Properties\PropertyVisitors\PropertyVisitor.cs" />
-     <Compile Include="Library\PackageCache\com.unity.properties@1.6.0-preview\Runtime\Unity.Properties\Properties\ReflectedMemberProperty.cs" />
-     <Compile Include="Library\PackageCache\com.unity.properties@1.6.0-preview\Runtime\Unity.Properties\Algorithms\PropertyContainer.Path.cs" />
-     <Compile Include="Library\PackageCache\com.unity.properties@1.6.0-preview\Runtime\Unity.Properties\PropertyVisitors\Adapters\IVisit.cs" />
      <Compile Include="Library\PackageCache\com.unity.properties@1.6.0-preview\Runtime\Unity.Properties\Algorithms\PropertyContainer.Visit.cs" />
      <Compile Include="Library\PackageCache\com.unity.properties@1.6.0-preview\Runtime\Unity.Properties\Algorithms\PropertyContainer.SetValue.cs" />
-     <Compile Include="Library\PackageCache\com.unity.properties@1.6.0-preview\Runtime\Unity.Properties\PropertyBags\PropertyBag.cs" />
-     <Compile Include="Library\PackageCache\com.unity.properties@1.6.0-preview\Runtime\Unity.Properties\Utility\AOT.cs" />
-     <Compile Include="Library\PackageCache\com.unity.properties@1.6.0-preview\Runtime\Unity.Properties\Utility\Internal\Pool.cs" />
-     <Compile Include="Library\PackageCache\com.unity.properties@1.6.0-preview\Runtime\Unity.Properties\PropertyBags\Internal\IPropertyBagProvider.cs" />
      <Compile Include="Library\PackageCache\com.unity.properties@1.6.0-preview\Runtime\Unity.Properties\Utility\TypeConversion.cs" />
-     <Compile Include="Library\PackageCache\com.unity.properties@1.6.0-preview\Runtime\Unity.Properties\PropertyVisitors\Internal\PathVisitor.cs" />
-     <Compile Include="Library\PackageCache\com.unity.properties@1.6.0-preview\Runtime\Unity.Properties\PropertyVisitors\Adapters\IExclude.cs" />
-     <Compile Include="Library\PackageCache\com.unity.properties@1.6.0-preview\Runtime\Unity.Properties\PropertyBags\Internal\DictionaryPropertyBag.cs" />
-     <Compile Include="Library\PackageCache\com.unity.properties@1.6.0-preview\Runtime\Unity.Properties\Properties\Property.cs" />
      <Compile Include="Library\PackageCache\com.unity.properties@1.6.0-preview\Runtime\Unity.Properties\Properties\ICollectionElementProperty.cs" />
      <Compile Include="Library\PackageCache\com.unity.properties@1.6.0-preview\Runtime\Unity.Properties\PropertyVisitors\Internal\ConcreteTypeVisitor.cs" />
      <Compile Include="Library\PackageCache\com.unity.properties@1.6.0-preview\Runtime\Unity.Properties\Utility\Internal\RuntimeTypeInfoCache.cs" />
-     <Compile Include="Library\PackageCache\com.unity.properties@1.6.0-preview\Runtime\Unity.Properties\Utility\Internal\ArrayUtility.cs" />
      <Compile Include="Library\PackageCache\com.unity.properties@1.6.0-preview\Runtime\Unity.Properties\PropertyBags\ContainerPropertyBag.cs" />
      <Compile Include="Library\PackageCache\com.unity.properties@1.6.0-preview\Runtime\Unity.Properties\PropertyVisitors\Internal\IVisitor.cs" />
-     <Compile Include="Library\PackageCache\com.unity.properties@1.6.0-preview\Runtime\Unity.Properties\Algorithms\Internal\VisitErrorCode.cs" />
-     <Compile Include="Library\PackageCache\com.unity.properties@1.6.0-preview\Runtime\Unity.Properties\PropertyVisitors\Adapters\IVisitPrimitives.cs" />
      <Compile Include="Library\PackageCache\com.unity.properties@1.6.0-preview\Runtime\Unity.Properties\PropertyBags\Internal\DefaultPropertyBags.cs" />
      <Compile Include="Library\PackageCache\com.unity.properties@1.6.0-preview\Runtime\Unity.Properties\Utility\Internal\PropertyWrapper.cs" />
-     <Compile Include="Library\PackageCache\com.unity.properties@1.6.0-preview\Runtime\Unity.Properties\AssemblyInfo.cs" />
-     <Compile Include="Library\PackageCache\com.unity.properties@1.6.0-preview\Runtime\Unity.Properties\PropertyBags\Internal\SetPropertyBag.cs" />
-     <Compile Include="Library\PackageCache\com.unity.properties@1.6.0-preview\Runtime\Unity.Properties\PropertyBags\Internal\KeyValuePairPropertyBag.cs" />
      <None Include="Library\PackageCache\com.unity.properties@1.6.0-preview\Runtime\Unity.Properties\Unity.Properties.asmdef" />
      <Reference Include="UnityEngine">
      <HintPath>C:\Program Files\Unity\Hub\Editor\2020.3.23f1\Editor\Data\Managed\UnityEngine\UnityEngine.dll</HintPath>
@@ -335,6 +335,9 @@
      <Reference Include="Unity.Plastic.Antlr3.Runtime">
      <HintPath>C:\Users\Serega\Documents\UnityProjects\ECS\Library\PackageCache\com.unity.collab-proxy@1.17.2\Lib\Editor\PlasticSCM\Unity.Plastic.Antlr3.Runtime.dll</HintPath>
      </Reference>
+     <Reference Include="DOTweenEditor">
+     <HintPath>C:\Users\Serega\Documents\UnityProjects\ECS\Assets\Plugins\Demigiant\DOTween\Editor\DOTweenEditor.dll</HintPath>
+     </Reference>
      <Reference Include="Unity.Burst.Unsafe">
      <HintPath>C:\Users\Serega\Documents\UnityProjects\ECS\Library\PackageCache\com.unity.burst@1.4.1\Unity.Burst.Unsafe.dll</HintPath>
      </Reference>
@@ -344,8 +347,14 @@
      <Reference Include="log4netPlastic">
      <HintPath>C:\Users\Serega\Documents\UnityProjects\ECS\Library\PackageCache\com.unity.collab-proxy@1.17.2\Lib\Editor\PlasticSCM\log4netPlastic.dll</HintPath>
      </Reference>
+     <Reference Include="DOTween">
+     <HintPath>C:\Users\Serega\Documents\UnityProjects\ECS\Assets\Plugins\Demigiant\DOTween\DOTween.dll</HintPath>
+     </Reference>
      <Reference Include="Zenject.ReflectionBaking.Mono.Cecil.Mdb">
      <HintPath>C:\Users\Serega\Documents\UnityProjects\ECS\Assets\Plugins\Zenject\OptionalExtras\ReflectionBaking\Lib\Zenject.ReflectionBaking.Mono.Cecil.Mdb.dll</HintPath>
+     </Reference>
+     <Reference Include="ICSharpCode.NRefactory">
+     <HintPath>C:\Users\Serega\Documents\UnityProjects\ECS\Library\PackageCache\com.unity.render-pipelines.core@10.7.0\Editor\ShaderGenerator\ICSharpCode.NRefactory.dll</HintPath>
      </Reference>
      <Reference Include="Newtonsoft.Json">
      <HintPath>C:\Users\Serega\Documents\UnityProjects\ECS\Library\PackageCache\com.unity.nuget.newtonsoft-json@2.0.0-preview\Runtime\Newtonsoft.Json.dll</HintPath>
@@ -355,9 +364,6 @@
      </Reference>
      <Reference Include="unityplastic">
      <HintPath>C:\Users\Serega\Documents\UnityProjects\ECS\Library\PackageCache\com.unity.collab-proxy@1.17.2\Lib\Editor\PlasticSCM\unityplastic.dll</HintPath>
-     </Reference>
-     <Reference Include="ICSharpCode.NRefactory">
-     <HintPath>C:\Users\Serega\Documents\UnityProjects\ECS\Library\PackageCache\com.unity.render-pipelines.core@10.7.0\Editor\ShaderGenerator\ICSharpCode.NRefactory.dll</HintPath>
      </Reference>
      <Reference Include="netstandard">
      <HintPath>C:\Program Files\Unity\Hub\Editor\2020.3.23f1\Editor\Data\NetStandard\ref\2.0.0\netstandard.dll</HintPath>

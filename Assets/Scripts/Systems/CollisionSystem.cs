@@ -1,5 +1,4 @@
 using System;
-using System.Collections.Generic;
 using Components;
 using Unity.Entities;
 using Unity.Mathematics;
@@ -10,8 +9,6 @@ namespace Systems
     public class CollisionSystem : ComponentSystem
     {
         private EntityQuery _collisionQuery;
-        
-        private Collider[] _colliders = new Collider[50];
 
         protected override void OnCreate()
         {
@@ -27,16 +24,16 @@ namespace Systems
                     var gameObject = collisionAbility.gameObject;
                     float3 position = gameObject.transform.position;
                     var rotation = gameObject.transform.rotation;
+                    Collider[] collidersInCollision = new Collider[50];
+                    collisionAbility.CollidersInCollision.Clear();
 
-                    collisionAbility.Collisions?.Clear();
-
-                    var size = 0;
+                    var collisions = 0;
 
                     switch (actorColliderData.ColliderType)
                     {
                         case ColliderType.Sphere:
-                            size = Physics.OverlapSphereNonAlloc(actorColliderData.SphereCenter + position,
-                                actorColliderData.SphereRadius, _colliders);
+                            collisions = Physics.OverlapSphereNonAlloc(actorColliderData.SphereCenter + position,
+                                actorColliderData.SphereRadius, collidersInCollision);
                             break;
                         case ColliderType.Capsule:
                             var center = (actorColliderData.CapsuleStart + position + (actorColliderData.CapsuleEnd +
@@ -45,25 +42,22 @@ namespace Systems
                             var point2 = actorColliderData.CapsuleEnd + position;
                             point1 = (float3) (rotation * (point1 - center)) + center;
                             point2 = (float3) (rotation * (point2 - center)) + center;
-                            size = Physics.OverlapCapsuleNonAlloc(point1, point2, actorColliderData.CapsuleRadius,
-                                _colliders);
+                            collisions = Physics.OverlapCapsuleNonAlloc(point1, point2, actorColliderData.CapsuleRadius,
+                                collidersInCollision);
                             break;
                         case ColliderType.Box:
-                            size = Physics.OverlapBoxNonAlloc(actorColliderData.BoxCenter + position,
-                                actorColliderData.BoxHalfExtents, _colliders,
+                            collisions = Physics.OverlapBoxNonAlloc(actorColliderData.BoxCenter + position,
+                                actorColliderData.BoxHalfExtents, collidersInCollision,
                                 actorColliderData.BoxOrientation * rotation);
                             break;
                         default:
                             throw new ArgumentOutOfRangeException();
                     }
 
-                    if (size > 0)
+                    if (collisions > 0)
                     {
-                        foreach (var result in _colliders)
-                        {
-                            collisionAbility.Collisions?.Add(result);
-                        }
-                        
+                        foreach (var collider in collidersInCollision)
+                            collisionAbility.CollidersInCollision?.Add(collider);
                         collisionAbility.Execute();
                     }
                 });

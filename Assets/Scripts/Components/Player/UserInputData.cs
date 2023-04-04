@@ -13,6 +13,7 @@ namespace Components
 
         public MonoBehaviour ShootAction => shootAction;
         public MonoBehaviour RushAction => rushAction;
+        public float Speed => speed;
 
         public void Convert(Entity entity, EntityManager dstManager, GameObjectConversionSystem conversionSystem)
         {
@@ -27,6 +28,8 @@ namespace Components
 
             if (rushAction != null && rushAction is IAbility)
                 dstManager.AddComponentData(entity, new RushData());
+            
+            dstManager.AddComponentData(entity, new AnimationData());
         }
     }
 
@@ -51,5 +54,10 @@ namespace Components
     public struct RushData : IComponentData
     {
         public float Rush;
+    }
+    
+    public struct AnimationData : IComponentData
+    {
+        
     }
 }

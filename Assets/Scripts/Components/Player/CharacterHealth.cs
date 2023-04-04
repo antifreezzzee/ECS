@@ -2,20 +2,42 @@ using UnityEngine;
 
 public class CharacterHealth : MonoBehaviour
 {
-    [SerializeField] private int health = 100;
+    [SerializeField] private int health;
+    [SerializeField] private float godTime;
+    private double _damageTime = double.MinValue;
+    private Animator _animator;
+    private bool _isAlive;
+    public bool IsAlive => _isAlive;
 
-    public int Health => health;
+    private void Awake()
+    {
+        _animator = GetComponent<Animator>();
+        _isAlive = true;
+    }
 
     public void AddHealth(int count)
     {
-        health += count;
+        if (_isAlive)
+            health += count;
     }
 
     public void ReceiveDamage(int count)
     {
-        if (health > 0)
+        if (_isAlive)
+        {
+            if (Time.time < _damageTime + godTime)
+                return;
+            _damageTime = Time.time;
             health -= count;
-        if (health < 0)
-            health = 0;
+            if (health <= 0)
+                Die();
+            else _animator.SetTrigger("Hit");
+        }
+    }
+    private void Die()
+    {
+        health = 0;
+        _isAlive = false;
+        _animator.SetTrigger("Die");
     }
 }

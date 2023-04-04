@@ -44,11 +44,11 @@
      <Compile Include="Library\PackageCache\com.unity.test-framework.performance@2.3.1-preview\Editor\TestReportGraph\TestListTable.cs" />
      <Compile Include="Library\PackageCache\com.unity.test-framework.performance@2.3.1-preview\Editor\TestReportGraph\SampleGroupAdditionalData.cs" />
      <Compile Include="Library\PackageCache\com.unity.test-framework.performance@2.3.1-preview\Editor\PerformanceTestBuildAssemblyFilter.cs" />
-     <Compile Include="Library\PackageCache\com.unity.test-framework.performance@2.3.1-preview\Editor\TestRunBuilder.cs" />
      <Compile Include="Library\PackageCache\com.unity.test-framework.performance@2.3.1-preview\Editor\PerformanceTestRunSaver.cs" />
+     <Compile Include="Library\PackageCache\com.unity.test-framework.performance@2.3.1-preview\Editor\TestResultXmlParser.cs" />
+     <Compile Include="Library\PackageCache\com.unity.test-framework.performance@2.3.1-preview\Editor\TestRunBuilder.cs" />
      <Compile Include="Library\PackageCache\com.unity.test-framework.performance@2.3.1-preview\Editor\TestReportGraph\SamplePoint.cs" />
      <Compile Include="Library\PackageCache\com.unity.test-framework.performance@2.3.1-preview\Editor\TestReportGraph\TestReportWindow.cs" />
-     <Compile Include="Library\PackageCache\com.unity.test-framework.performance@2.3.1-preview\Editor\TestResultXmlParser.cs" />
      <None Include="Library\PackageCache\com.unity.test-framework.performance@2.3.1-preview\Editor\TestReportGraph\TestReportShader.shader" />
      <None Include="Library\PackageCache\com.unity.test-framework.performance@2.3.1-preview\Editor\Unity.PerformanceTesting.Editor.asmdef" />
      <Reference Include="UnityEngine">

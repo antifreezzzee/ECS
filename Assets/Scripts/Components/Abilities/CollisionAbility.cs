@@ -11,36 +11,33 @@ namespace Components
         [SerializeField] private Collider collider;
         [SerializeField] private List<MonoBehaviour> collisionActions;
 
-        private List<IAbilityTarget> _collisionActionsAbilities = new List<IAbilityTarget>();
-        private List<Collider> _collisions = new List<Collider>();
+        private List<ITargetedAbility> _collisionActionsAbilities = new List<ITargetedAbility>();
+        private List<Collider> _collidersInCollision = new List<Collider>();
 
-        public List<Collider> Collisions => _collisions;
+        public List<Collider> CollidersInCollision => _collidersInCollision;
 
         private void Start()
         {
             foreach (var action in collisionActions)
             {
-                if (action is IAbilityTarget ability)
-                {
-                    _collisionActionsAbilities.Add(ability);
-                }
+                if (action is ITargetedAbility targetedAbility) 
+                    _collisionActionsAbilities.Add(targetedAbility);
                 else
-                {
                     Debug.LogError("collision action must derive from IAbility");
-                }
             }
         }
 
         public void Execute()
         {
-            foreach (var action in _collisionActionsAbilities)
+            foreach (var targetedAbility in _collisionActionsAbilities)
             {
-                action.Targets = new List<GameObject>();
-                _collisions.ForEach(c =>
+                targetedAbility.Targets = new List<GameObject>();
+                _collidersInCollision.ForEach(targetCollider =>
                 {
-                    if (c != null) action.Targets.Add(c.gameObject);
+                    if (targetCollider != null) 
+                        targetedAbility.Targets.Add(targetCollider.gameObject);
                 });
-                action.Execute();
+                targetedAbility.Execute();
             }
         }
 

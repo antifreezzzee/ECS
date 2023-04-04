@@ -15,20 +15,29 @@ namespace Components
 
         private float _rushTime = float.MinValue;
 
+        private Animator _animator;
+
+        private void Awake()
+        {
+            _animator = GetComponent<Animator>();
+        }
+
         public void Execute()
         {
             if (Time.time < _rushTime + rushDelay)
                 return;
             _rushTime = Time.time;
             GetComponent<Rigidbody>().AddForce(transform.forward * rushForce, ForceMode.Impulse);
-            StartCoroutine(ChangeMaterial());
+            _animator.SetBool("onRun", true);
+            StartCoroutine(Show());
         }
 
-        private IEnumerator ChangeMaterial()
+        private IEnumerator Show()
         {
             meshRenderer.material = rushGlowMaterial;
-            yield return new WaitForSeconds(2);
+            yield return new WaitForSeconds(rushDelay);
             meshRenderer.material = defaultMaterial;
+            _animator.SetBool("onRun", false);
         }
     }
 }

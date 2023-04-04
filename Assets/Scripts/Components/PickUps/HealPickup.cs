@@ -4,7 +4,7 @@ using UnityEngine;
 
 namespace Components
 {
-    public class HealPickup : MonoBehaviour, IAbilityTarget
+    public class HealPickup : MonoBehaviour, ITargetedAbility
     {
         [SerializeField] private int healPoints;
         [SerializeField] private GameObject model;

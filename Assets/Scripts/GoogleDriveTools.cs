@@ -25,12 +25,12 @@ public static class GoogleDriveTools
 
     public static void Upload(File file)
     {
-        GoogleDriveFiles.Create(file).Send().OnDone += json => { Debug.Log("json файл отправлен на сервер"); };
+        GoogleDriveFiles.Create(file).Send().OnDone += json => { /*Debug.Log("json файл отправлен на сервер");*/ };
     }
 
     public static void Update(string fileId, File newFile)
     {
-        GoogleDriveFiles.Update(fileId, newFile).Send().OnDone += file => { Debug.Log("json файл на сервере обновлен"); };
+        GoogleDriveFiles.Update(fileId, newFile).Send().OnDone += file => { /*Debug.Log("json файл на сервере обновлен");*/ };
     }
 
     public static File Download(string fileId)
@@ -38,7 +38,7 @@ public static class GoogleDriveTools
         RemoteFile = new File();
         GoogleDriveFiles.Download(fileId).Send().OnDone += file => 
         { 
-            Debug.Log("json файл скачан с сервера");
+            //Debug.Log("json файл скачан с сервера");
             RemoteFile = file; 
             OnFileDownloaded?.Invoke();
         };

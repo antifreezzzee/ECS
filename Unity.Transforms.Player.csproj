@@ -41,18 +41,18 @@
     <ImplicitlyExpandDesignTimeFacades>false</ImplicitlyExpandDesignTimeFacades>
   </PropertyGroup>
   <ItemGroup>
-     <Compile Include="Library\PackageCache\com.unity.entities@0.17.0-preview.42\Unity.Transforms\Scale.cs" />
      <Compile Include="Library\PackageCache\com.unity.entities@0.17.0-preview.42\Unity.Transforms\TRSToLocalToParentSystem.cs" />
      <Compile Include="Library\PackageCache\com.unity.entities@0.17.0-preview.42\Unity.Transforms\Translation.cs" />
      <Compile Include="Library\PackageCache\com.unity.entities@0.17.0-preview.42\Unity.Transforms\PostRotationEuler.cs" />
-     <Compile Include="Library\PackageCache\com.unity.entities@0.17.0-preview.42\Unity.Transforms\WorldToLocal.cs" />
      <Compile Include="Library\PackageCache\com.unity.entities@0.17.0-preview.42\Unity.Transforms\RotationEuler.cs" />
      <Compile Include="Library\PackageCache\com.unity.entities@0.17.0-preview.42\Unity.Transforms\Parent.cs" />
      <Compile Include="Library\PackageCache\com.unity.entities@0.17.0-preview.42\Unity.Transforms\CompositeScale.cs" />
-     <Compile Include="Library\PackageCache\com.unity.entities@0.17.0-preview.42\Unity.Transforms\LocalToParent.cs" />
      <Compile Include="Library\PackageCache\com.unity.entities@0.17.0-preview.42\Unity.Transforms\Rotation.cs" />
      <Compile Include="Library\PackageCache\com.unity.entities@0.17.0-preview.42\Unity.Transforms\NonUniformScale.cs" />
      <Compile Include="Library\PackageCache\com.unity.entities@0.17.0-preview.42\Unity.Transforms\LocalToParentSystem.cs" />
+     <Compile Include="Library\PackageCache\com.unity.entities@0.17.0-preview.42\Unity.Transforms\Scale.cs" />
+     <Compile Include="Library\PackageCache\com.unity.entities@0.17.0-preview.42\Unity.Transforms\WorldToLocal.cs" />
+     <Compile Include="Library\PackageCache\com.unity.entities@0.17.0-preview.42\Unity.Transforms\LocalToParent.cs" />
      <Compile Include="Library\PackageCache\com.unity.entities@0.17.0-preview.42\Unity.Transforms\ParentScaleInverse.cs" />
      <Compile Include="Library\PackageCache\com.unity.entities@0.17.0-preview.42\Unity.Transforms\ParentSystem.cs" />
      <Compile Include="Library\PackageCache\com.unity.entities@0.17.0-preview.42\Unity.Transforms\LocalToWorld.cs" />
@@ -270,6 +270,9 @@
      </Reference>
      <Reference Include="Unity.Burst.Unsafe">
      <HintPath>C:\Users\Serega\Documents\UnityProjects\ECS\Library\PackageCache\com.unity.burst@1.4.1\Unity.Burst.Unsafe.dll</HintPath>
+     </Reference>
+     <Reference Include="DOTween">
+     <HintPath>C:\Users\Serega\Documents\UnityProjects\ECS\Assets\Plugins\Demigiant\DOTween\DOTween.dll</HintPath>
      </Reference>
      <Reference Include="netstandard">
      <HintPath>C:\Program Files\Unity\Hub\Editor\2020.3.23f1\Editor\Data\NetStandard\ref\2.0.0\netstandard.dll</HintPath>

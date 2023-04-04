@@ -42,16 +42,16 @@
   </PropertyGroup>
   <ItemGroup>
      <Compile Include="Library\PackageCache\com.unity.entities@0.17.0-preview.42\Unity.Transforms.Hybrid\CopyTransformFromGameObjectcs.cs" />
-     <Compile Include="Library\PackageCache\com.unity.entities@0.17.0-preview.42\Unity.Transforms.Hybrid\CopyInitialTransformFromGameObject.cs" />
      <Compile Include="Library\PackageCache\com.unity.entities@0.17.0-preview.42\Unity.Transforms.Hybrid\AssemblyInfo.cs" />
-     <Compile Include="Library\PackageCache\com.unity.entities@0.17.0-preview.42\Unity.Transforms.Hybrid\TransformConversion.cs" />
      <Compile Include="Library\PackageCache\com.unity.entities@0.17.0-preview.42\Unity.Transforms.Hybrid\CopyTransformFromGameObjectSystem.cs" />
      <Compile Include="Library\PackageCache\com.unity.entities@0.17.0-preview.42\Unity.Transforms.Hybrid\CopyInitialTransformFromGameObjectSystem.cs" />
      <Compile Include="Library\PackageCache\com.unity.entities@0.17.0-preview.42\Unity.Transforms.Hybrid\TransformIncrementalConversionSystem.cs" />
-     <Compile Include="Library\PackageCache\com.unity.entities@0.17.0-preview.42\Unity.Transforms.Hybrid\CompanionGameObjectUpdateTransformSystem.cs" />
-     <Compile Include="Library\PackageCache\com.unity.entities@0.17.0-preview.42\Unity.Transforms.Hybrid\CopyTransformToGameObject.cs" />
      <Compile Include="Library\PackageCache\com.unity.entities@0.17.0-preview.42\Unity.Transforms.Hybrid\CopyTransformFromPrimaryEntityTag.cs" />
      <Compile Include="Library\PackageCache\com.unity.entities@0.17.0-preview.42\Unity.Transforms.Hybrid\CopyTransformToGameObjectSystem.cs" />
+     <Compile Include="Library\PackageCache\com.unity.entities@0.17.0-preview.42\Unity.Transforms.Hybrid\CopyInitialTransformFromGameObject.cs" />
+     <Compile Include="Library\PackageCache\com.unity.entities@0.17.0-preview.42\Unity.Transforms.Hybrid\TransformConversion.cs" />
+     <Compile Include="Library\PackageCache\com.unity.entities@0.17.0-preview.42\Unity.Transforms.Hybrid\CompanionGameObjectUpdateTransformSystem.cs" />
+     <Compile Include="Library\PackageCache\com.unity.entities@0.17.0-preview.42\Unity.Transforms.Hybrid\CopyTransformToGameObject.cs" />
      <None Include="Library\PackageCache\com.unity.entities@0.17.0-preview.42\Unity.Transforms.Hybrid\Unity.Transforms.Hybrid.asmdef" />
      <Reference Include="UnityEngine">
      <HintPath>C:\Program Files\Unity\Hub\Editor\2020.3.23f1\Editor\Data\PlaybackEngines\WindowsStandaloneSupport\Variations\mono\Managed\UnityEngine.dll</HintPath>
@@ -262,6 +262,9 @@
      </Reference>
      <Reference Include="Unity.Burst.Unsafe">
      <HintPath>C:\Users\Serega\Documents\UnityProjects\ECS\Library\PackageCache\com.unity.burst@1.4.1\Unity.Burst.Unsafe.dll</HintPath>
+     </Reference>
+     <Reference Include="DOTween">
+     <HintPath>C:\Users\Serega\Documents\UnityProjects\ECS\Assets\Plugins\Demigiant\DOTween\DOTween.dll</HintPath>
      </Reference>
      <Reference Include="netstandard">
      <HintPath>C:\Program Files\Unity\Hub\Editor\2020.3.23f1\Editor\Data\NetStandard\ref\2.0.0\netstandard.dll</HintPath>

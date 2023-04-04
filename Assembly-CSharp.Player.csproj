@@ -41,35 +41,37 @@
     <ImplicitlyExpandDesignTimeFacades>false</ImplicitlyExpandDesignTimeFacades>
   </PropertyGroup>
   <ItemGroup>
-     <Compile Include="Assets\Scripts\Systems\AIBehaveSystem.cs" />
+     <Compile Include="Assets\Scripts\Systems\AI\AIBehaveSystem.cs" />
      <Compile Include="Assets\Scripts\DisplayInfo.cs" />
-     <Compile Include="Assets\Scripts\Systems\UserInputSystem.cs" />
      <Compile Include="Assets\Scripts\Components\PickUps\HealPickup.cs" />
      <Compile Include="Assets\Scripts\GameSettings.cs" />
      <Compile Include="Assets\Scripts\Utils.cs" />
      <Compile Include="Assets\Scripts\Components\Behaviours\WaitBehaviour.cs" />
-     <Compile Include="Assets\Scripts\Components\BehaviourManager.cs" />
-     <Compile Include="Assets\Scripts\Components\Player\CharacterHealth.cs" />
-     <Compile Include="Assets\Scripts\Systems\CharacterRushSystem.cs" />
-     <Compile Include="Assets\Scripts\Systems\CharacterShootSystem.cs" />
      <Compile Include="Assets\Scripts\Components\Behaviours\AttackBehaviour.cs" />
-     <Compile Include="Assets\Scripts\Systems\CharacterMoveSystem.cs" />
-     <Compile Include="Assets\Scripts\ShootCounter.cs" />
-     <Compile Include="Assets\Scripts\Components\Interfaces\IBehaviour.cs" />
      <Compile Include="Assets\Scripts\DummyGameSettings.cs" />
-     <Compile Include="Assets\Scripts\Systems\AIEvaluateSystem.cs" />
-     <Compile Include="Assets\Scripts\Components\Projectile.cs" />
-     <Compile Include="Assets\Scripts\Components\Interfaces\IAbilityTarget.cs" />
-     <Compile Include="Assets\Scripts\Components\ApplyDamage.cs" />
-     <Compile Include="Assets\Scripts\Components\Interfaces\IAbility.cs" />
      <Compile Include="Assets\Scripts\Components\Abilities\RushAbility.cs" />
      <Compile Include="Assets\Scripts\Components\Player\UserInputData.cs" />
-     <Compile Include="Assets\Scripts\DI\MyInstaller.cs" />
-     <Compile Include="Assets\Scripts\GoogleDriveTools.cs" />
      <Compile Include="Assets\Scripts\Components\Abilities\CollisionAbility.cs" />
-     <Compile Include="Assets\Scripts\Components\PickUps\RicochetPickUp.cs" />
      <Compile Include="Assets\Scripts\Components\Player\CharacterStatus.cs" />
      <Compile Include="Assets\Scripts\Systems\CollisionSystem.cs" />
+     <Compile Include="Assets\Scripts\Systems\UserInputSystem.cs" />
+     <Compile Include="Assets\Scripts\Components\BehaviourManager.cs" />
+     <Compile Include="Assets\Scripts\Systems\Character\CharacterAnimationSystem.cs" />
+     <Compile Include="Assets\Scripts\Components\Player\CharacterHealth.cs" />
+     <Compile Include="Assets\Scripts\Systems\Character\CharacterRushSystem.cs" />
+     <Compile Include="Assets\Scripts\Systems\Character\CharacterShootSystem.cs" />
+     <Compile Include="Assets\Scripts\Systems\Character\CharacterMoveSystem.cs" />
+     <Compile Include="Assets\Scripts\ShootCounter.cs" />
+     <Compile Include="Assets\Scripts\Components\Interfaces\IBehaviour.cs" />
+     <Compile Include="Assets\Scripts\Systems\AI\AIEvaluateSystem.cs" />
+     <Compile Include="Assets\Scripts\Components\Projectile.cs" />
+     <Compile Include="Assets\Scripts\Components\Interfaces\ITargetedAbility.cs" />
+     <Compile Include="Assets\Scripts\Components\Abilities\ApplyDamageToTargetAbility.cs" />
+     <Compile Include="Assets\Scripts\Components\Interfaces\IAbility.cs" />
+     <Compile Include="Assets\Scripts\DI\MyInstaller.cs" />
+     <Compile Include="Assets\Scripts\GoogleDriveTools.cs" />
+     <Compile Include="Assets\Scripts\Components\Player\CharacterAnimationNames.cs" />
+     <Compile Include="Assets\Scripts\Components\PickUps\RicochetPickUp.cs" />
      <Compile Include="Assets\Scripts\Components\Abilities\ShootAbility.cs" />
      <Reference Include="UnityEngine">
      <HintPath>C:\Program Files\Unity\Hub\Editor\2020.3.23f1\Editor\Data\PlaybackEngines\WindowsStandaloneSupport\Variations\mono\Managed\UnityEngine.dll</HintPath>
@@ -275,6 +277,9 @@
      <Reference Include="Unity.VSCode.Editor">
      <HintPath>C:\Users\Serega\Documents\UnityProjects\ECS\Library\ScriptAssemblies\Unity.VSCode.Editor.dll</HintPath>
      </Reference>
+     <Reference Include="Unity.Searcher.Editor">
+     <HintPath>C:\Users\Serega\Documents\UnityProjects\ECS\Library\ScriptAssemblies\Unity.Searcher.Editor.dll</HintPath>
+     </Reference>
      <Reference Include="Zenject-Editor">
      <HintPath>C:\Users\Serega\Documents\UnityProjects\ECS\Library\ScriptAssemblies\Zenject-Editor.dll</HintPath>
      </Reference>
@@ -292,6 +297,9 @@
      </Reference>
      <Reference Include="com.unity.cinemachine.editor">
      <HintPath>C:\Users\Serega\Documents\UnityProjects\ECS\Library\ScriptAssemblies\com.unity.cinemachine.editor.dll</HintPath>
+     </Reference>
+     <Reference Include="Unity.ShaderGraph.Editor">
+     <HintPath>C:\Users\Serega\Documents\UnityProjects\ECS\Library\ScriptAssemblies\Unity.ShaderGraph.Editor.dll</HintPath>
      </Reference>
      <Reference Include="Zenject-ReflectionBaking-Editor">
      <HintPath>C:\Users\Serega\Documents\UnityProjects\ECS\Library\ScriptAssemblies\Zenject-ReflectionBaking-Editor.dll</HintPath>
@@ -329,6 +337,9 @@
      <Reference Include="Zenject-PoolMonitor-Editor">
      <HintPath>C:\Users\Serega\Documents\UnityProjects\ECS\Library\ScriptAssemblies\Zenject-PoolMonitor-Editor.dll</HintPath>
      </Reference>
+     <Reference Include="Unity.RenderPipelines.Universal.Editor">
+     <HintPath>C:\Users\Serega\Documents\UnityProjects\ECS\Library\ScriptAssemblies\Unity.RenderPipelines.Universal.Editor.dll</HintPath>
+     </Reference>
      <Reference Include="Unity.Timeline.Editor">
      <HintPath>C:\Users\Serega\Documents\UnityProjects\ECS\Library\ScriptAssemblies\Unity.Timeline.Editor.dll</HintPath>
      </Reference>
@@ -338,17 +349,8 @@
      <Reference Include="Unity.ScriptableBuildPipeline.Editor">
      <HintPath>C:\Users\Serega\Documents\UnityProjects\ECS\Library\ScriptAssemblies\Unity.ScriptableBuildPipeline.Editor.dll</HintPath>
      </Reference>
-     <Reference Include="Unity.Searcher.Editor">
-     <HintPath>C:\Users\Serega\Documents\UnityProjects\ECS\Library\ScriptAssemblies\Unity.Searcher.Editor.dll</HintPath>
-     </Reference>
      <Reference Include="Unity.RenderPipelines.Core.Editor">
      <HintPath>C:\Users\Serega\Documents\UnityProjects\ECS\Library\ScriptAssemblies\Unity.RenderPipelines.Core.Editor.dll</HintPath>
-     </Reference>
-     <Reference Include="Unity.ShaderGraph.Editor">
-     <HintPath>C:\Users\Serega\Documents\UnityProjects\ECS\Library\ScriptAssemblies\Unity.ShaderGraph.Editor.dll</HintPath>
-     </Reference>
-     <Reference Include="Unity.RenderPipelines.Universal.Editor">
-     <HintPath>C:\Users\Serega\Documents\UnityProjects\ECS\Library\ScriptAssemblies\Unity.RenderPipelines.Universal.Editor.dll</HintPath>
      </Reference>
      <Reference Include="Newtonsoft.Json">
      <HintPath>C:\Users\Serega\Documents\UnityProjects\ECS\Library\PackageCache\com.unity.nuget.newtonsoft-json@2.0.0-preview\Runtime\AOT\Newtonsoft.Json.dll</HintPath>
@@ -361,6 +363,9 @@
      </Reference>
      <Reference Include="Unity.Burst.Unsafe">
      <HintPath>C:\Users\Serega\Documents\UnityProjects\ECS\Library\PackageCache\com.unity.burst@1.4.1\Unity.Burst.Unsafe.dll</HintPath>
+     </Reference>
+     <Reference Include="DOTween">
+     <HintPath>C:\Users\Serega\Documents\UnityProjects\ECS\Assets\Plugins\Demigiant\DOTween\DOTween.dll</HintPath>
      </Reference>
      <Reference Include="netstandard">
      <HintPath>C:\Program Files\Unity\Hub\Editor\2020.3.23f1\Editor\Data\NetStandard\ref\2.0.0\netstandard.dll</HintPath>
@@ -725,9 +730,17 @@
       <Project>{30128ef8-3ef8-b0eb-8e5f-3f583718a5de}</Project>
       <Name>Unity.Serialization.Player</Name>
     </ProjectReference>
+    <ProjectReference Include="Unity.RenderPipelines.Universal.Shaders.Player.csproj">
+      <Project>{94aeb78b-cc14-7d80-a50d-3d39a70232ba}</Project>
+      <Name>Unity.RenderPipelines.Universal.Shaders.Player</Name>
+    </ProjectReference>
     <ProjectReference Include="Unity.InputSystem.Player.csproj">
       <Project>{f2e5e78e-44ed-1d6c-ea74-c4121b8cfef9}</Project>
       <Name>Unity.InputSystem.Player</Name>
+    </ProjectReference>
+    <ProjectReference Include="Unity.RenderPipelines.Core.ShaderLibrary.Player.csproj">
+      <Project>{c3072d3e-5f8a-ffcf-ae4d-48d96f3f5f38}</Project>
+      <Name>Unity.RenderPipelines.Core.ShaderLibrary.Player</Name>
     </ProjectReference>
     <ProjectReference Include="UnityEngine.UI.Player.csproj">
       <Project>{91744492-9dbb-563e-3569-7e258531b822}</Project>
@@ -744,6 +757,10 @@
     <ProjectReference Include="Unity.Scenes.Player.csproj">
       <Project>{8af4799d-b357-6577-8253-a5e4a7111d53}</Project>
       <Name>Unity.Scenes.Player</Name>
+    </ProjectReference>
+    <ProjectReference Include="Unity.RenderPipeline.Universal.ShaderLibrary.Player.csproj">
+      <Project>{c150ee92-c0ac-f42c-6d33-4c34e34fd740}</Project>
+      <Name>Unity.RenderPipeline.Universal.ShaderLibrary.Player</Name>
     </ProjectReference>
     <ProjectReference Include="Unity.Mathematics.Extensions.Player.csproj">
       <Project>{3bada1a6-f312-02a5-fa5e-0ae7f6e273c5}</Project>
@@ -765,6 +782,10 @@
       <Project>{2e636c5e-3ec2-89e3-bdbb-90ba8f996e7b}</Project>
       <Name>Unity.Mathematics.Extensions.Hybrid.Player</Name>
     </ProjectReference>
+    <ProjectReference Include="Unity.RenderPipelines.Universal.Runtime.Player.csproj">
+      <Project>{0cc1654a-bcb5-b7b3-d017-0fd4863befdd}</Project>
+      <Name>Unity.RenderPipelines.Universal.Runtime.Player</Name>
+    </ProjectReference>
     <ProjectReference Include="Unity.Timeline.Player.csproj">
       <Project>{b7ad533b-9517-5693-fee6-933e9bc6d48b}</Project>
       <Name>Unity.Timeline.Player</Name>
@@ -772,6 +793,10 @@
     <ProjectReference Include="Unity.TextMeshPro.Player.csproj">
       <Project>{0415b59e-b9b8-9098-71bc-7ad65dab594e}</Project>
       <Name>Unity.TextMeshPro.Player</Name>
+    </ProjectReference>
+    <ProjectReference Include="Unity.RenderPipelines.Core.Runtime.Player.csproj">
+      <Project>{2f47fba3-a908-c3b0-5ed5-b9798dc8f13d}</Project>
+      <Name>Unity.RenderPipelines.Core.Runtime.Player</Name>
     </ProjectReference>
     <ProjectReference Include="Unity.Entities.Player.csproj">
       <Project>{b680c46b-d9de-ef51-9ce4-0cbdf4c194db}</Project>
@@ -805,33 +830,13 @@
       <Project>{cac436a9-abfc-6185-5f44-e4f7bed23bae}</Project>
       <Name>Unity.Properties.UI.Player</Name>
     </ProjectReference>
-    <ProjectReference Include="Unity.ScriptableBuildPipeline.Player.csproj">
-      <Project>{03d97885-bda9-a412-b7f7-5120f1594eda}</Project>
-      <Name>Unity.ScriptableBuildPipeline.Player</Name>
-    </ProjectReference>
-    <ProjectReference Include="Unity.RenderPipelines.Core.Runtime.Player.csproj">
-      <Project>{2f47fba3-a908-c3b0-5ed5-b9798dc8f13d}</Project>
-      <Name>Unity.RenderPipelines.Core.Runtime.Player</Name>
-    </ProjectReference>
-    <ProjectReference Include="Unity.RenderPipelines.Core.ShaderLibrary.Player.csproj">
-      <Project>{c3072d3e-5f8a-ffcf-ae4d-48d96f3f5f38}</Project>
-      <Name>Unity.RenderPipelines.Core.ShaderLibrary.Player</Name>
-    </ProjectReference>
     <ProjectReference Include="Unity.RenderPipelines.ShaderGraph.ShaderGraphLibrary.Player.csproj">
       <Project>{80e1f4e8-33d9-e78b-6a53-929beaca06e9}</Project>
       <Name>Unity.RenderPipelines.ShaderGraph.ShaderGraphLibrary.Player</Name>
     </ProjectReference>
-    <ProjectReference Include="Unity.RenderPipelines.Universal.Shaders.Player.csproj">
-      <Project>{94aeb78b-cc14-7d80-a50d-3d39a70232ba}</Project>
-      <Name>Unity.RenderPipelines.Universal.Shaders.Player</Name>
-    </ProjectReference>
-    <ProjectReference Include="Unity.RenderPipeline.Universal.ShaderLibrary.Player.csproj">
-      <Project>{c150ee92-c0ac-f42c-6d33-4c34e34fd740}</Project>
-      <Name>Unity.RenderPipeline.Universal.ShaderLibrary.Player</Name>
-    </ProjectReference>
-    <ProjectReference Include="Unity.RenderPipelines.Universal.Runtime.Player.csproj">
-      <Project>{0cc1654a-bcb5-b7b3-d017-0fd4863befdd}</Project>
-      <Name>Unity.RenderPipelines.Universal.Runtime.Player</Name>
+    <ProjectReference Include="Unity.ScriptableBuildPipeline.Player.csproj">
+      <Project>{03d97885-bda9-a412-b7f7-5120f1594eda}</Project>
+      <Name>Unity.ScriptableBuildPipeline.Player</Name>
     </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />

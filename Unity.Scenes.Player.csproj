@@ -41,43 +41,43 @@
     <ImplicitlyExpandDesignTimeFacades>false</ImplicitlyExpandDesignTimeFacades>
   </PropertyGroup>
   <ItemGroup>
-     <Compile Include="Library\PackageCache\com.unity.entities@0.17.0-preview.42\Unity.Scenes\EntityChangeSetSerialization.cs" />
-     <Compile Include="Library\PackageCache\com.unity.entities@0.17.0-preview.42\Unity.Scenes\SceneSectionStreamingSystem.cs" />
      <Compile Include="Library\PackageCache\com.unity.entities@0.17.0-preview.42\Unity.Scenes\LiveLink\LiveLinkSceneChangeTracker.cs" />
-     <Compile Include="Library\PackageCache\com.unity.entities@0.17.0-preview.42\Unity.Scenes\GameObjectSceneUtility.cs" />
      <Compile Include="Library\PackageCache\com.unity.entities@0.17.0-preview.42\Unity.Scenes\LiveLink\LiveLinkMsg.cs" />
-     <Compile Include="Library\PackageCache\com.unity.entities@0.17.0-preview.42\Unity.Scenes\Hybrid\ReferencedUnityObjects.cs" />
      <Compile Include="Library\PackageCache\com.unity.entities@0.17.0-preview.42\Unity.Scenes\ResolveSceneSectionUtility.cs" />
      <Compile Include="Library\PackageCache\com.unity.entities@0.17.0-preview.42\Unity.Scenes\AssetBundleManager.cs" />
-     <Compile Include="Library\PackageCache\com.unity.entities@0.17.0-preview.42\Unity.Scenes\Hybrid\FileUtilityHybrid.cs" />
      <Compile Include="Library\PackageCache\com.unity.entities@0.17.0-preview.42\Unity.Scenes\AssetDatabaseCompatibility.cs" />
      <Compile Include="Library\PackageCache\com.unity.entities@0.17.0-preview.42\Unity.Scenes\GlobalAssetObjectResolver.cs" />
+     <Compile Include="Library\PackageCache\com.unity.entities@0.17.0-preview.42\Unity.Scenes\AsyncLoadSceneOperation.cs" />
+     <Compile Include="Library\PackageCache\com.unity.entities@0.17.0-preview.42\Unity.Scenes\EntitySceneOptimization.cs" />
+     <Compile Include="Library\PackageCache\com.unity.entities@0.17.0-preview.42\Unity.Scenes\GameObjectSceneSystem.cs" />
+     <Compile Include="Library\PackageCache\com.unity.entities@0.17.0-preview.42\Unity.Scenes\AssemblyInfo.cs" />
+     <Compile Include="Library\PackageCache\com.unity.entities@0.17.0-preview.42\Unity.Scenes\LiveLink\MessageEventArgsExtensions.cs" />
+     <Compile Include="Library\PackageCache\com.unity.entities@0.17.0-preview.42\Unity.Scenes\Hybrid\SerializeUtilityHybrid.cs" />
+     <Compile Include="Library\PackageCache\com.unity.entities@0.17.0-preview.42\Unity.Scenes\GameObjectSceneManager.cs" />
+     <Compile Include="Library\PackageCache\com.unity.entities@0.17.0-preview.42\Unity.Scenes\LiveLink\LiveLinkPlayerAssetRefreshSystem.cs" />
+     <Compile Include="Library\PackageCache\com.unity.entities@0.17.0-preview.42\Unity.Scenes\SceneSystemGroup.cs" />
+     <Compile Include="Library\PackageCache\com.unity.entities@0.17.0-preview.42\Unity.Scenes\SubScene.cs" />
+     <Compile Include="Library\PackageCache\com.unity.entities@0.17.0-preview.42\Unity.Scenes\AssetObjectManifest.cs" />
+     <Compile Include="Library\PackageCache\com.unity.entities@0.17.0-preview.42\Unity.Scenes\EntityScenesPaths.cs" />
+     <Compile Include="Library\PackageCache\com.unity.entities@0.17.0-preview.42\Unity.Scenes\EntityChangeSetSerialization.cs" />
+     <Compile Include="Library\PackageCache\com.unity.entities@0.17.0-preview.42\Unity.Scenes\SceneSectionStreamingSystem.cs" />
+     <Compile Include="Library\PackageCache\com.unity.entities@0.17.0-preview.42\Unity.Scenes\GameObjectSceneUtility.cs" />
+     <Compile Include="Library\PackageCache\com.unity.entities@0.17.0-preview.42\Unity.Scenes\Hybrid\ReferencedUnityObjects.cs" />
+     <Compile Include="Library\PackageCache\com.unity.entities@0.17.0-preview.42\Unity.Scenes\Hybrid\FileUtilityHybrid.cs" />
      <Compile Include="Library\PackageCache\com.unity.entities@0.17.0-preview.42\Unity.Scenes\LiveLink\LiveLinkResolveSceneReferenceSystem.cs" />
      <Compile Include="Library\PackageCache\com.unity.entities@0.17.0-preview.42\Unity.Scenes\ResolveSceneReferenceSystem.cs" />
      <Compile Include="Library\PackageCache\com.unity.entities@0.17.0-preview.42\Unity.Scenes\SceneWithBuildConfigurationGUIDs.cs" />
      <Compile Include="Library\PackageCache\com.unity.entities@0.17.0-preview.42\Unity.Scenes\AssetDependencyTracker.cs" />
-     <Compile Include="Library\PackageCache\com.unity.entities@0.17.0-preview.42\Unity.Scenes\AsyncLoadSceneOperation.cs" />
-     <Compile Include="Library\PackageCache\com.unity.entities@0.17.0-preview.42\Unity.Scenes\EntitySceneOptimization.cs" />
      <Compile Include="Library\PackageCache\com.unity.entities@0.17.0-preview.42\Unity.Scenes\PublicEntityRef.cs" />
-     <Compile Include="Library\PackageCache\com.unity.entities@0.17.0-preview.42\Unity.Scenes\GameObjectSceneSystem.cs" />
      <Compile Include="Library\PackageCache\com.unity.entities@0.17.0-preview.42\Unity.Scenes\SceneSystem.cs" />
-     <Compile Include="Library\PackageCache\com.unity.entities@0.17.0-preview.42\Unity.Scenes\AssemblyInfo.cs" />
-     <Compile Include="Library\PackageCache\com.unity.entities@0.17.0-preview.42\Unity.Scenes\LiveLink\MessageEventArgsExtensions.cs" />
      <Compile Include="Library\PackageCache\com.unity.entities@0.17.0-preview.42\Unity.Scenes\LiveLink\LiveLinkPlayerSystemGroup.cs" />
      <Compile Include="Library\PackageCache\com.unity.entities@0.17.0-preview.42\Unity.Scenes\Scene.cs" />
-     <Compile Include="Library\PackageCache\com.unity.entities@0.17.0-preview.42\Unity.Scenes\Hybrid\SerializeUtilityHybrid.cs" />
-     <Compile Include="Library\PackageCache\com.unity.entities@0.17.0-preview.42\Unity.Scenes\GameObjectSceneManager.cs" />
      <Compile Include="Library\PackageCache\com.unity.entities@0.17.0-preview.42\Unity.Scenes\SceneBoundingVolume.cs" />
      <Compile Include="Library\PackageCache\com.unity.entities@0.17.0-preview.42\Unity.Scenes\GameObjectSceneComponents.cs" />
-     <Compile Include="Library\PackageCache\com.unity.entities@0.17.0-preview.42\Unity.Scenes\LiveLink\LiveLinkPlayerAssetRefreshSystem.cs" />
      <Compile Include="Library\PackageCache\com.unity.entities@0.17.0-preview.42\Unity.Scenes\LiveLinkPatcher.cs" />
-     <Compile Include="Library\PackageCache\com.unity.entities@0.17.0-preview.42\Unity.Scenes\SceneSystemGroup.cs" />
      <Compile Include="Library\PackageCache\com.unity.entities@0.17.0-preview.42\Unity.Scenes\SceneSectionBundleTag.cs" />
-     <Compile Include="Library\PackageCache\com.unity.entities@0.17.0-preview.42\Unity.Scenes\SubScene.cs" />
      <Compile Include="Library\PackageCache\com.unity.entities@0.17.0-preview.42\Unity.Scenes\EditorUpdateUtility.cs" />
-     <Compile Include="Library\PackageCache\com.unity.entities@0.17.0-preview.42\Unity.Scenes\AssetObjectManifest.cs" />
      <Compile Include="Library\PackageCache\com.unity.entities@0.17.0-preview.42\Unity.Scenes\LiveLink\LiveLinkPlayerSystem.cs" />
-     <Compile Include="Library\PackageCache\com.unity.entities@0.17.0-preview.42\Unity.Scenes\EntityScenesPaths.cs" />
      <Compile Include="Library\PackageCache\com.unity.entities@0.17.0-preview.42\Unity.Scenes\LiveLink\LiveLinkUtility.cs" />
      <Compile Include="Library\PackageCache\com.unity.entities@0.17.0-preview.42\Unity.Scenes\ResourceCatalogData.cs" />
      <None Include="Library\PackageCache\com.unity.entities@0.17.0-preview.42\Unity.Scenes\Unity.Scenes.asmdef" />
@@ -290,6 +290,9 @@
      </Reference>
      <Reference Include="Unity.Burst.Unsafe">
      <HintPath>C:\Users\Serega\Documents\UnityProjects\ECS\Library\PackageCache\com.unity.burst@1.4.1\Unity.Burst.Unsafe.dll</HintPath>
+     </Reference>
+     <Reference Include="DOTween">
+     <HintPath>C:\Users\Serega\Documents\UnityProjects\ECS\Assets\Plugins\Demigiant\DOTween\DOTween.dll</HintPath>
      </Reference>
      <Reference Include="netstandard">
      <HintPath>C:\Program Files\Unity\Hub\Editor\2020.3.23f1\Editor\Data\NetStandard\ref\2.0.0\netstandard.dll</HintPath>

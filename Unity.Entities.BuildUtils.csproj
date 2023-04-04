@@ -41,8 +41,8 @@
     <ImplicitlyExpandDesignTimeFacades>false</ImplicitlyExpandDesignTimeFacades>
   </PropertyGroup>
   <ItemGroup>
-     <Compile Include="Library\PackageCache\com.unity.entities@0.17.0-preview.42\Unity.Entities.BuildUtils\TypeUtils.cs" />
      <Compile Include="Library\PackageCache\com.unity.entities@0.17.0-preview.42\Unity.Entities.BuildUtils\MonoExtensions.cs" />
+     <Compile Include="Library\PackageCache\com.unity.entities@0.17.0-preview.42\Unity.Entities.BuildUtils\TypeUtils.cs" />
      <Compile Include="Library\PackageCache\com.unity.entities@0.17.0-preview.42\Unity.Entities.BuildUtils\TypeHash.cs" />
      <None Include="Library\PackageCache\com.unity.entities@0.17.0-preview.42\Unity.Entities.BuildUtils\Unity.Entities.BuildUtils.asmdef" />
      <Reference Include="UnityEngine">

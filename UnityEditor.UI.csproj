@@ -41,43 +41,43 @@
     <ImplicitlyExpandDesignTimeFacades>false</ImplicitlyExpandDesignTimeFacades>
   </PropertyGroup>
   <ItemGroup>
-     <Compile Include="Library\PackageCache\com.unity.ugui@1.0.0\Editor\UI\PropertyDrawers\DropdownOptionListDrawer.cs" />
-     <Compile Include="Library\PackageCache\com.unity.ugui@1.0.0\Editor\UI\MenuOptions.cs" />
-     <Compile Include="Library\PackageCache\com.unity.ugui@1.0.0\Editor\UI\PropertyDrawers\FontDataDrawer.cs" />
-     <Compile Include="Library\PackageCache\com.unity.ugui@1.0.0\Editor\EventSystem\Physics2DRaycasterEditor.cs" />
      <Compile Include="Library\PackageCache\com.unity.ugui@1.0.0\Editor\UI\InputFieldEditor.cs" />
-     <Compile Include="Library\PackageCache\com.unity.ugui@1.0.0\Editor\EventSystem\EventSystemEditor.cs" />
      <Compile Include="Library\PackageCache\com.unity.ugui@1.0.0\Editor\UI\CanvasScalerEditor.cs" />
-     <Compile Include="Library\PackageCache\com.unity.ugui@1.0.0\Editor\UI\PrefabLayoutRebuilder.cs" />
-     <Compile Include="Library\PackageCache\com.unity.ugui@1.0.0\Editor\UI\SelectableEditor.cs" />
      <Compile Include="Library\PackageCache\com.unity.ugui@1.0.0\Editor\UI\ImageEditor.cs" />
-     <Compile Include="Library\PackageCache\com.unity.ugui@1.0.0\Editor\UI\SliderEditor.cs" />
      <Compile Include="Library\PackageCache\com.unity.ugui@1.0.0\Editor\UI\LayoutElementEditor.cs" />
      <Compile Include="Library\PackageCache\com.unity.ugui@1.0.0\Editor\UI\DropdownEditor.cs" />
      <Compile Include="Library\PackageCache\com.unity.ugui@1.0.0\Editor\UI\ButtonEditor.cs" />
      <Compile Include="Library\PackageCache\com.unity.ugui@1.0.0\Editor\EventSystem\PhysicsRaycasterEditor.cs" />
      <Compile Include="Library\PackageCache\com.unity.ugui@1.0.0\Editor\UI\TextEditor.cs" />
-     <Compile Include="Library\PackageCache\com.unity.ugui@1.0.0\Editor\UI\PropertyDrawers\AnimationTriggersDrawer.cs" />
      <Compile Include="Library\PackageCache\com.unity.ugui@1.0.0\Editor\EventSystem\EventTriggerEditor.cs" />
-     <Compile Include="Library\PackageCache\com.unity.ugui@1.0.0\Editor\UI\HorizontalOrVerticalLayoutGroupEditor.cs" />
      <Compile Include="Library\PackageCache\com.unity.ugui@1.0.0\Editor\UI\RawImageEditor.cs" />
      <Compile Include="Library\PackageCache\com.unity.ugui@1.0.0\Editor\UI\RectMask2DEditor.cs" />
+     <Compile Include="Library\PackageCache\com.unity.ugui@1.0.0\Editor\UI\InterceptedEventsPreview.cs" />
+     <Compile Include="Library\PackageCache\com.unity.ugui@1.0.0\Editor\UI\AspectRatioFitterEditor.cs" />
+     <Compile Include="Library\PackageCache\com.unity.ugui@1.0.0\Editor\UI\ScrollbarEditor.cs" />
+     <Compile Include="Library\PackageCache\com.unity.ugui@1.0.0\Editor\UI\ToggleEditor.cs" />
+     <Compile Include="Library\PackageCache\com.unity.ugui@1.0.0\Editor\UI\PropertyDrawers\SpriteStateDrawer.cs" />
+     <Compile Include="Library\PackageCache\com.unity.ugui@1.0.0\Editor\UI\PropertyDrawers\NavigationDrawer.cs" />
+     <Compile Include="Library\PackageCache\com.unity.ugui@1.0.0\Editor\UI\PropertyDrawers\DropdownOptionListDrawer.cs" />
+     <Compile Include="Library\PackageCache\com.unity.ugui@1.0.0\Editor\UI\MenuOptions.cs" />
+     <Compile Include="Library\PackageCache\com.unity.ugui@1.0.0\Editor\UI\PropertyDrawers\FontDataDrawer.cs" />
+     <Compile Include="Library\PackageCache\com.unity.ugui@1.0.0\Editor\EventSystem\Physics2DRaycasterEditor.cs" />
+     <Compile Include="Library\PackageCache\com.unity.ugui@1.0.0\Editor\EventSystem\EventSystemEditor.cs" />
+     <Compile Include="Library\PackageCache\com.unity.ugui@1.0.0\Editor\UI\PrefabLayoutRebuilder.cs" />
+     <Compile Include="Library\PackageCache\com.unity.ugui@1.0.0\Editor\UI\SelectableEditor.cs" />
+     <Compile Include="Library\PackageCache\com.unity.ugui@1.0.0\Editor\UI\SliderEditor.cs" />
+     <Compile Include="Library\PackageCache\com.unity.ugui@1.0.0\Editor\UI\PropertyDrawers\AnimationTriggersDrawer.cs" />
+     <Compile Include="Library\PackageCache\com.unity.ugui@1.0.0\Editor\UI\HorizontalOrVerticalLayoutGroupEditor.cs" />
      <Compile Include="Library\PackageCache\com.unity.ugui@1.0.0\Editor\UI\ContentSizeFitterEditor.cs" />
      <Compile Include="Library\PackageCache\com.unity.ugui@1.0.0\Editor\UI\SelfControllerEditor.cs" />
      <Compile Include="Library\PackageCache\com.unity.ugui@1.0.0\Editor\UI\MaskEditor.cs" />
      <Compile Include="Library\PackageCache\com.unity.ugui@1.0.0\Editor\UI\PropertyDrawers\ColorBlockDrawer.cs" />
-     <Compile Include="Library\PackageCache\com.unity.ugui@1.0.0\Editor\UI\InterceptedEventsPreview.cs" />
      <Compile Include="Library\PackageCache\com.unity.ugui@1.0.0\Editor\Properties\AssemblyInfo.cs" />
      <Compile Include="Library\PackageCache\com.unity.ugui@1.0.0\Editor\UI\LayoutPropertiesPreview.cs" />
      <Compile Include="Library\PackageCache\com.unity.ugui@1.0.0\Editor\UI\SpriteDrawUtility.cs" />
      <Compile Include="Library\PackageCache\com.unity.ugui@1.0.0\Editor\UI\GraphicEditor.cs" />
      <Compile Include="Library\PackageCache\com.unity.ugui@1.0.0\Editor\UI\GridLayoutGroupEditor.cs" />
-     <Compile Include="Library\PackageCache\com.unity.ugui@1.0.0\Editor\UI\AspectRatioFitterEditor.cs" />
-     <Compile Include="Library\PackageCache\com.unity.ugui@1.0.0\Editor\UI\ScrollbarEditor.cs" />
-     <Compile Include="Library\PackageCache\com.unity.ugui@1.0.0\Editor\UI\ToggleEditor.cs" />
      <Compile Include="Library\PackageCache\com.unity.ugui@1.0.0\Editor\UI\ScrollRectEditor.cs" />
-     <Compile Include="Library\PackageCache\com.unity.ugui@1.0.0\Editor\UI\PropertyDrawers\SpriteStateDrawer.cs" />
-     <Compile Include="Library\PackageCache\com.unity.ugui@1.0.0\Editor\UI\PropertyDrawers\NavigationDrawer.cs" />
      <None Include="Library\PackageCache\com.unity.ugui@1.0.0\Editor\UnityEditor.UI.asmdef" />
      <Reference Include="UnityEngine">
      <HintPath>C:\Program Files\Unity\Hub\Editor\2020.3.23f1\Editor\Data\Managed\UnityEngine\UnityEngine.dll</HintPath>
@@ -331,6 +331,9 @@
      <Reference Include="Unity.Plastic.Antlr3.Runtime">
      <HintPath>C:\Users\Serega\Documents\UnityProjects\ECS\Library\PackageCache\com.unity.collab-proxy@1.17.2\Lib\Editor\PlasticSCM\Unity.Plastic.Antlr3.Runtime.dll</HintPath>
      </Reference>
+     <Reference Include="DOTweenEditor">
+     <HintPath>C:\Users\Serega\Documents\UnityProjects\ECS\Assets\Plugins\Demigiant\DOTween\Editor\DOTweenEditor.dll</HintPath>
+     </Reference>
      <Reference Include="Unity.Burst.Unsafe">
      <HintPath>C:\Users\Serega\Documents\UnityProjects\ECS\Library\PackageCache\com.unity.burst@1.4.1\Unity.Burst.Unsafe.dll</HintPath>
      </Reference>
@@ -340,8 +343,14 @@
      <Reference Include="log4netPlastic">
      <HintPath>C:\Users\Serega\Documents\UnityProjects\ECS\Library\PackageCache\com.unity.collab-proxy@1.17.2\Lib\Editor\PlasticSCM\log4netPlastic.dll</HintPath>
      </Reference>
+     <Reference Include="DOTween">
+     <HintPath>C:\Users\Serega\Documents\UnityProjects\ECS\Assets\Plugins\Demigiant\DOTween\DOTween.dll</HintPath>
+     </Reference>
      <Reference Include="Zenject.ReflectionBaking.Mono.Cecil.Mdb">
      <HintPath>C:\Users\Serega\Documents\UnityProjects\ECS\Assets\Plugins\Zenject\OptionalExtras\ReflectionBaking\Lib\Zenject.ReflectionBaking.Mono.Cecil.Mdb.dll</HintPath>
+     </Reference>
+     <Reference Include="ICSharpCode.NRefactory">
+     <HintPath>C:\Users\Serega\Documents\UnityProjects\ECS\Library\PackageCache\com.unity.render-pipelines.core@10.7.0\Editor\ShaderGenerator\ICSharpCode.NRefactory.dll</HintPath>
      </Reference>
      <Reference Include="Newtonsoft.Json">
      <HintPath>C:\Users\Serega\Documents\UnityProjects\ECS\Library\PackageCache\com.unity.nuget.newtonsoft-json@2.0.0-preview\Runtime\Newtonsoft.Json.dll</HintPath>
@@ -351,9 +360,6 @@
      </Reference>
      <Reference Include="unityplastic">
      <HintPath>C:\Users\Serega\Documents\UnityProjects\ECS\Library\PackageCache\com.unity.collab-proxy@1.17.2\Lib\Editor\PlasticSCM\unityplastic.dll</HintPath>
-     </Reference>
-     <Reference Include="ICSharpCode.NRefactory">
-     <HintPath>C:\Users\Serega\Documents\UnityProjects\ECS\Library\PackageCache\com.unity.render-pipelines.core@10.7.0\Editor\ShaderGenerator\ICSharpCode.NRefactory.dll</HintPath>
      </Reference>
      <Reference Include="nunit.framework">
      <HintPath>C:\Users\Serega\Documents\UnityProjects\ECS\Library\PackageCache\com.unity.ext.nunit@1.0.6\net35\unity-custom\nunit.framework.dll</HintPath>

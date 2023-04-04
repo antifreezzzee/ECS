@@ -12,6 +12,13 @@ namespace Components
         
         private float _shootTime = float.MinValue;
         public ShootCounter shootCounter;
+        
+        private Animator _animator;
+
+        private void Awake()
+        {
+            _animator = GetComponent<Animator>();
+        }
 
         private void OnEnable()
         {
@@ -49,6 +56,7 @@ namespace Components
             _shootTime = Time.time;
             if (bullet != null)
             {
+                _animator.SetTrigger("Shoot");
                 var bulletTransform = bulletEmitter;
                 Instantiate(bullet, bulletTransform.position, bulletTransform.rotation)
                     .SetRicochet(CharacterStatus.IsRicochetBullets);

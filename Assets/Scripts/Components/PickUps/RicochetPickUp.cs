@@ -4,7 +4,7 @@ using UnityEngine;
 
 namespace Components
 {
-    public class RicochetPickUp : MonoBehaviour, IAbilityTarget
+    public class RicochetPickUp : MonoBehaviour, ITargetedAbility
     {
         [SerializeField] private GameObject model;
         public void Execute()
