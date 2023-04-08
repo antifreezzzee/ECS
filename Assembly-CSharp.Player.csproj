@@ -842,6 +842,10 @@
       <Project>{03d97885-bda9-a412-b7f7-5120f1594eda}</Project>
       <Name>Unity.ScriptableBuildPipeline.Player</Name>
     </ProjectReference>
+    <ProjectReference Include="UniRx.Player.csproj">
+      <Project>{7d85ea3d-7afc-d547-3c6f-29f93552890e}</Project>
+      <Name>UniRx.Player</Name>
+    </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it.

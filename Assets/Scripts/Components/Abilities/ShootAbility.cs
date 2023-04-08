@@ -22,17 +22,17 @@ namespace Components
 
         private void OnEnable()
         {
-            GoogleDriveTools.OnFileDownloaded += GetRemoteStats;
+            shootCounter.GoogleDriveTools.OnFileDownloaded += GetRemoteStats;
         }
 
         private void OnDisable()
         {
-            GoogleDriveTools.OnFileDownloaded -= GetRemoteStats;
+            shootCounter.GoogleDriveTools.OnFileDownloaded -= GetRemoteStats;
         }
         private void Start()
         {
             GetLocalStats();
-            GoogleDriveTools.Download(CharacterStatus.SaveFileId);
+            shootCounter.GoogleDriveTools.Download(CharacterStatus.SaveFileId);
         }
 
         private void GetRemoteStats()

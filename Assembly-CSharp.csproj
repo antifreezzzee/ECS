@@ -909,6 +909,10 @@
       <Project>{fcdacaf6-cdf0-ab23-a170-da87d9c254b8}</Project>
       <Name>Unity.RenderPipelines.Core.Editor</Name>
     </ProjectReference>
+    <ProjectReference Include="UniRx.csproj">
+      <Project>{323a572d-152d-f931-ecdf-aea396a1133f}</Project>
+      <Name>UniRx</Name>
+    </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it.

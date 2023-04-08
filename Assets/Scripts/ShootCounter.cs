@@ -10,25 +10,30 @@ namespace DefaultNamespace
     public class ShootCounter
     {
         [SerializeField] private double shootsCount;
+        private GoogleDriveTools googleDriveTools = new GoogleDriveTools("GameData.json");
 
         public static event Action OnShootsCountChanged;
-        public void InvokeChangedEvent()
-        {
-            OnShootsCountChanged?.Invoke();
-        }
-
+        
         public double ShootsCount
         {
             get => shootsCount;
             set => shootsCount = value;
         }
 
+        public GoogleDriveTools GoogleDriveTools => googleDriveTools;
+
+        public void InvokeChangedEvent()
+        {
+            OnShootsCountChanged?.Invoke();
+        }
+
+
         public void SaveStats()
         {
             var jsonString = JsonUtility.ToJson(this);
-            var jsonFile = GoogleDriveTools.CreateFileFromJson(jsonString);
+            var jsonFile = googleDriveTools.CreateFileFromJson(jsonString);
             PlayerPrefs.SetString("Stats", jsonString);
-            GoogleDriveTools.Update(CharacterStatus.SaveFileId, jsonFile);
+            googleDriveTools.Update(CharacterStatus.SaveFileId, jsonFile);
         }
 
         public ShootCounter LoadStatsFromPrefs()
@@ -41,9 +46,9 @@ namespace DefaultNamespace
         public ShootCounter LoadStatsFromRemote()
         {
             File remoteFile = new File();
-            if (GoogleDriveTools.RemoteFile != null)
+            if (googleDriveTools.RemoteFile != null)
             {
-                remoteFile = GoogleDriveTools.RemoteFile;
+                remoteFile = googleDriveTools.RemoteFile;
                 //Debug.Log("json файл получен");
                 byte[] remoteFileBytes = remoteFile.Content;
                 //Debug.Log($"контент получен. количество байт: {remoteFile.Content.Length}");

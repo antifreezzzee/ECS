@@ -56,6 +56,7 @@
      <Compile Include="Assets\Plugins\Demigiant\DOTween\Modules\DOTweenModulePhysics.cs" />
      <Compile Include="Assets\Plugins\Demigiant\DOTween\Modules\DOTweenModuleSprite.cs" />
      <Compile Include="Assets\Plugins\Demigiant\DOTween\Modules\DOTweenModuleAudio.cs" />
+     <None Include="Assets\Plugins\UniRx\ReadMe.txt" />
      <None Include="Assets\Plugins\Demigiant\DOTween\readme.txt" />
      <Reference Include="UnityEngine">
      <HintPath>C:\Program Files\Unity\Hub\Editor\2020.3.23f1\Editor\Data\PlaybackEngines\WindowsStandaloneSupport\Variations\mono\Managed\UnityEngine.dll</HintPath>
@@ -817,6 +818,10 @@
     <ProjectReference Include="Unity.ScriptableBuildPipeline.Player.csproj">
       <Project>{03d97885-bda9-a412-b7f7-5120f1594eda}</Project>
       <Name>Unity.ScriptableBuildPipeline.Player</Name>
+    </ProjectReference>
+    <ProjectReference Include="UniRx.Player.csproj">
+      <Project>{7d85ea3d-7afc-d547-3c6f-29f93552890e}</Project>
+      <Name>UniRx.Player</Name>
     </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />

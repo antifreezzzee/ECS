@@ -1,47 +1,46 @@
 using System;
-using System.Collections.Generic;
 using System.Text;
-using UnityEngine;
 using UnityGoogleDrive;
 using UnityGoogleDrive.Data;
 
-public static class GoogleDriveTools
+public class GoogleDriveTools
 {
-    public static File RemoteFile;
+    private File _remoteFile;
+    private string _fileName;
+    public File RemoteFile => _remoteFile;
+    public event Action OnFileDownloaded;
 
-    public static event Action OnFileDownloaded;
-
-    public static List<File> FileList()
+    public GoogleDriveTools(string fileName)
     {
-        List<File> output = new List<File>();
-        GoogleDriveFiles.List().Send().OnDone += fileList => { output = fileList.Files; };
-        return output;
+        _fileName = fileName;
     }
-
-    public static File CreateFileFromJson(string jsonString)
+    
+    public File CreateFileFromJson(string jsonString)
     {
-        return new File {Name = "GameData.json", Content = Encoding.ASCII.GetBytes(jsonString)};
+        return new File {Name = _fileName, Content = Encoding.ASCII.GetBytes(jsonString)};
     }
-
-    public static void Upload(File file)
+    public void Upload(File file)
     {
-        GoogleDriveFiles.Create(file).Send().OnDone += json => { /*Debug.Log("json файл отправлен на сервер");*/ };
+        GoogleDriveFiles.Create(file).Send().OnDone += json =>
+        {
+            /*Debug.Log("json файл отправлен на сервер");*/
+        };
     }
-
-    public static void Update(string fileId, File newFile)
+    public void Update(string fileId, File newFile)
     {
-        GoogleDriveFiles.Update(fileId, newFile).Send().OnDone += file => { /*Debug.Log("json файл на сервере обновлен");*/ };
+        GoogleDriveFiles.Update(fileId, newFile).Send().OnDone += file =>
+        {
+            /*Debug.Log("json файл на сервере обновлен");*/
+        };
     }
-
-    public static File Download(string fileId)
+    public void Download(string fileId)
     {
-        RemoteFile = new File();
-        GoogleDriveFiles.Download(fileId).Send().OnDone += file => 
-        { 
+        _remoteFile = new File();
+        GoogleDriveFiles.Download(fileId).Send().OnDone += file =>
+        {
             //Debug.Log("json файл скачан с сервера");
-            RemoteFile = file; 
+            _remoteFile = file;
             OnFileDownloaded?.Invoke();
         };
-        return RemoteFile;
     }
 }
