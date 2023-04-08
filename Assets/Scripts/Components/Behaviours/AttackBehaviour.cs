@@ -9,11 +9,14 @@ namespace Components.Behaviours
         [SerializeField] private float attackDistance;
         private NavMeshAgent _navMeshAgent;
         private Transform _target;
+        private ApplyDamageToTargetAbility _damageToTarget;
 
         private void Awake()
         {
             _navMeshAgent = GetComponent<NavMeshAgent>();
             _target = FindObjectOfType<CharacterHealth>().transform;
+            _damageToTarget = GetComponent<ApplyDamageToTargetAbility>();
+            _damageToTarget.CanDamage = true;
         }
 
         public float Evaluate()

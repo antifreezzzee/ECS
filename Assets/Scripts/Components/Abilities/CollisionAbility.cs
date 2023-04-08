@@ -23,7 +23,7 @@ namespace Components
                 if (action is ITargetedAbility targetedAbility) 
                     _collisionActionsAbilities.Add(targetedAbility);
                 else
-                    Debug.LogError("collision action must derive from IAbility");
+                    Debug.LogError("collision action must derive from ITargetedAbility");
             }
         }
 

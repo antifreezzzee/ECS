@@ -7,15 +7,22 @@ namespace Components
     public class ApplyDamageToTargetAbility : MonoBehaviour, ITargetedAbility
     {
         [SerializeField] private int damage;
+
+        public bool CanDamage { get; set; }
+
         public List<GameObject> Targets { get; set; }
+        
         public void Execute()
         {
-            foreach (var target in Targets)
+            if (CanDamage)
             {
-                var health = target.GetComponent<CharacterHealth>();
-                if (health != null)
+                foreach (var target in Targets)
                 {
-                    health.ReceiveDamage(damage);
+                    var health = target.GetComponent<CharacterHealth>();
+                    if (health != null)
+                    {
+                        health.ReceiveDamage(damage);
+                    }
                 }
             }
         }
