@@ -261,8 +261,8 @@
      <Compile Include="Library\PackageCache\com.unity.inputsystem@1.4.3\InputSystem\Actions\InputActionAsset.cs" />
      <Compile Include="Library\PackageCache\com.unity.inputsystem@1.4.3\InputSystem\Editor\ControlPicker\InputControlPathEditor.cs" />
      <Compile Include="Library\PackageCache\com.unity.inputsystem@1.4.3\InputSystem\Editor\Debugger\InputDebuggerWindow.cs" />
-     <Compile Include="Library\PackageCache\com.unity.inputsystem@1.4.3\InputSystem\Plugins\HID\HIDSupport.cs" />
      <Compile Include="Library\PackageCache\com.unity.inputsystem@1.4.3\InputSystem\Utilities\DisplayStringFormatAttribute.cs" />
+     <Compile Include="Library\PackageCache\com.unity.inputsystem@1.4.3\InputSystem\Plugins\HID\HIDSupport.cs" />
      <Compile Include="Library\PackageCache\com.unity.inputsystem@1.4.3\InputSystem\Plugins\Steam\SteamControllerType.cs" />
      <Compile Include="Library\PackageCache\com.unity.inputsystem@1.4.3\InputSystem\Plugins\Users\InputUserSettings.cs" />
      <Compile Include="Library\PackageCache\com.unity.inputsystem@1.4.3\InputSystem\Plugins\XR\Controls\PoseControl.cs" />

@@ -58,6 +58,7 @@
      <Compile Include="Assets\Scripts\Components\Abilities\DOTWeenMoveAbility.cs" />
      <Compile Include="Assets\Scripts\Systems\UserInputSystem.cs" />
      <Compile Include="Assets\Scripts\Components\Abilities\DOTWeenAbility.cs" />
+     <Compile Include="Assets\Scripts\Configurations\GameConfiguration.cs" />
      <Compile Include="Assets\Scripts\Components\BehaviourManager.cs" />
      <Compile Include="Assets\Scripts\Systems\Character\CharacterAnimationSystem.cs" />
      <Compile Include="Assets\Scripts\Components\Player\CharacterHealth.cs" />
@@ -77,7 +78,6 @@
      <Compile Include="Assets\Scripts\Components\Player\CharacterAnimationNames.cs" />
      <Compile Include="Assets\Scripts\Components\PickUps\RicochetPickUp.cs" />
      <Compile Include="Assets\Scripts\Components\Abilities\ShootAbility.cs" />
-     <Compile Include="Assets\Scripts\Configurations\GameConfiguration.cs" />
      <Reference Include="UnityEngine">
      <HintPath>C:\Program Files\Unity\Hub\Editor\2020.3.23f1\Editor\Data\PlaybackEngines\WindowsStandaloneSupport\Variations\mono\Managed\UnityEngine.dll</HintPath>
      </Reference>
@@ -815,6 +815,10 @@
       <Project>{4eb358b0-a906-b83f-b6c8-47395bf6062d}</Project>
       <Name>Unity.Mathematics.Player</Name>
     </ProjectReference>
+    <ProjectReference Include="UniRx.Player.csproj">
+      <Project>{7d85ea3d-7afc-d547-3c6f-29f93552890e}</Project>
+      <Name>UniRx.Player</Name>
+    </ProjectReference>
     <ProjectReference Include="Unity.Burst.Player.csproj">
       <Project>{172a2ab1-e5ae-4a87-7873-fd294e730682}</Project>
       <Name>Unity.Burst.Player</Name>
@@ -842,10 +846,6 @@
     <ProjectReference Include="Unity.ScriptableBuildPipeline.Player.csproj">
       <Project>{03d97885-bda9-a412-b7f7-5120f1594eda}</Project>
       <Name>Unity.ScriptableBuildPipeline.Player</Name>
-    </ProjectReference>
-    <ProjectReference Include="UniRx.Player.csproj">
-      <Project>{7d85ea3d-7afc-d547-3c6f-29f93552890e}</Project>
-      <Name>UniRx.Player</Name>
     </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />

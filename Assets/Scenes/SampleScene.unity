@@ -1872,9 +1872,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: eba35239116982446996cd0581f0d148, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  defaultStringData: Default
-  defaultBoolData: 1
-  defaultFloatData: 5.6
+  defaultConfiguration: {fileID: 11400000, guid: bfa232beb507684458f340b834f2c796, type: 2}
+  _configuration: {fileID: 11400000, guid: bfa232beb507684458f340b834f2c796, type: 2}
+  stringData: GameSettings
+  boolData: 1
+  floatData: 3.5
 --- !u!4 &1602287870
 Transform:
   m_ObjectHideFlags: 0

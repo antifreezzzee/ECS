@@ -58,6 +58,7 @@
      <Compile Include="Assets\Scripts\Components\Abilities\DOTWeenMoveAbility.cs" />
      <Compile Include="Assets\Scripts\Systems\UserInputSystem.cs" />
      <Compile Include="Assets\Scripts\Components\Abilities\DOTWeenAbility.cs" />
+     <Compile Include="Assets\Scripts\Configurations\GameConfiguration.cs" />
      <Compile Include="Assets\Scripts\Components\BehaviourManager.cs" />
      <Compile Include="Assets\Scripts\Systems\Character\CharacterAnimationSystem.cs" />
      <Compile Include="Assets\Scripts\Components\Player\CharacterHealth.cs" />
@@ -77,7 +78,6 @@
      <Compile Include="Assets\Scripts\Components\Player\CharacterAnimationNames.cs" />
      <Compile Include="Assets\Scripts\Components\PickUps\RicochetPickUp.cs" />
      <Compile Include="Assets\Scripts\Components\Abilities\ShootAbility.cs" />
-     <Compile Include="Assets\Scripts\Configurations\GameConfiguration.cs" />
      <Reference Include="UnityEngine">
      <HintPath>C:\Program Files\Unity\Hub\Editor\2020.3.23f1\Editor\Data\Managed\UnityEngine\UnityEngine.dll</HintPath>
      </Reference>
@@ -862,6 +862,10 @@
       <Project>{b6edb76e-35fa-6293-89e6-318a2c9c2b20}</Project>
       <Name>Unity.Mathematics</Name>
     </ProjectReference>
+    <ProjectReference Include="UniRx.csproj">
+      <Project>{323a572d-152d-f931-ecdf-aea396a1133f}</Project>
+      <Name>UniRx</Name>
+    </ProjectReference>
     <ProjectReference Include="Unity.Burst.csproj">
       <Project>{12613b6c-7ed6-e02a-cf20-6b6ef1bf3468}</Project>
       <Name>Unity.Burst</Name>
@@ -909,10 +913,6 @@
     <ProjectReference Include="Unity.RenderPipelines.Core.Editor.csproj">
       <Project>{fcdacaf6-cdf0-ab23-a170-da87d9c254b8}</Project>
       <Name>Unity.RenderPipelines.Core.Editor</Name>
-    </ProjectReference>
-    <ProjectReference Include="UniRx.csproj">
-      <Project>{323a572d-152d-f931-ecdf-aea396a1133f}</Project>
-      <Name>UniRx</Name>
     </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />

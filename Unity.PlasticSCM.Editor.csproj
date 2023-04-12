@@ -265,8 +265,8 @@
      <Compile Include="Library\PackageCache\com.unity.collab-proxy@1.17.2\Editor\PlasticSCM\AssetOverlays\Cache\LocalStatusCache.cs" />
      <Compile Include="Library\PackageCache\com.unity.collab-proxy@1.17.2\Editor\PlasticSCM\AssetMenu\AssetOperations.cs" />
      <Compile Include="Library\PackageCache\com.unity.collab-proxy@1.17.2\Editor\PlasticSCM\Configuration\ChannelCertificateUiImpl.cs" />
-     <Compile Include="Library\PackageCache\com.unity.collab-proxy@1.17.2\Editor\PlasticSCM\Views\IncomingChanges\Developer\IncomingChangesTab.cs" />
      <Compile Include="Library\PackageCache\com.unity.collab-proxy@1.17.2\Editor\PlasticSCM\MetaPath.cs" />
+     <Compile Include="Library\PackageCache\com.unity.collab-proxy@1.17.2\Editor\PlasticSCM\Views\IncomingChanges\Developer\IncomingChangesTab.cs" />
      <Compile Include="Library\PackageCache\com.unity.collab-proxy@1.17.2\Editor\PlasticSCM\EnumExtensions.cs" />
      <Compile Include="Library\PackageCache\com.unity.collab-proxy@1.17.2\Editor\PlasticSCM\UI\DockEditorWindow.cs" />
      <Compile Include="Library\PackageCache\com.unity.collab-proxy@1.17.2\Editor\PlasticSCM\Views\PendingChanges\ChangelistTreeViewItem.cs" />

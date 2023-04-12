@@ -2,22 +2,28 @@ using System;
 using System.IO;
 using System.Threading;
 using System.Threading.Tasks;
+using DefaultNamespace;
 using UnityEngine;
 
 public class GameConfiguration : MonoBehaviour
 {
-    [SerializeField] private string defaultStringData;
-    [SerializeField] private bool defaultBoolData;
-    [SerializeField] private float defaultFloatData;
+    [Header("Конфигурация по умолчанию:")] [SerializeField]
+    private GameSettings defaultConfiguration;
 
-    private string _stringData;
-    private bool _boolData;
-    private float _floatData;
+    [Header("Текущая конфигурация:")] [SerializeField]
+    private GameSettings _configuration;
+
+    [Header("Значения текущей конфигурации:")] 
+    [SerializeField] private string stringData;
+    [SerializeField] private bool boolData;
+    [SerializeField] private float floatData;
+
+    public GameSettings Configuration
+    {
+        set => _configuration = value;
+    }
 
     private string fileName = String.Empty;
-    public string StringData => _stringData;
-    public bool BoolData => _boolData;
-    public float FloatData => _floatData;
 
     private bool CheckFileExist()
     {
@@ -27,7 +33,9 @@ public class GameConfiguration : MonoBehaviour
     private void CreateDefaultConfig()
     {
         Debug.Log("Create file content");
-        string fileContent = $"{defaultStringData}\n{defaultBoolData.ToString()}\n{defaultFloatData.ToString()}";
+        string fileContent = $"{defaultConfiguration.StringValue}" +
+                             $"\n{defaultConfiguration.BoolValue.ToString()}" +
+                             $"\n{defaultConfiguration.FloatValue.ToString()}";
         Debug.Log("Create file");
         StreamWriter streamWriter = new StreamWriter(fileName);
         Debug.Log("Fill file with content");
@@ -43,6 +51,7 @@ public class GameConfiguration : MonoBehaviour
             Debug.Log("File is not exist. Creating");
             CreateDefaultConfig();
         }
+
         Debug.Log("Thread sleep 10 sec... check freezes on start :)");
         Thread.Sleep(10000);
         StreamReader streamReader = new StreamReader(fileName);
@@ -53,17 +62,25 @@ public class GameConfiguration : MonoBehaviour
         Debug.Log("Create array");
         string[] configs = fileContent.Split('\n');
         Debug.Log("Fill config");
-        _stringData = configs[0];
-        _boolData = Convert.ToBoolean(configs[1]);
-        _floatData = Convert.ToSingle(configs[2]);
+        stringData = configs[0];
+        boolData = Convert.ToBoolean(configs[1]);
+        floatData = Convert.ToSingle(configs[2]);
         Debug.Log("Config filled");
     }
 
     private void Awake()
     {
         fileName = Application.persistentDataPath + "/config.txt";
-        Task.Run(LoadConfigFile);
+        //Task.Run(LoadConfigFile);
     }
-    
-    
+
+    public void ApplyConfiguration()
+    {
+        if (_configuration != null)
+        {
+            stringData = _configuration.StringValue;
+            boolData = _configuration.BoolValue;
+            floatData = _configuration.FloatValue;
+        }
+    }
 }
