@@ -11,23 +11,24 @@ namespace Systems
         protected override void OnCreate()
         {
             _moveQuery = GetEntityQuery(ComponentType.ReadOnly<InputData>(),
-                ComponentType.ReadOnly<MoveData>(), 
-                ComponentType.ReadOnly<Transform>());
+                ComponentType.ReadOnly<Transform>(),
+                ComponentType.ReadOnly<CharacterData>(),
+                ComponentType.ReadOnly<CharacterHealth>());
         }
 
         protected override void OnUpdate()
         {
             Entities.With(_moveQuery).ForEach(
-                (Entity entity, Transform transform, ref InputData inputData, ref MoveData moveData) =>
+                (Entity entity, ref InputData inputData, Transform transform, CharacterHealth characterHealth,
+                    CharacterData characterData) =>
                 {
-                    var gameObject = transform.gameObject;
-                    var health = gameObject.GetComponent<CharacterHealth>();
                     var pos = transform.position;
-                    if (health.IsAlive)
+                    var speed = characterData.MoveSpeed / 1000;
+                    if (characterHealth.IsAlive)
                     {
                         var input = new Vector3(inputData.Move.x, 0, inputData.Move.y);
                         var lookDirection = pos + input;
-                        pos += input * moveData.Speed;
+                        pos += input * speed;
                         transform.position = pos;
                         transform.LookAt(lookDirection);
                     }

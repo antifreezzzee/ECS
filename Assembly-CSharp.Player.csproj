@@ -78,6 +78,13 @@
      <Compile Include="Assets\Scripts\Components\Player\CharacterAnimationNames.cs" />
      <Compile Include="Assets\Scripts\Components\PickUps\RicochetPickUp.cs" />
      <Compile Include="Assets\Scripts\Components\Abilities\ShootAbility.cs" />
+     <Compile Include="Assets\Scripts\Inventory.cs" />
+     <Compile Include="Assets\Scripts\Components\PickUps\PickUp.cs" />
+     <Compile Include="Assets\Scripts\Components\Player\CharacterData.cs" />
+     <Compile Include="Assets\Scripts\Components\Interfaces\IItem.cs" />
+     <Compile Include="Assets\Scripts\Components\PickUps\ItemPickUp.cs" />
+     <Compile Include="Assets\Scripts\Components\Abilities\EnergyDrinkPickUpAbility.cs" />
+     <Compile Include="Assets\Scripts\Components\Abilities\GodModePickUpAbility.cs" />
      <Reference Include="UnityEngine">
      <HintPath>C:\Program Files\Unity\Hub\Editor\2020.3.23f1\Editor\Data\PlaybackEngines\WindowsStandaloneSupport\Variations\mono\Managed\UnityEngine.dll</HintPath>
      </Reference>

@@ -7,28 +7,23 @@ namespace Components
 {
     public class UserInputData : MonoBehaviour, IConvertGameObjectToEntity
     {
-        [SerializeField] private float speed;
         [SerializeField] private MonoBehaviour shootAction;
         [SerializeField] private MonoBehaviour rushAction;
 
         public MonoBehaviour ShootAction => shootAction;
         public MonoBehaviour RushAction => rushAction;
-        public float Speed => speed;
 
         public void Convert(Entity entity, EntityManager dstManager, GameObjectConversionSystem conversionSystem)
         {
             dstManager.AddComponentData(entity, new InputData());
-            dstManager.AddComponentData(entity, new MoveData
-            {
-                Speed = speed / 1000
-            });
+            dstManager.AddComponentData(entity, new MoveData());
 
             if (shootAction != null && shootAction is IAbility)
                 dstManager.AddComponentData(entity, new ShootData());
 
             if (rushAction != null && rushAction is IAbility)
                 dstManager.AddComponentData(entity, new RushData());
-            
+
             dstManager.AddComponentData(entity, new AnimationData());
         }
     }
@@ -42,7 +37,6 @@ namespace Components
 
     public struct MoveData : IComponentData
     {
-        public float Speed;
     }
 
     public struct ShootData : IComponentData
@@ -55,9 +49,8 @@ namespace Components
     {
         public float Rush;
     }
-    
+
     public struct AnimationData : IComponentData
     {
-        
     }
 }

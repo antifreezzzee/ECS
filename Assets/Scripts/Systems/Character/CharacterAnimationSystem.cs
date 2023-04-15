@@ -12,19 +12,22 @@ namespace Systems
 
         protected override void OnCreate()
         {
-            _animationQuery = GetEntityQuery(ComponentType.ReadOnly<AnimationData>(), 
-                ComponentType.ReadOnly<Animator>());
+            _animationQuery = GetEntityQuery(ComponentType.ReadOnly<AnimationData>(),
+                ComponentType.ReadOnly<Animator>(),
+                ComponentType.ReadOnly<CharacterData>());
         }
 
         protected override void OnUpdate()
         {
             Entities.With(_animationQuery).ForEach(
-                (Entity entity, ref InputData inputData, Animator animator, UserInputData userInputData) =>
+                (Entity entity, ref InputData inputData, Animator animator, UserInputData userInputData,
+                    CharacterData characterData) =>
                 {
-                    animator.SetBool("onWalk", 
-                        Mathf.Abs(inputData.Move.x)  > 0.05 || Mathf.Abs(inputData.Move.y) > 0.05);
-                    animator.SetFloat("WalkSpeed", 
-                        userInputData.Speed * Vector2.Distance(Vector2.zero, new Vector2(inputData.Move.x,inputData.Move.y)));
+                    animator.SetBool("onWalk",
+                        Mathf.Abs(inputData.Move.x) > 0.05 || Mathf.Abs(inputData.Move.y) > 0.05);
+                    animator.SetFloat("WalkSpeed",
+                        characterData.MoveSpeed *
+                        Vector2.Distance(Vector2.zero, new Vector2(inputData.Move.x, inputData.Move.y)));
                 });
         }
     }

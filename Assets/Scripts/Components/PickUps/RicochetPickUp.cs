@@ -4,16 +4,14 @@ using UnityEngine;
 
 namespace Components
 {
-    public class RicochetPickUp : MonoBehaviour, ITargetedAbility
+    public class RicochetPickUp : PickUp, ITargetedAbility
     {
-        [SerializeField] private GameObject model;
+        public List<GameObject> Targets { get; set; }
+
         public void Execute()
         {
             CharacterStatus.IsRicochetBullets = true;
-            //Destroy(gameObject);
-            model.SetActive(false);
+            DestroyPickUp();
         }
-
-        public List<GameObject> Targets { get; set; }
     }
 }

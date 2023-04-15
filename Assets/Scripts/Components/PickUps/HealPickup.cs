@@ -4,13 +4,15 @@ using UnityEngine;
 
 namespace Components
 {
-    public class HealPickup : MonoBehaviour, ITargetedAbility
+    public class HealPickup : PickUp, ITargetedAbility
     {
         [SerializeField] private int healPoints;
-        [SerializeField] private GameObject model;
+
         public List<GameObject> Targets { get; set; }
+
         public void Execute()
         {
+            Debug.Log("collision");
             foreach (var target in Targets)
             {
                 var health = target.GetComponent<CharacterHealth>();
@@ -19,8 +21,7 @@ namespace Components
                     health.AddHealth(healPoints);
                 }
             }
-            //Destroy(gameObject);
-            model.SetActive(false);
+            DestroyPickUp();
         }
     }
 }
