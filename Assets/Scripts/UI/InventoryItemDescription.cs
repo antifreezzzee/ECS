@@ -9,6 +9,11 @@ namespace DefaultNamespace
         [SerializeField] private Text descriptionText;
         [SerializeField] private string defaultText;
 
+        private void Awake()
+        {
+            descriptionText.text = defaultText;
+        }
+
         private void OnDisable()
         {
             descriptionText.text = defaultText;

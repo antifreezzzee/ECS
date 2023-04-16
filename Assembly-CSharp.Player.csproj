@@ -69,6 +69,7 @@
      <Compile Include="Assets\Scripts\Systems\Character\CharacterRushSystem.cs" />
      <Compile Include="Assets\Scripts\Components\Interfaces\IDOTWeenAbility.cs" />
      <Compile Include="Assets\Scripts\Systems\Character\CharacterShootSystem.cs" />
+     <Compile Include="Assets\Scripts\Components\Interfaces\InventoryItem.cs" />
      <Compile Include="Assets\Scripts\Systems\Character\CharacterMoveSystem.cs" />
      <Compile Include="Assets\Scripts\ShootCounter.cs" />
      <Compile Include="Assets\Scripts\Components\Interfaces\IBehaviour.cs" />
@@ -83,10 +84,9 @@
      <Compile Include="Assets\Scripts\DI\MyInstaller.cs" />
      <Compile Include="Assets\Scripts\GoogleDriveTools.cs" />
      <Compile Include="Assets\Scripts\Components\Player\CharacterAnimationNames.cs" />
+     <Compile Include="Assets\Scripts\UI\InventoryItemDescription.cs" />
      <Compile Include="Assets\Scripts\Components\PickUps\RicochetPickUp.cs" />
      <Compile Include="Assets\Scripts\Components\Abilities\PlayerAbilities\ShootAbility.cs" />
-     <Compile Include="Assets\Scripts\UI\InventoryItemDescription.cs" />
-     <Compile Include="Assets\Scripts\Components\Interfaces\InventoryItem.cs" />
      <Reference Include="UnityEngine">
      <HintPath>C:\Program Files\Unity\Hub\Editor\2020.3.23f1\Editor\Data\PlaybackEngines\WindowsStandaloneSupport\Variations\mono\Managed\UnityEngine.dll</HintPath>
      </Reference>
