@@ -42,22 +42,26 @@
   </PropertyGroup>
   <ItemGroup>
      <Compile Include="Assets\Scripts\Systems\AI\AIBehaveSystem.cs" />
-     <Compile Include="Assets\Scripts\DisplayInfo.cs" />
+     <Compile Include="Assets\Scripts\UI\DisplayInfo.cs" />
      <Compile Include="Assets\Scripts\Components\PickUps\HealPickup.cs" />
      <Compile Include="Assets\Scripts\GameSettings.cs" />
      <Compile Include="Assets\Scripts\Utils.cs" />
      <Compile Include="Assets\Scripts\Components\Behaviours\WaitBehaviour.cs" />
+     <Compile Include="Assets\Scripts\Components\PickUps\ItemPickUp.cs" />
      <Compile Include="Assets\Scripts\Components\Behaviours\AttackBehaviour.cs" />
      <Compile Include="Assets\Scripts\Systems\DOTWeenSystem.cs" />
      <Compile Include="Assets\Scripts\DummyGameSettings.cs" />
-     <Compile Include="Assets\Scripts\Components\Abilities\RushAbility.cs" />
+     <Compile Include="Assets\Scripts\Components\Abilities\PlayerAbilities\RushAbility.cs" />
      <Compile Include="Assets\Scripts\Components\Player\UserInputData.cs" />
+     <Compile Include="Assets\Scripts\Components\PickUps\PickUp.cs" />
      <Compile Include="Assets\Scripts\Components\Abilities\CollisionAbility.cs" />
      <Compile Include="Assets\Scripts\Components\Player\CharacterStatus.cs" />
      <Compile Include="Assets\Scripts\Systems\CollisionSystem.cs" />
-     <Compile Include="Assets\Scripts\Components\Abilities\DOTWeenMoveAbility.cs" />
+     <Compile Include="Assets\Scripts\Components\Abilities\DOTWeenAbilities\DOTWeenMoveAbility.cs" />
      <Compile Include="Assets\Scripts\Systems\UserInputSystem.cs" />
-     <Compile Include="Assets\Scripts\Components\Abilities\DOTWeenAbility.cs" />
+     <Compile Include="Assets\Scripts\Components\Interfaces\IItem.cs" />
+     <Compile Include="Assets\Scripts\UI\Inventory.cs" />
+     <Compile Include="Assets\Scripts\Components\Abilities\DOTWeenAbilities\DOTWeenAbility.cs" />
      <Compile Include="Assets\Scripts\Configurations\GameConfiguration.cs" />
      <Compile Include="Assets\Scripts\Components\BehaviourManager.cs" />
      <Compile Include="Assets\Scripts\Systems\Character\CharacterAnimationSystem.cs" />
@@ -68,23 +72,21 @@
      <Compile Include="Assets\Scripts\Systems\Character\CharacterMoveSystem.cs" />
      <Compile Include="Assets\Scripts\ShootCounter.cs" />
      <Compile Include="Assets\Scripts\Components\Interfaces\IBehaviour.cs" />
+     <Compile Include="Assets\Scripts\Components\Abilities\PickUpsAbilities\EnergyDrinkPickUpAbility.cs" />
+     <Compile Include="Assets\Scripts\Components\Abilities\PickUpsAbilities\GodModePickUpAbility.cs" />
      <Compile Include="Assets\Scripts\Systems\AI\AIEvaluateSystem.cs" />
      <Compile Include="Assets\Scripts\Components\Projectile.cs" />
      <Compile Include="Assets\Scripts\Components\Interfaces\ITargetedAbility.cs" />
      <Compile Include="Assets\Scripts\Components\Abilities\ApplyDamageToTargetAbility.cs" />
      <Compile Include="Assets\Scripts\Components\Interfaces\IAbility.cs" />
+     <Compile Include="Assets\Scripts\Components\Player\CharacterData.cs" />
      <Compile Include="Assets\Scripts\DI\MyInstaller.cs" />
      <Compile Include="Assets\Scripts\GoogleDriveTools.cs" />
      <Compile Include="Assets\Scripts\Components\Player\CharacterAnimationNames.cs" />
      <Compile Include="Assets\Scripts\Components\PickUps\RicochetPickUp.cs" />
-     <Compile Include="Assets\Scripts\Components\Abilities\ShootAbility.cs" />
-     <Compile Include="Assets\Scripts\Inventory.cs" />
-     <Compile Include="Assets\Scripts\Components\PickUps\PickUp.cs" />
-     <Compile Include="Assets\Scripts\Components\Player\CharacterData.cs" />
-     <Compile Include="Assets\Scripts\Components\Interfaces\IItem.cs" />
-     <Compile Include="Assets\Scripts\Components\PickUps\ItemPickUp.cs" />
-     <Compile Include="Assets\Scripts\Components\Abilities\EnergyDrinkPickUpAbility.cs" />
-     <Compile Include="Assets\Scripts\Components\Abilities\GodModePickUpAbility.cs" />
+     <Compile Include="Assets\Scripts\Components\Abilities\PlayerAbilities\ShootAbility.cs" />
+     <Compile Include="Assets\Scripts\UI\InventoryItemDescription.cs" />
+     <Compile Include="Assets\Scripts\Components\Interfaces\InventoryItem.cs" />
      <Reference Include="UnityEngine">
      <HintPath>C:\Program Files\Unity\Hub\Editor\2020.3.23f1\Editor\Data\PlaybackEngines\WindowsStandaloneSupport\Variations\mono\Managed\UnityEngine.dll</HintPath>
      </Reference>

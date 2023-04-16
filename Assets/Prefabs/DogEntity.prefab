@@ -2365,6 +2365,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   health: 50
   godTime: 3
+  defaultMaterial: {fileID: 2100000, guid: da05e49adf02c134f88f541992ee78d2, type: 2}
+  godModeGlowMaterial: {fileID: 2100000, guid: c502561237585ad41b41333fda05f2a7, type: 2}
+  meshRenderer: {fileID: 9148094312735350628}
 --- !u!114 &771900418622307080
 MonoBehaviour:
   m_ObjectHideFlags: 0

@@ -12,7 +12,6 @@ namespace Components
 
         public void Execute()
         {
-            Debug.Log("collision");
             foreach (var target in Targets)
             {
                 var health = target.GetComponent<CharacterHealth>();

@@ -7,9 +7,10 @@ namespace Components
     public class ItemPickUp : PickUp, ITargetedAbility, IItem
     {
         [SerializeField] private GameObject uiItem;
+        [SerializeField] private string description;
         public List<GameObject> Targets { get; set; }
         public GameObject UIItem => uiItem;
-        
+
 
         public void Execute()
         {

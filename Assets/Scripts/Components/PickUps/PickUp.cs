@@ -1,3 +1,4 @@
+using DefaultNamespace;
 using Unity.Entities;
 using UnityEngine;
 
@@ -17,4 +18,6 @@ public class PickUp : MonoBehaviour, IConvertGameObjectToEntity
         _entity = entity;
         _entityManager = dstManager;
     }
+
+    
 }
