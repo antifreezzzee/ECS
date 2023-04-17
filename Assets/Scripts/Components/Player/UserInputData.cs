@@ -1,4 +1,5 @@
 using Components.Interfaces;
+using Photon.Pun;
 using Unity.Entities;
 using Unity.Mathematics;
 using UnityEngine;
@@ -10,12 +11,20 @@ namespace Components
         [SerializeField] private MonoBehaviour shootAction;
         [SerializeField] private MonoBehaviour rushAction;
 
+        private PhotonView _photonView;
         public MonoBehaviour ShootAction => shootAction;
         public MonoBehaviour RushAction => rushAction;
 
+        
         public void Convert(Entity entity, EntityManager dstManager, GameObjectConversionSystem conversionSystem)
         {
-            dstManager.AddComponentData(entity, new InputData());
+            
+            _photonView = PhotonView.Get(gameObject);
+            if (_photonView.IsMine)
+            {
+                dstManager.AddComponentData(entity, new InputData());
+            }
+            
             dstManager.AddComponentData(entity, new MoveData());
 
             if (shootAction != null && shootAction is IAbility)

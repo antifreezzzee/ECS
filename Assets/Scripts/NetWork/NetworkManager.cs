@@ -1,3 +1,4 @@
+using System.Collections.Generic;
 using Photon.Pun;
 using Photon.Realtime;
 using UnityEngine;
@@ -6,6 +7,8 @@ namespace DefaultNamespace.NetWork
 {
     public class NetworkManager : MonoBehaviourPunCallbacks
     {
+        public GameObject PlayerSample;
+        public List<Transform> SpawnPoints;
         private void Start()
         {
             PhotonNetwork.ConnectUsingSettings();
@@ -23,7 +26,19 @@ namespace DefaultNamespace.NetWork
 
         public override void OnJoinedRoom()
         {
-            Debug.Log(PhotonNetwork.CurrentRoom.PlayerCount);
+            var id = PhotonNetwork.LocalPlayer.ActorNumber;
+            Debug.Log("Joined room with " +
+                      PhotonNetwork.CurrentRoom.PlayerCount +
+                      " players and ID is " +
+                      "id");
+            if (id> SpawnPoints.Count + 1)
+            {
+                Debug.LogError("no spawn point");
+            }
+            else
+            {
+                PhotonNetwork.Instantiate(PlayerSample.name, SpawnPoints[id - 1].position, Quaternion.identity);
+            }
         }
     }
 }
