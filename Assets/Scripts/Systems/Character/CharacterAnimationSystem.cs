@@ -1,7 +1,5 @@
 using Components;
-using Components.Interfaces;
 using Unity.Entities;
-using Unity.Mathematics;
 using UnityEngine;
 
 namespace Systems
@@ -14,7 +12,8 @@ namespace Systems
         {
             _animationQuery = GetEntityQuery(ComponentType.ReadOnly<AnimationData>(),
                 ComponentType.ReadOnly<Animator>(),
-                ComponentType.ReadOnly<CharacterData>());
+                ComponentType.ReadOnly<CharacterData>(),
+                ComponentType.ReadOnly<InputData>());
         }
 
         protected override void OnUpdate()
