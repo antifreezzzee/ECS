@@ -27,7 +27,6 @@ namespace DefaultNamespace
             OnShootsCountChanged?.Invoke();
         }
 
-
         public void SaveStats()
         {
             var jsonString = JsonUtility.ToJson(this);
